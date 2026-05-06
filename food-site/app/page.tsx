@@ -4,6 +4,7 @@ import WhyChooseUsSection from './components/home/WhyChooseUsSection';
 import OurProductsSection from './components/home/OurProductsSection';
 import AboutUsSection from './components/home/AboutUsSection';
 import SectionDivider from './components/SectionDivider';
+import CTASection from './components/CTASection';
 
 export const metadata: Metadata = {
   title: 'GrannexFoods — Quality Food Ingredients & Commodities',
@@ -32,6 +33,7 @@ export default function Home() {
       <OurProductsSection />
       <SectionDivider />
       <AboutUsSection />
+      <CTASection text="Ready to place your first order?" buttonContent="View All Products" />
     </>
   );
 }

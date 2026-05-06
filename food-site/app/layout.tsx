@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import ScrollHeader from "./components/header/ScrollHeader";
-import CTASection from "./components/CTASection";
 import Footer from "./components/footer/Footer";
 
 const roboto = Roboto({
@@ -78,7 +77,6 @@ export default function RootLayout({
         <main className="pt-16 md:pt-20 grow">
           {children}
         </main>
-        <CTASection />
         <Footer />
         <Analytics />
         <SpeedInsights />
