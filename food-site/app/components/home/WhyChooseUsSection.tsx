@@ -1,18 +1,23 @@
+import Image from 'next/image';
+
 const features = [
   {
     title: 'Reliable Quality, Every Time',
     description:
       'We work with trusted producers and carefully selected sources to ensure consistent quality across every shipment.',
+    icon: '/quality-choose-us.svg',
   },
   {
     title: 'Flexible Supply Solutions',
     description:
       'From bulk orders to tailored sourcing, we adapt to your business needs with efficiency and reliability.',
+    icon: '/supply-choose-us.svg',
   },
   {
     title: 'Dedicated Partnership Approach',
     description:
       'A single point of contact guiding you from inquiry to delivery - making the entire process smooth and transparent.',
+    icon: '/partnership-choose-us.svg',
   },
 ];
 
@@ -37,8 +42,8 @@ export default function WhyChooseUsSection() {
               key={feature.title}
               className="border border-secondary rounded-2xl p-8 flex flex-col items-center text-center"
             >
-              <div className="w-16 h-16 rounded-full bg-pale flex items-center justify-center mb-6">
-                <div className="w-5 h-5 rounded-full bg-primary" />
+              <div className="h-14 flex items-center justify-center mb-2">
+                <Image src={feature.icon} alt="" width={48} height={48} className="object-contain" />
               </div>
               <h3 className="font-bold text-primary mb-3">{feature.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>

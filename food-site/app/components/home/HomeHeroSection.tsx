@@ -3,23 +3,21 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ContactPopup from '../ContactPopup';
 
 const slides = [
-  { src: '/HomeHero.png', alt: 'Quality food ingredients' },
-  { src: '/HomeHero.png', alt: 'Quality food ingredients' },
-  { src: '/HomeHero.png', alt: 'Quality food ingredients' },
-  { src: '/HomeHero.png', alt: 'Quality food ingredients' },
+  { src: '/corn-oil-hero.png', alt: 'Quality food ingredients' },
+  { src: '/ketchup-hero.png', alt: 'Quality food ingredients' },
+  { src: '/mustard-hero.png', alt: 'Quality food ingredients' },
+  { src: '/sunflower-oil-hero.png', alt: 'Quality food ingredients' },
 ];
 
 export default function HomeHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
 
   return (
     <>
-      <section className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[520px]">
+      <section className="w-full bg-primary">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 lg:h-[520px]">
 
           {/* Left: Content */}
           <div className="bg-primary flex flex-col justify-center">
@@ -37,12 +35,12 @@ export default function HomeHeroSection() {
               Reliable sourcing of oils, grains, and food ingredients - tailored to your business needs, with consistent quality and trusted supply chains.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button
-                onClick={() => setIsContactPopupOpen(true)}
+              <Link
+                href="/contact"
                 className="bg-white text-primary font-medium px-6 py-3 rounded-full hover:bg-green-light transition-colors"
               >
-                Place an Order
-              </button>
+                Contact us
+              </Link>
               <Link
                 href="/products"
                 className="border border-white text-white font-medium px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
@@ -90,7 +88,6 @@ export default function HomeHeroSection() {
         </div>
       </section>
 
-      <ContactPopup isOpen={isContactPopupOpen} onClose={() => setIsContactPopupOpen(false)} />
     </>
   );
 }
