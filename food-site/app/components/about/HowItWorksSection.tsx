@@ -1,16 +1,22 @@
-const steps = [
-  { number: '01', title: 'You place an order', description: 'By form, email, or phone' },
-  { number: '02', title: 'We pick & pack', description: 'Same-day for orders before 2pm' },
-  { number: '03', title: 'Dispatched nationwide', description: 'Direct to your premises' },
-  { number: '04', title: "You're stocked up", description: 'Ready to trade' },
+type Step = { type: 'step'; number: string; title: string; description: string };
+type Connector = { type: 'connector'; id: string };
+type Item = Step | Connector;
+
+const items: Item[] = [
+  { type: 'step', number: '01', title: 'You place an order', description: 'By form, email, or phone' },
+  { type: 'connector', id: 'c1' },
+  { type: 'step', number: '02', title: 'We pick & pack', description: 'Same-day for orders before 2pm' },
+  { type: 'connector', id: 'c2' },
+  { type: 'step', number: '03', title: 'Dispatched nationwide', description: 'Direct to your premises' },
+  { type: 'connector', id: 'c3' },
+  { type: 'step', number: '04', title: "You're stocked up", description: 'Ready to trade' },
 ];
 
 function StepConnector() {
   return (
-    <div className="hidden sm:flex items-center flex-shrink-0 pt-5 px-2">
-      <div className="w-8 h-[1px] bg-sage" />
+    <div className="flex-1 flex items-center min-w-0 max-w-16">
       <div className="w-2 h-2 rounded-full bg-sage flex-shrink-0" />
-      <div className="w-8 h-[1px] bg-sage" />
+      <div className="flex-1 h-[1px] bg-sage" />
     </div>
   );
 }
@@ -29,31 +35,32 @@ export default function HowItWorksSection() {
           From source to your door — simple, fast, transparent
         </h2>
 
-        {/* Desktop: horizontal steps with connectors as separate elements */}
-        <div className="hidden sm:flex items-start">
-          {steps.map((step, index) => (
-            <div key={step.number} className="flex items-start">
-              <div className="flex flex-col gap-2">
-                <span className="text-xs font-semibold text-green-medium">{step.number}</span>
-                <p className="font-bold text-primary text-sm">{step.title}</p>
-                <p className="text-sm text-green-medium">{step.description}</p>
+        {/* Desktop (lg+): steps take natural content width, connectors stretch to fill */}
+        <div className="hidden lg:flex items-center gap-8">
+          {items.map((item) =>
+            item.type === 'step' ? (
+              <div key={item.number} className="flex-shrink-0 flex flex-col gap-1">
+                <span className="text-xs font-semibold text-green-medium">{item.number}</span>
+                <p className="font-bold text-primary text-sm whitespace-nowrap">{item.title}</p>
+                <p className="text-sm text-green-medium whitespace-nowrap">{item.description}</p>
               </div>
-              {index < steps.length - 1 && <StepConnector />}
-            </div>
-          ))}
+            ) : (
+              <StepConnector key={item.id} />
+            )
+          )}
         </div>
 
-        {/* Mobile: vertical stacked steps */}
-        <div className="flex flex-col gap-6 sm:hidden">
-          {steps.map((step) => (
-            <div key={step.number} className="flex gap-4 items-start border-l-2 border-divider pl-4">
-              <div>
+        {/* Mobile/tablet (below lg): vertical stacked */}
+        <div className="flex flex-col gap-6 lg:hidden">
+          {items
+            .filter((item): item is Step => item.type === 'step')
+            .map((step) => (
+              <div key={step.number} className="border-l-2 border-divider pl-4">
                 <span className="text-xs font-semibold text-green-medium">{step.number}</span>
                 <p className="font-bold text-primary text-sm mt-1">{step.title}</p>
                 <p className="text-sm text-green-medium">{step.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,6 +13,13 @@ const slides = [
 
 export default function HomeHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <>
@@ -77,8 +84,8 @@ export default function HomeHeroSection() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`Go to slide ${index + 1}`}
-                  className={`w-2.5 h-2.5 rounded-full border-2 border-primary transition-all ${
-                    index === currentSlide ? 'bg-primary' : 'bg-transparent hover:bg-primary/30'
+                  className={`w-3 h-3 rounded-full border-2 border-white transition-all ${
+                    index === currentSlide ? 'bg-white' : 'bg-transparent hover:bg-white/40'
                   }`}
                 />
               ))}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import HomeHeroSection from './components/home/HomeHeroSection';
 import WhyChooseUsSection from './components/home/WhyChooseUsSection';
 import OurProductsSection from './components/home/OurProductsSection';
-import AboutUsSection from './components/home/AboutUsSection';
+import AboutUsHomeSection from './components/home/AboutUsHomeSection';
 import SectionDivider from './components/SectionDivider';
 import CTASection from './components/CTASection';
 
@@ -32,7 +32,7 @@ export default function Home() {
       <SectionDivider />
       <OurProductsSection />
       <SectionDivider />
-      <AboutUsSection />
+      <AboutUsHomeSection />
       <CTASection text="Ready to place your first order?" buttonContent="View All Products" />
     </>
   );

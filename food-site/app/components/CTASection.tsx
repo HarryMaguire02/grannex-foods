@@ -4,9 +4,10 @@ interface CTASectionProps {
   text: string;
   buttonContent: string;
   description?: string;
+  href?: string;
 }
 
-export default function CTASection({ text, buttonContent, description }: CTASectionProps) {
+export default function CTASection({ text, buttonContent, description, href = '/products' }: CTASectionProps) {
   return (
     <section className="bg-cta w-full">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12 min-h-[180px] flex flex-col sm:flex-row items-center sm:justify-between gap-6 py-10 sm:py-0">
@@ -19,7 +20,7 @@ export default function CTASection({ text, buttonContent, description }: CTASect
           )}
         </div>
         <Link
-          href="/products"
+          href={href}
           className="shrink-0 bg-primary text-white text-sm font-medium px-8 py-3 rounded-full hover:opacity-90 transition-opacity"
         >
           {buttonContent}

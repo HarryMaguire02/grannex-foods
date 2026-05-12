@@ -1,36 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import productsData from '@/app/data/products.json';
 
-const products = [
-  {
-    name: 'Sunflower Oil',
-    badge: 'Best Seller',
-    description:
-      'High-quality refined and crude sunflower oil, suitable for food production, retail, and industrial use.',
-    slug: 'sunflower-oil',
-  },
-  {
-    name: 'Rapeseed Oil',
-    badge: 'In Demand',
-    description:
-      'Versatile and cost-efficient oil with a balanced profile - ideal for large-scale food processing and distribution.',
-    slug: 'rapeseed-oil',
-  },
-  {
-    name: 'Mayonnaise',
-    badge: 'In Demand',
-    description:
-      'A wide selection of grains, seeds, and raw materials sourced globally to support diverse production needs.',
-    slug: 'mayonnaise',
-  },
-  {
-    name: 'Ketchup',
-    badge: 'In Demand',
-    description:
-      'High-quality tomato ketchup produced to consistent standards - available in bulk formats and suitable for retail, food service, and private label.',
-    slug: 'ketchup',
-  },
-];
+const products = productsData.filter((p) => p.featured);
 
 export default function OurProductsSection() {
   return (
@@ -54,7 +26,7 @@ export default function OurProductsSection() {
               {/* Image */}
               <div className="relative h-48">
                 <Image
-                  src="/OurProductsTemp.png"
+                  src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover"
