@@ -6,7 +6,7 @@ const stats = [
   { value: 'Extensive', label: 'Delivery Coverage' },
 ];
 
-export default function AboutUsSection() {
+export default function AboutUsHomeSection() {
   return (
     <section className="bg-white py-8 lg:py-12">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
@@ -37,7 +37,7 @@ export default function AboutUsSection() {
           {/* Right: Stats */}
           <div className="grid grid-cols-3 gap-4">
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-2">
+              <div key={stat.label} className="flex flex-col gap-2 items-center text-center">
                 <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-primary">{stat.value}</span>
                 <div className="w-8 h-[2px] bg-sage" />
                 <span className="text-xs text-sage">{stat.label}</span>

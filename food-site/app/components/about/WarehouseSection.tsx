@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const bullets = [
@@ -34,8 +35,15 @@ export default function WarehouseSection() {
         {/* Two columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-          {/* Left: Image placeholder */}
-          <div className="bg-secondary/30 rounded-2xl aspect-[4/3] w-full" />
+          {/* Left: Warehouse image */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full">
+            <Image
+              src="/warehouse.png"
+              alt="GrannexFoods warehouse"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           {/* Right: Content */}
           <div>

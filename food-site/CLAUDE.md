@@ -2,6 +2,27 @@
 
 This file provides guidance to Claude Code when working with code in this repository.
 
+## TODO
+
+### Pages to build
+- [X] `/products` — product listing page with hero, category filter tabs, 9-product grid, CTA to contact
+- [ ] `/products/[slug]` — product detail page (image, description, specs, CTA to contact)
+- [ ] Legal pages — `/privacy-policy`, `/cookie-policy`, `/terms-of-use`, `/purchase-conditions`, `/sales-conditions`, `/whistleblower-policy`
+
+### Polish
+- [ ] Animations — add scroll-triggered entrance animations (fade-in, slide-up) to sections across the site
+- [ ] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages
+- [ ] `PageHeroSection` image — review and improve how the hero image is displayed/cropped on various screen sizes
+
+### Infrastructure
+- [X] Upstash Redis — create new database for food-site (via Vercel Storage) and fill in `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` in `.env.local` and Vercel env vars
+- [ ] Test contact form end-to-end after Redis is connected
+
+### Content placeholders to replace with real data
+- [ ] `ContactFormSection` — `warehouse@grannexfoods.com`, phone numbers (`+30 698 461 4171`, `+381 63 107 7708`) need confirming with client
+- [ ] `HomeHero.png` — used as fallback in About and Contact heroes, replace with page-specific images when available
+- [ ] `sitemap.ts` — add `/products/[slug]` entries once detail pages are built
+
 ## Project Overview
 
 GrannexFoods B2B food ingredients and agricultural commodities website. Built with Next.js 16 (App Router), React 19, TypeScript 5, and Tailwind CSS 4. Sister site to grannex.com (grannex-nextjs), following the same architecture and patterns. Deployed on Vercel at `grannexfoods.com`.
@@ -27,8 +48,11 @@ No test framework is configured.
 - **Static Generation** for product detail pages via `generateStaticParams()` (to be added)
 
 ### Data Layer
-- Product catalog will be a static JSON file at `data/products.json`
-- No database; all filtering and pagination are client-side
+- Product catalog is a static JSON file at `app/data/products.json` (9 products)
+- Each product has: `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`
+- `category` values: `"cooking-oils"`, `"frying-oils"`, `"mayo-sauces"`, or `null` (shown only under All Products)
+- `featured: true` marks the 4 products shown in `OurProductsSection` on the home page
+- No database; all filtering is client-side
 
 ### API Routes
 - `app/api/contact/route.ts` — Order form endpoint
@@ -41,12 +65,13 @@ No test framework is configured.
 - `app/components/header/` — ScrollHeader, Header, Navigation, NavLink
 - `app/components/footer/` — Footer
 - `app/components/PageHeroSection.tsx` — Shared hero base used by About and Contact pages; accepts `label`, `heading` (ReactNode), `description`, `imageSrc`, `imageAlt` props
-- `app/components/CTASection.tsx` — Full-width CTA banner; accepts `text`, `buttonContent`, optional `description`; link is hardcoded to `/products`
+- `app/components/CTASection.tsx` — Full-width CTA banner; accepts `text`, `buttonContent`, optional `description`, optional `href` (defaults to `"/products"`); pass `href="/contact"` on the products page to avoid circular link
 - `app/components/SectionDivider.tsx` — Thin horizontal rule using `border-divider` color
 - `app/components/ContactPopup.tsx` — Stub, returns null (no longer triggered from header)
-- `app/components/home/` — HomeHeroSection, WhyChooseUsSection, OurProductsSection, AboutUsSection
-- `app/components/about/` — AboutHeroSection (thin wrapper around PageHeroSection), WarehouseSection, StatsSection, CommitmentsSection, HowItWorksSection
+- `app/components/home/` — HomeHeroSection, WhyChooseUsSection, OurProductsSection, AboutUsHomeSection
+- `app/components/about/` — WarehouseSection, StatsSection, CommitmentsSection, HowItWorksSection
 - `app/components/contact/` — ContactFormSection, HQSection, FAQSection
+- `app/components/products/` — ProductCard, ProductsGrid
 
 ### Routing
 - App Router with pages at: `/`, `/about`, `/contact`, `/products`, `/products/[slug]`
@@ -62,6 +87,13 @@ SectionDivider
 AboutUsSection
 CTASection
 — (Footer rendered by layout.tsx)
+```
+
+### Products Page Structure (`app/products/page.tsx`)
+```
+PageHeroSection   (label="Our Products", imageSrc="/ProductsHero.png")
+ProductsGrid      (client component — filter tabs + 4-col grid of all 9 products)
+CTASection        (href="/contact" — links to contact, not back to products)
 ```
 
 ### Contact Page Structure (`app/contact/page.tsx`)
@@ -111,10 +143,9 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - Example: `WhyChooseUsSection` with `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg`
 
 ### Shared Hero Component
-- `PageHeroSection` is the base for all page heroes (About, Contact, future pages)
+- `PageHeroSection` is the base for all page heroes (About, Contact, Products)
 - Layout: full-width `bg-primary`, desktop right-30% image, mobile stacked image, content left-aligned in `max-w-content` container
 - `heading` prop is `React.ReactNode` to support `<br />` in headings
-- `AboutHeroSection` is a thin wrapper that passes hardcoded props into `PageHeroSection`
 
 ### Google Maps Embed
 - Uses the free Google Maps Embed API (iframe) — no API key, no billing, no usage limits
@@ -157,7 +188,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - JSON-LD Organization schema in root layout
 - `sitemap.ts` and `robots.ts` at app root
 - `metadataBase` set to `https://grannexfoods.com`
-- Dynamic product pages added to sitemap once `data/products.json` exists
+- `/products` is in `sitemap.ts`; add `/products/[slug]` entries once detail pages are built
 
 ### Environment Variables
 - `NEXT_PUBLIC_SITE_URL` — Public site URL (https://grannexfoods.com)
@@ -176,9 +207,41 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `linkedin-green.svg`, `facebook-green.svg` — green icons (available for future use)
 - `HomeHero.png` — used in About and Contact page heroes; also home hero slideshow fallback
 - `corn-oil-hero.png`, `ketchup-hero.png`, `mustard-hero.png`, `sunflower-oil-hero.png` — home hero slideshow slides
-- `OurProductsTemp.png` — placeholder for product cards until real product images provided
+- `OurProductsTemp.png` — old placeholder, no longer used (real images now come from `public/products/`)
+- `ProductsHero.png` — hero image for the products page
+- `warehouse.png` — warehouse photo used in `WarehouseSection` (About page)
+- `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
+- `public/products/` — 9 product images: `01-sunflower-oil.png` through `09-mustard.png`
+
+### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
+Mirrors the agri-site `ProductCard` exactly. The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
+- **Image area**: `flex-1` at rest → `flex-3` on hover (shrinks to give room to info panel); uses `transition-all duration-500`
+- **Info panel**: `flex-none` at rest → `flex-1` on hover (expands); product name shifts `text-center` → `text-left`
+- **Description**: hidden via `opacity-0 max-h-0` → revealed with `opacity-100 group-hover:max-h-40 transition-all duration-500`; capped at `line-clamp-3`
+- **"Read more"**: `text-green-medium` label always present in the description block, revealed on hover
+- Props: `slug`, `name`, `image`, `description`
+
+### OurProductsSection Data Source
+`OurProductsSection` reads from `app/data/products.json` and filters by `featured === true`. The 4 featured products are: Sunflower Oil, Rape Oil, Ketchup, Mayonnaise. To change which products appear on the home page, update the `featured` field in `products.json`.
+
+### CommitmentsSection Icon Pattern
+Each card in `CommitmentsSection` has a fixed-height icon container (`h-32`) so all three cards are the same height regardless of each SVG's natural dimensions. Without this, SVGs of different heights cause card height mismatches. The icon is centered within `h-32 flex items-center justify-center`. Below the icon area, a text block with `p-6 text-center flex flex-col gap-3 flex-1`.
+
+### HowItWorksSection Steps Pattern
+Steps and connectors live in a single flat `items: Item[]` array (alternating `type: 'step'` and `type: 'connector'` entries). Desktop layout (`hidden lg:flex items-center gap-8`):
+- Step items: `flex-shrink-0 flex flex-col gap-1` with `whitespace-nowrap` on title and description — each step takes only the width its text needs
+- `StepConnector`: `flex-1 flex items-center min-w-0 max-w-16` — stretches to fill remaining space but capped so connectors stay visibly narrower than steps; dot (`w-2 h-2 rounded-full bg-sage`) at the LEFT end, line (`flex-1 h-[1px] bg-sage`) extends right (`•————`)
+- Mobile (`lg:hidden`): filter to step-only items, display as vertical list with `border-l-2 border-divider`
+
+### HomeHeroSection Slideshow
+- Auto-advances every 4 seconds via `useEffect` + `setInterval`; interval cleared on unmount
+- Manual dot clicks override the current slide immediately; the interval continues from its own cadence
+- Dot style: active = `bg-white border-white` (solid white), inactive = `bg-transparent border-2 border-white` (white ring); size `w-3 h-3`
+
+### AboutUsHomeSection Stats Centering
+The stats grid (`grid grid-cols-3`) sits in the right column of a 2-col layout. Each stat item uses `flex flex-col gap-2 items-center text-center` so the value, divider line, and label are horizontally centered within their grid cell.
 
 ### Card Layout Pattern
 For equal-height cards in a grid where content length varies:

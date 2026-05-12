@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "sunflower-oil",
+    "name": "Sunflower Oil",
+    "image": "/products/01-sunflower-oil.png",
+    "category": "cooking-oils",
+    "featured": true,
+    "badge": "Best Seller",
+    "description": "High-quality refined and crude sunflower oil, suitable for food production, retail, and industrial use."
+  },
+  {
+    "slug": "corn-oil",
+    "name": "Corn Oil",
+    "image": "/products/02-corn-oil.png",
+    "category": "cooking-oils",
+    "featured": false,
+    "badge": "In Demand",
+    "description": "Light and neutral cooking oil pressed from corn germ — a cost-efficient choice for large-scale food manufacturing."
+  },
+  {
+    "slug": "soybean-oil",
+    "name": "Soybean Oil",
+    "image": "/products/03-soybean-oil.png",
+    "category": "cooking-oils",
+    "featured": false,
+    "badge": "In Demand",
+    "description": "Versatile, widely-used vegetable oil with a mild flavour — suitable for frying, baking, and food processing at scale."
+  },
+  {
+    "slug": "palm-oil",
+    "name": "Palm Oil",
+    "image": "/products/04-palm-oil.png",
+    "category": "frying-oils",
+    "featured": false,
+    "badge": "In Demand",
+    "description": "High-stability frying oil with a high smoke point — ideal for industrial frying and large-scale food production."
+  },
+  {
+    "slug": "rape-oil",
+    "name": "Rape Oil",
+    "image": "/products/05-rape-oil.png",
+    "category": "cooking-oils",
+    "featured": true,
+    "badge": "In Demand",
+    "description": "Versatile and cost-efficient oil with a balanced profile — ideal for large-scale food processing and distribution."
+  },
+  {
+    "slug": "tapioca-starch",
+    "name": "Tapioca Starch",
+    "image": "/products/06-tapioca-starch.png",
+    "category": null,
+    "featured": false,
+    "badge": "In Demand",
+    "description": "Fine-grade tapioca starch for thickening, binding, and texturing — sourced for consistent quality across food production."
+  },
+  {
+    "slug": "ketchup",
+    "name": "Ketchup",
+    "image": "/products/07-ketchup.png",
+    "category": "mayo-sauces",
+    "featured": true,
+    "badge": "In Demand",
+    "description": "High-quality tomato ketchup produced to consistent standards — available in bulk formats for retail, food service, and private label."
+  },
+  {
+    "slug": "mayonnaise",
+    "name": "Mayonnaise",
+    "image": "/products/08-mayonnaise.png",
+    "category": "mayo-sauces",
+    "featured": true,
+    "badge": "In Demand",
+    "description": "Rich, creamy mayonnaise available in wholesale quantities — consistent texture and flavour for food service and retail."
+  },
+  {
+    "slug": "mustard",
+    "name": "Mustard",
+    "image": "/products/09-mustard.png",
+    "category": "mayo-sauces",
+    "featured": false,
+    "badge": "In Demand",
+    "description": "Classic yellow mustard in bulk supply — a reliable condiment for food service operations and private label production."
+  }
+]

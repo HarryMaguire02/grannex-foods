@@ -1,18 +1,23 @@
+import Image from 'next/image';
+
 const commitments = [
   {
     title: 'Uncompromising Quality',
     description:
       'Every product in our range is selected for purity, consistency, and performance. We only stock what we would confidently supply to our own business.',
+    icon: '/about-us-quality.svg',
   },
   {
     title: 'Operational Reliability',
     description:
-      'Your supply chain depends on us being dependable. We hold local UK stock and dispatch 24/7 so your business is never left waiting.',
+      'Your supply chain depends on us being dependable. We maintain ready stock and process orders efficiently so your business is never left waiting.',
+    icon: '/about-us-reliability.svg',
   },
   {
     title: 'Genuine Partnership',
     description:
       'We work closely with every client — from first enquiry to ongoing supply. You get a dedicated contact, not a call centre.',
+    icon: '/about-us-partnership.svg',
   },
 ];
 
@@ -34,10 +39,24 @@ export default function CommitmentsSection() {
           {commitments.map((item) => (
             <div
               key={item.title}
-              className="bg-secondary/30 rounded-2xl p-8 text-center border-b-2 border-primary flex flex-col"
+              className="bg-secondary/30 rounded-2xl border-b-4 border-primary flex flex-col overflow-hidden"
             >
-              <h3 className="font-bold text-primary mb-3">{item.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed flex-1">{item.description}</p>
+              {/* Icon area — fixed height so all cards align regardless of SVG natural size */}
+              <div className="flex items-center justify-center pt-8 px-8 h-32">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+
+              {/* Text area */}
+              <div className="p-6 text-center flex flex-col gap-3 flex-1">
+                <h3 className="font-bold text-primary">{item.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
