@@ -2,117 +2,1174 @@
   {
     "slug": "sunflower-oil",
     "name": "Sunflower Oil",
+    "subtitle": "Refined & Deodorized · Premium Grade",
     "image": "/products/01-sunflower-oil.png",
     "category": "cooking-oils",
     "featured": true,
     "badge": "Best Seller",
+    "tags": ["Cooking Oils", "Best Seller", "Global Dispatch"],
     "description": "100% pure refined & deodorized sunflower oil. Standard & High Oleic variants available. Ideal for frying, baking, and industrial use.",
+    "longDescription": "Grannex Foods Sunflower Oil is a 100% pure, refined and deodorized premium cooking oil — never blended with other oils. Produced using advanced hot pressing technology (seeds heated to 130–140°C), the oil delivers maximum extraction while preserving natural flavour and nutritional properties. Deodorized for a neutral taste and aroma, it is the ideal choice for high-heat frying, baking, catering, and industrial food production. Sourced from certified producers to guarantee consistent, top-tier quality for every batch. Available in Standard and High Oleic variants.",
     "smokePoint": "~230°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
+    "grade": "Refined & Deodorized, Premium Grade",
+    "productionMethod": "Hot pressing at 130–140°C",
+    "tasteAroma": "Neutral — fully refined and deodorized",
+    "variants": [
+      {
+        "name": "Standard Sunflower Oil",
+        "image": "/products/standard-sunflower-oil.png",
+        "badge": "Most Popular",
+        "description": "Ideal for everyday cooking, frying, sauteing, and baking. The go-to for restaurants, catering, and industrial food production.",
+        "oleic": "27.5%",
+        "linoleic": "60.2%",
+        "bestFor": "Frying · Catering · Baking · Industrial",
+        "smokePoint": "~230°C",
+        "shelfLife": "24 months"
+      },
+      {
+        "name": "High Oleic Sunflower Oil",
+        "image": "/products/oleic-sunflower-oil.png",
+        "badge": "Extended Shelf Life",
+        "description": "Higher oleic acid delivers enhanced stability at high temperatures and longer shelf life — perfect for commercial frying.",
+        "oleic": "81.1%",
+        "linoleic": "8.8%",
+        "bestFor": "High-temp Frying · Commercial · Long-term",
+        "smokePoint": "~240°C",
+        "shelfLife": "24 months"
+      }
+    ],
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3696 kJ / 899 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "99.9 g" },
+      { "nutrient": "— Saturated", "per100g": "≤12 g" },
+      { "nutrient": "— Monounsaturated", "per100g": "14–35 g" },
+      { "nutrient": "— Polyunsaturated", "per100g": "50–75 g" },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      {
+        "label": "Ingredients",
+        "value": "100% pure sunflower oil (own production)"
+      },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
+      { "label": "Smoke Point", "value": "~230°C" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
+      { "label": "Grade", "value": "Refined & Deodorized, Premium Grade" },
+      { "label": "Production method", "value": "Hot pressing — 130–140°C" },
+      { "label": "Shelf Life", "value": "24 months from production" },
+      {
+        "label": "Tast & Aroma",
+        "value": "Neutral - fully refined and deodorized"
+      }
+    ],
+    "features": [
+      {
+        "title": "100% Pure",
+        "description": "Never blended. Premium quality sunflower oil, consistent in every single batch."
+      },
+      {
+        "title": "High Smoke Point",
+        "description": "~230°C smoke point — perfect for frying, baking, and industrial applications."
+      },
+      {
+        "title": "Expertly Refined",
+        "description": "Processed under strict temperature controls for maximum stability and quality."
+      },
+      {
+        "title": "Neutral Taste",
+        "description": "Fully refined and deodorized for a clean, highly versatile flavour profile."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available from 0.5L bottles to 1000L IBC tanks, tailored for wholesale."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full seed-to-dispatch traceability."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Frying, sauteing, and everyday cooking at scale.",
+        "image": "/Restaurants-Catering.png"
+      },
+      {
+        "title": "Fast Food & Quick Service",
+        "description": "High-performance frying that maintains quality under repeated use.",
+        "image": "/FastFood-quickService.png"
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Snacks, ready meals, baked goods, and processed foods.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Packaged formats for commercial resale and widespread distribution.",
+        "image": "/retail-distribution.png"
+      },
+      {
+        "title": "Industrial Food Production",
+        "description": "Consistent bulk supply for large-scale manufactures",
+        "image": "/retail-distribution.png"
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bottles",
+        "sizeLabel": "0.5L – 5L",
+        "image": "/05L-5L.png",
+        "description": "Consumer & retail formats. Ready for distribution."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "corn-oil",
     "name": "Corn Oil",
+    "subtitle": "Refined & Deodorized · Premium Grade",
     "image": "/products/02-corn-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Cooking Oils", "In Demand", "Global Dispatch"],
     "description": "Refined & deodorized maize germ oil. Light, mild flavour. Rich in Vitamin E and polyunsaturates.",
+    "longDescription": "Grannex Foods Corn Oil is a 100% pure, refined and deodorized premium cooking oil extracted from high-quality maize germ. Never blended, it delivers a light, mild flavour with a high smoke point — ideal for deep frying, baking, grilling, and salad dressings. Rich in polyunsaturated fats and vitamin E, it is a versatile choice for professional kitchens, food manufacturers, and wholesale buyers who demand consistent, top-tier quality.",
     "smokePoint": "~230°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Ukraine, North Macedonia",
+    "grade": "Refined & Deodorized, Premium Grade",
+    "productionMethod": "Hot pressing at 130–140°C",
+    "tasteAroma": "Light, mild — fully refined and deodorized",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3700 kJ / 899 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "99.9 g" },
+      { "nutrient": "— Saturated", "per100g": "≤14 g" },
+      { "nutrient": "— Monounsaturated", "per100g": "28–30 g" },
+      { "nutrient": "— Polyunsaturated", "per100g": "55–58 g" },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      { "label": "Country of Origin", "value": "Ukraine, North Macedonia" },
+      { "label": "Grade", "value": "Refined & Deodorized, Premium Grade" },
+      { "label": "Smoke Point", "value": "~230°C" },
+      { "label": "Shelf Life", "value": "24 months" },
+      {
+        "label": "Fat Type",
+        "value": "Rich in polyunsaturated fats & Vitamin E"
+      },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "100% Pure",
+        "description": "Extracted from premium maize germ — never blended with other oils."
+      },
+      {
+        "title": "High Smoke Point",
+        "description": "~230°C — excellent for deep frying and high-heat cooking."
+      },
+      {
+        "title": "Light Flavour",
+        "description": "Mild taste that does not overpower dishes — highly versatile."
+      },
+      {
+        "title": "Rich in Vitamin E",
+        "description": "Natural source of Vitamin E for added nutritional value."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available in bottles, jerry cans, drums, and IBC tanks for wholesale."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full seed-to-dispatch traceability."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Frying, sauteing, stir-frying, and general cooking."
+      },
+      {
+        "title": "Fast Food & Quick Service",
+        "description": "High-performance frying oil with consistent results under heavy use."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Snacks, baked goods, dressings, and processed foods."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Packaged formats for commercial resale and consumer use."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bottles",
+        "sizeLabel": "0.5L – 5L",
+        "image": "/05L-5L.png",
+        "description": "Consumer & retail formats. Ready for distribution."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "soybean-oil",
     "name": "Soybean Oil",
+    "subtitle": "Refined & Deodorized · Vegetable Oil",
     "image": "/products/03-soybean-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Cooking Oils", "In Demand", "Global Dispatch"],
     "description": "100% pure vegetable oil. Cholesterol-free. Neutral taste. Ideal for industrial food production.",
+    "longDescription": "Grannex Foods Soybean Oil is a 100% pure, refined and deodorized premium vegetable oil, produced using hot pressing technology at 130–140°C to retain natural qualities. Cholesterol-free with a clean natural taste that enhances flavours in finished products, it is ideal for frying, baking, and large-scale industrial food production. Sourced from specially selected soybean seeds, it provides exceptional stability and consistent quality for every batch.",
     "smokePoint": "~232°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Ukraine, North Macedonia",
+    "grade": "Refined & Deodorized, Vegetable Oil",
+    "productionMethod": "Hot pressing at 130–140°C",
+    "tasteAroma": "Clean, neutral — cholesterol-free",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3700 kJ / 899 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "99.9 g" },
+      { "nutrient": "— Saturated", "per100g": "≤16 g" },
+      { "nutrient": "— Monounsaturated", "per100g": "22–24 g" },
+      { "nutrient": "— Polyunsaturated", "per100g": "57–61 g" },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      { "label": "Country of Origin", "value": "Ukraine, North Macedonia" },
+      { "label": "Also Known As", "value": "Vegetable Oil" },
+      { "label": "Production Method", "value": "Hot pressing at 130–140°C" },
+      { "label": "Smoke Point", "value": "~232°C" },
+      { "label": "Shelf Life", "value": "24 months" },
+      { "label": "Cholesterol", "value": "Cholesterol-free" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "100% Pure",
+        "description": "Cholesterol-free soybean oil — never blended."
+      },
+      {
+        "title": "High Smoke Point",
+        "description": "~232°C — ideal for deep frying and industrial applications."
+      },
+      {
+        "title": "Neutral Flavour",
+        "description": "Clean taste that enhances natural flavours in finished products."
+      },
+      {
+        "title": "Industrial Grade",
+        "description": "Consistent fatty acid profile for reliable industrial food production."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available from bottles to IBC tanks to suit any volume requirement."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full traceability guaranteed."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Industrial Food Production",
+        "description": "Snacks, ready meals, baked goods, and processed foods."
+      },
+      {
+        "title": "Restaurants & Catering",
+        "description": "Frying, sauteing, and all-purpose cooking."
+      },
+      {
+        "title": "Fast Food & Chip Shops",
+        "description": "Consistent high-performance frying oil."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Margarines, dressings, and emulsified products."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bottles",
+        "sizeLabel": "0.5L – 5L",
+        "image": "/05L-5L.png",
+        "description": "Consumer & retail formats. Ready for distribution."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "palm-oil",
     "name": "Palm Oil",
+    "subtitle": "Refined, Bleached & Deodorized (RBD) · Premium Grade",
     "image": "/products/04-palm-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Cooking Oils", "In Demand", "Global Dispatch"],
     "description": "RBD palm oil. Semi-solid. High oxidative stability. Essential for bakery, margarine, and confectionery.",
+    "longDescription": "Grannex Foods Palm Oil is a premium RBD (Refined, Bleached & Deodorized) palm oil — a semi-solid fat at room temperature widely used in food manufacturing, bakery, confectionery, and industrial frying. Prized for its high oxidative stability, long shelf life, and neutral flavour, it is an essential ingredient for margarine production, shortening, instant noodles, biscuits, and a wide range of processed food products. Available in bulk formats to meet industrial demand.",
     "smokePoint": "~235°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "RBD — Refined, Bleached & Deodorized",
+    "productionMethod": "RBD Refining Process",
+    "tasteAroma": "Neutral — fully refined and deodorized",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3700 kJ / 899 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "99.9 g" },
+      { "nutrient": "— Saturated", "per100g": "~48–50 g" },
+      { "nutrient": "— Monounsaturated", "per100g": "~37–39 g" },
+      { "nutrient": "— Polyunsaturated", "per100g": "~9–11 g" },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Grade", "value": "RBD — Refined, Bleached & Deodorized" },
+      { "label": "Smoke Point", "value": "~235°C" },
+      { "label": "Iodine Value", "value": "50–55 g I₂/100g" },
+      { "label": "Shelf Life", "value": "24 months" },
+      {
+        "label": "Form",
+        "value": "Semi-solid at room temp; liquid above ~36°C"
+      },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "High Stability",
+        "description": "Excellent oxidative stability — ideal for long-life products."
+      },
+      {
+        "title": "Versatile Form",
+        "description": "Semi-solid at room temp; fully liquid for frying above ~36°C."
+      },
+      {
+        "title": "Neutral Flavour",
+        "description": "RBD process ensures a clean, neutral taste and aroma."
+      },
+      {
+        "title": "Long Shelf Life",
+        "description": "24-month shelf life with proper storage conditions."
+      },
+      {
+        "title": "Industrial Grade",
+        "description": "Standard choice for bakery, confectionery, and margarine production."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full traceability on every batch."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Bakery & Confectionery",
+        "description": "Biscuits, cakes, pastries, and chocolate products."
+      },
+      {
+        "title": "Margarine & Shortening",
+        "description": "Core ingredient in margarine and vegetable fat production."
+      },
+      {
+        "title": "Industrial Frying",
+        "description": "Instant noodles, snacks, and deep-fried processed foods."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Emulsifiers, creamers, and ready meals."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bottles",
+        "sizeLabel": "0.5L – 5L",
+        "image": "/05L-5L.png",
+        "description": "Consumer & retail formats. Ready for distribution."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "rapeseed-oil",
     "name": "Rapeseed Oil",
+    "subtitle": "Refined & Deodorized · Lowest Saturated Fat",
     "image": "/products/05-rape-oil.png",
+    "relatedImage": "/products/related-rapeseed-oil.png",
     "category": "cooking-oils",
     "featured": true,
     "badge": "In Demand",
+    "tags": ["Cooking Oils", "In Demand", "Global Dispatch"],
     "description": "Lowest saturated fat. Rich in Omega-3. Light nutty flavour. Also known as Canola Oil.",
+    "longDescription": "Grannex Foods Rapeseed Oil is a 100% pure, refined and deodorized premium cooking oil — produced using hot pressing technology at 130–140°C for optimal extraction and natural flavour retention. Boasting the lowest saturated fat content among common cooking oils and a natural source of omega-3 fatty acids, it is the health-conscious professional choice for frying, baking, dressings, and a wide range of culinary applications. Sometimes referred to as Canola Oil in North America, our rapeseed oil is 100% pure and never blended.",
     "smokePoint": "~204°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "Refined & Deodorized, Lowest Saturated Fat",
+    "productionMethod": "Hot pressing at 130–140°C",
+    "tasteAroma": "Light, nutty — delicate and versatile",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3700 kJ / 899 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "99.9 g" },
+      { "nutrient": "— Saturated", "per100g": "~7 g (lowest of common oils)" },
+      { "nutrient": "— Monounsaturated", "per100g": "~61–64 g" },
+      {
+        "nutrient": "— Polyunsaturated",
+        "per100g": "~28–32 g (incl. Omega-3)"
+      },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Also Known As", "value": "Canola Oil (N. America)" },
+      { "label": "Production Method", "value": "Hot pressing at 130–140°C" },
+      { "label": "Smoke Point", "value": "~204°C" },
+      { "label": "Shelf Life", "value": "24 months" },
+      {
+        "label": "Key Nutrition",
+        "value": "Lowest saturated fat · Rich in Omega-3"
+      },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "Lowest Saturated Fat",
+        "description": "Healthiest fat profile of all common cooking oils."
+      },
+      {
+        "title": "Rich in Omega-3",
+        "description": "Natural source of alpha-linolenic acid (ALA) omega-3."
+      },
+      {
+        "title": "Light Nutty Flavour",
+        "description": "Delicate taste — enhances dishes without overpowering."
+      },
+      {
+        "title": "High Smoke Point",
+        "description": "~204°C — suitable for frying, baking, and roasting."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available in bottles, jerry cans, drums and IBC tanks."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full traceability guaranteed."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Frying, roasting, baking, and salad dressings."
+      },
+      {
+        "title": "Health-Focused Menus",
+        "description": "Low-saturated-fat option for health-conscious customers."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Dressings, sauces, marinades, and baked goods."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Premium consumer packaging for widespread resale."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bottles",
+        "sizeLabel": "0.5L – 5L",
+        "image": "/05L-5L.png",
+        "description": "Consumer & retail formats. Ready for distribution."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "olive-oil",
     "name": "Olive Oil",
+    "subtitle": "Extra Virgin & Refined · Premium Mediterranean Grade",
     "image": "/products/06-olive-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Cooking Oils", "In Demand", "Global Dispatch"],
     "description": "Extra Virgin (cold-pressed) & Refined grades. Mediterranean origin. Rich in monounsaturates.",
+    "longDescription": "Grannex Foods Olive Oil is a premium Mediterranean-origin oil available in Extra Virgin and Refined grades. Extra Virgin Olive Oil is cold-pressed from hand-selected olives, preserving natural polyphenols, rich flavour, and a golden-green hue — perfect for dressings, dips, and finishing dishes. Our Refined Olive Oil offers a lighter taste and higher smoke point for cooking, frying, and baking. Both grades meet the highest international food safety standards and are ideal for professional kitchens, gourmet food producers, and premium retail.",
     "smokePoint": "EVOO ~190°C / Refined ~240°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus / Mediterranean (Premium Sourced)",
+    "grade": "Extra Virgin (Cold Pressed) · Refined (Pure)",
+    "productionMethod": "Cold pressing (EVOO) / Refining (Pure)",
+    "tasteAroma": "Rich, fruity (EVOO) / Light, neutral (Refined)",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "3700 kJ / 884 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "100 g" },
+      { "nutrient": "— Saturated", "per100g": "~14 g" },
+      { "nutrient": "— Monounsaturated", "per100g": "~73–75 g" },
+      { "nutrient": "— Polyunsaturated", "per100g": "~10–12 g" },
+      { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      { "label": "Country of Origin", "value": "Cyprus / Mediterranean" },
+      {
+        "label": "Grades Available",
+        "value": "Extra Virgin (Cold Pressed) · Refined (Pure)"
+      },
+      { "label": "Acidity (EVOO)", "value": "≤0.8% free fatty acids" },
+      { "label": "Smoke Point", "value": "EVOO ~190°C / Refined ~240°C" },
+      { "label": "Shelf Life", "value": "24 months" },
+      {
+        "label": "Key Nutrition",
+        "value": "Rich in monounsaturated fats · High in Vitamin E & polyphenols"
+      },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "Extra Virgin Grade",
+        "description": "Cold-pressed — full natural polyphenols, flavour, and aroma retained."
+      },
+      {
+        "title": "Premium Refined Grade",
+        "description": "Higher smoke point for versatile cooking applications."
+      },
+      {
+        "title": "Heart-Healthy",
+        "description": "Rich in monounsaturated oleic acid — supports cardiovascular health."
+      },
+      {
+        "title": "Authentic Origin",
+        "description": "Sourced from certified Mediterranean olive producers."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available in glass bottles, tins, jerry cans, and bulk drums."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified with full traceability."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Fine Dining & Restaurants",
+        "description": "Dressings, dips, finishing oil, and premium cooking."
+      },
+      {
+        "title": "Retail & Gourmet Stores",
+        "description": "Premium bottled product for health-conscious consumers."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Antipasti, dressings, marinades, and premium sauces."
+      },
+      {
+        "title": "Export & Wholesale",
+        "description": "Bulk supply for international distributors and importers."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Glass Bottles",
+        "sizeLabel": "250ml – 750ml",
+        "image": "/05L-5L.png",
+        "description": "Premium retail formats for consumer and gourmet market."
+      },
+      {
+        "format": "Jerry Cans",
+        "sizeLabel": "10L – 20L",
+        "image": "/10L-20L.png",
+        "description": "Mid-volume for catering & food service."
+      },
+      {
+        "format": "Drums",
+        "sizeLabel": "25L – 200L",
+        "image": "/25L-200L.png",
+        "description": "Wholesale bulk supply for commercial use."
+      },
+      {
+        "format": "IBC Tank",
+        "sizeLabel": "1000L",
+        "image": "/1000L.png",
+        "description": "Maximum volume for large operations."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "ketchup",
     "name": "Ketchup",
+    "subtitle": "Premium Tomato Ketchup · 28.5% Tomato Paste · No Artificial Additives",
     "image": "/products/07-ketchup.png",
+    "relatedImage": "/products/related-ketchup.png",
     "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
+    "tags": ["Condiments & Sauces", "In Demand", "Global Dispatch"],
     "description": "28.5% tomato paste. 100% natural. No artificial additives. Rich, smooth, balanced tomato flavour.",
+    "longDescription": "Grannex Foods Tomato Ketchup is crafted from 100% natural ingredients — sun-ripened, juicy tomatoes processed with a 28.5% tomato paste content for a rich, authentic flavour and smooth, velvety texture. Free from artificial flavours, colours, and preservatives, it is the premium choice for professional kitchens, fast food operations, food manufacturers, and wholesale buyers who demand a consistent, high-quality condiment. Perfect for burgers, fries, pizzas, grilled meats, and a vast range of culinary applications.",
     "shelfLife": "12 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "Premium Tomato Ketchup",
+    "tasteAroma": "Rich, smooth, perfectly balanced sweet-tangy flavour",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "450 kJ / 107 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "0.1 g" },
+      { "nutrient": "— Saturated", "per100g": "0.0 g" },
+      { "nutrient": "Carbohydrates", "per100g": "25 g" },
+      { "nutrient": "— of which Sugar", "per100g": "22 g" },
+      { "nutrient": "Protein", "per100g": "1.5 g" },
+      { "nutrient": "Salt", "per100g": "1.8 g" },
+      { "nutrient": "Lycopene", "per100g": "High — from natural tomatoes" }
+    ],
+    "specifications": [
+      { "label": "Key Ingredient", "value": "28.5% tomato paste content" },
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      {
+        "label": "Additives",
+        "value": "No artificial additives, colours, or preservatives"
+      },
+      {
+        "label": "Taste Profile",
+        "value": "Rich, smooth, perfectly balanced sweet-tangy flavour"
+      },
+      { "label": "Shelf Life", "value": "12 months" },
+      { "label": "Suitable For", "value": "Vegetarians & Vegans" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
+      {
+        "label": "Storage",
+        "value": "Store in a cool, dry place. Refrigerate after opening."
+      }
+    ],
+    "features": [
+      {
+        "title": "28.5% Tomato Paste",
+        "description": "Rich, authentic tomato flavour with smooth velvety texture."
+      },
+      {
+        "title": "100% Natural",
+        "description": "No artificial additives, preservatives, or colourings."
+      },
+      {
+        "title": "Consistent Quality",
+        "description": "Certified production ensures every batch meets the same high standard."
+      },
+      {
+        "title": "Versatile Use",
+        "description": "Burgers, fries, pizzas, dips, sandwiches, and marinades."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Available in sachets, bottles, buckets, and catering packs."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full traceability from tomato to jar."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Table condiment, burger sauce, and cooking ingredient."
+      },
+      {
+        "title": "Fast Food & Chip Shops",
+        "description": "Dipping sauce and accompaniment for fried foods."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Base sauce for ready meals, pizzas, and processed foods."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Consumer packaging for supermarkets and convenience stores."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Plastic Tube",
+        "sizeLabel": "850g",
+        "image": "/05L-5L.png",
+        "description": "Retail & catering formats. Ready for distribution."
+      },
+      {
+        "format": "Bucket",
+        "sizeLabel": "5 kg",
+        "image": "/25L-200L.png",
+        "description": "Food service bulk supply."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "mayonnaise",
     "name": "Mayonnaise Sauce",
+    "subtitle": "Egg-Free · 67% & 30% Fat Variants · Premium Quality",
     "image": "/products/08-mayonnaise.png",
+    "relatedImage": "/products/related-mayonnaise.png",
     "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
+    "tags": ["Condiments & Sauces", "In Demand", "Global Dispatch"],
     "description": "Egg-free. 67% Classic & 30% Light variants. Sunflower oil base. Suitable for vegetarians.",
+    "longDescription": "Grannex Foods Mayonnaise Sauce is a premium egg-free sauce made with 100% pure sunflower oil produced in our own facilities. Available in two variants — 67% fat Classic for a rich, creamy texture, and 30% fat Light for a healthier alternative — both are egg-free, making them suitable for vegetarians and those with egg allergies. Free from artificial additives and preservatives, our mayonnaise delivers consistent neutral taste and aroma, ideal for commercial kitchens, restaurants, food manufacturers, and wholesale distribution.",
     "shelfLife": "6–12 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "Egg-Free · Premium Quality",
+    "tasteAroma": "Neutral, creamy, and versatile",
+    "nutrition": [
+      { "nutrient": "Energy (Classic)", "per100g": "2680 kJ / 648 kcal" },
+      { "nutrient": "Energy (Light)", "per100g": "1210 kJ / 293 kcal" },
+      { "nutrient": "Fat (Classic)", "per100g": "67 g" },
+      { "nutrient": "Fat (Light)", "per100g": "30 g" },
+      { "nutrient": "Carbohydrates", "per100g": "~4–6 g" },
+      { "nutrient": "Protein", "per100g": "~0.5–1 g" },
+      { "nutrient": "Salt", "per100g": "~1.2 g" },
+      { "nutrient": "Cholesterol", "per100g": "0 mg (egg-free)" }
+    ],
+    "specifications": [
+      { "label": "Variants", "value": "Classic 67% fat · Light 30% fat" },
+      {
+        "label": "Base Oil",
+        "value": "100% pure sunflower oil (own production)"
+      },
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      {
+        "label": "Egg Content",
+        "value": "Egg-free — suitable for vegetarians & egg allergy sufferers"
+      },
+      {
+        "label": "Additives",
+        "value": "No artificial additives or preservatives"
+      },
+      {
+        "label": "Shelf Life",
+        "value": "6–12 months (sealed) / Refrigerate after opening"
+      },
+      { "label": "Taste Profile", "value": "Neutral, creamy, and versatile" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "Egg-Free Formula",
+        "description": "Suitable for vegetarians and those with egg allergies."
+      },
+      {
+        "title": "Two Fat Choices",
+        "description": "67% Classic for richness, 30% Light for a healthier profile."
+      },
+      {
+        "title": "Sunflower Oil Base",
+        "description": "Made with our own premium sunflower oil for guaranteed quality."
+      },
+      {
+        "title": "No Artificial Adds",
+        "description": "Clean label — no artificial additives or preservatives."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Jars, bottles, and catering buckets available."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Full traceability guaranteed."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Sandwiches, burgers, salads, and base for other sauces."
+      },
+      {
+        "title": "Fast Food Production",
+        "description": "Burgers, wraps, and ready-to-eat products."
+      },
+      {
+        "title": "Industrial Food Production",
+        "description": "Ready meals, sauces, dressings, and processed foods."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Retail jars and bulk packs for supermarkets and wholesalers."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Jar / Bottle",
+        "sizeLabel": "430g – 850g",
+        "image": "/05L-5L.png",
+        "description": "Retail & catering formats for consumer use."
+      },
+      {
+        "format": "Plastic Tube",
+        "sizeLabel": "950g",
+        "image": "/05L-5L.png",
+        "description": "Food service format."
+      },
+      {
+        "format": "Bucket",
+        "sizeLabel": "5 L",
+        "image": "/25L-200L.png",
+        "description": "Bulk food service supply."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "mustard",
     "name": "Mustard",
+    "subtitle": "Whole Grain · Dijon · Hot · No Artificial Additives",
     "image": "/products/09-mustard.png",
     "category": "condiments-sauces",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Condiments & Sauces", "In Demand", "Global Dispatch"],
     "description": "Whole Grain, Dijon & Hot variants. Own raw materials. No artificial additives. Vegan.",
+    "longDescription": "Grannex Foods Mustard is crafted from the finest mustard seeds using proven recipes that deliver authentic flavour, superior texture, and consistent quality. Available in three distinct varieties — Whole Grain, Dijon, and Hot — each is produced in our own certified facilities and is entirely free from artificial additives and preservatives. From creamy Dijon for gourmet sauces to rustic whole grain for charcuterie boards, our mustard range serves professional kitchens, food manufacturers, and wholesale buyers across the UK and internationally.",
     "shelfLife": "12 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "Whole Grain · Dijon · Hot",
+    "tasteAroma": "Whole Grain: rustic & tangy · Dijon: creamy & smooth · Hot: spicy",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "615 kJ / 147 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "8 g" },
+      { "nutrient": "— Saturated", "per100g": "1.5 g" },
+      { "nutrient": "Carbohydrates", "per100g": "5 g" },
+      { "nutrient": "— of which Sugar", "per100g": "3 g" },
+      { "nutrient": "Protein", "per100g": "3.4 g" },
+      { "nutrient": "Salt", "per100g": "~1.2 g" }
+    ],
+    "specifications": [
+      { "label": "Variants", "value": "Whole Grain · Dijon · Hot Mustard" },
+      {
+        "label": "Key Ingredients",
+        "value": "High-quality mustard seeds — own raw materials"
+      },
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      {
+        "label": "Additives",
+        "value": "No artificial additives or preservatives"
+      },
+      {
+        "label": "Taste Profile",
+        "value": "Whole Grain: rustic & tangy · Dijon: creamy & smooth · Hot: spicy"
+      },
+      {
+        "label": "Shelf Life",
+        "value": "12 months sealed / Refrigerate after opening"
+      },
+      { "label": "Suitable For", "value": "Vegetarians & Vegans" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "Three Varieties",
+        "description": "Whole Grain, Dijon, and Hot — for every culinary application."
+      },
+      {
+        "title": "Own Raw Materials",
+        "description": "Mustard seeds sourced and processed in our own certified facilities."
+      },
+      {
+        "title": "100% Natural",
+        "description": "No artificial additives, colourings, or preservatives."
+      },
+      {
+        "title": "Authentic Flavour",
+        "description": "Time-proven recipes delivering consistent, genuine mustard taste."
+      },
+      {
+        "title": "Bulk Packaging",
+        "description": "Jars, bottles, and catering buckets available for all volume needs."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Seed-to-jar traceability."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Restaurants & Catering",
+        "description": "Sandwich spread, sauce base, and marinade ingredient."
+      },
+      {
+        "title": "Deli & Charcuterie",
+        "description": "Whole grain mustard for premium boards and gourmet menus."
+      },
+      {
+        "title": "Fast Food & Takeaways",
+        "description": "Hot dogs, burgers, wraps, and sandwiches."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Consumer jars for supermarkets and specialty stores."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Plastic Tube",
+        "sizeLabel": "100g",
+        "image": "/05L-5L.png",
+        "description": "Retail format for consumer use."
+      },
+      {
+        "format": "Bucket",
+        "sizeLabel": "5 kg",
+        "image": "/25L-200L.png",
+        "description": "Food service bulk supply."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   },
   {
     "slug": "sugar",
     "name": "Sugar",
+    "subtitle": "White Refined · Raw Cane · Premium Grade",
     "image": "/products/10-sugar.png",
     "category": "condiments-sauces",
     "featured": false,
     "badge": "In Demand",
+    "tags": ["Condiments & Sauces", "In Demand", "Global Dispatch"],
     "description": "White Crystal, Raw Cane & Icing Sugar. ≥99.8% purity. Bulk supply for manufacturing & retail.",
+    "longDescription": "Grannex Foods Sugar is a premium, food-grade refined sugar available in White Crystal and Raw Cane variants, sourced from certified producers and supplied in bulk to professional food manufacturers, bakeries, beverage producers, confectionery companies, and wholesale distributors. Our sugar meets the strictest international food safety standards, delivering consistent purity, crystal quality, and reliable bulk supply for every production requirement.",
     "shelfLife": "36 months",
-    "certifications": ["HACCP", "FSSC 22000"]
+    "certifications": ["HACCP", "FSSC 22000"],
+    "origin": "Cyprus (Premium Sourced)",
+    "grade": "White Refined · Raw Cane · Premium Grade",
+    "nutrition": [
+      { "nutrient": "Energy", "per100g": "1700 kJ / 400 kcal" },
+      { "nutrient": "Fat (total)", "per100g": "0.0 g" },
+      { "nutrient": "— Saturated", "per100g": "0.0 g" },
+      { "nutrient": "Carbohydrates", "per100g": "100 g" },
+      { "nutrient": "— of which Sugar", "per100g": "100 g" },
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" },
+      { "nutrient": "Fibre", "per100g": "0.0 g" }
+    ],
+    "specifications": [
+      {
+        "label": "Variants",
+        "value": "White Crystal Sugar · Raw Cane Sugar · Icing Sugar"
+      },
+      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Purity (White)", "value": "≥99.8% sucrose" },
+      { "label": "Polarisation", "value": "≥99.8° Z" },
+      { "label": "Moisture", "value": "≤0.06%" },
+      { "label": "Shelf Life", "value": "36 months (sealed, dry storage)" },
+      { "label": "Additives", "value": "None — 100% pure sugar" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      }
+    ],
+    "features": [
+      {
+        "title": "≥99.8% Purity",
+        "description": "Premium food-grade white sugar — consistent crystal quality."
+      },
+      {
+        "title": "Multiple Variants",
+        "description": "Crystal White, Raw Cane, and Icing Sugar available."
+      },
+      {
+        "title": "36-Month Shelf Life",
+        "description": "Extended shelf life with correct sealed, dry storage."
+      },
+      {
+        "title": "Bulk Supply",
+        "description": "Available in 1 kg consumer bags to 50 kg sacks and big bags."
+      },
+      {
+        "title": "Traceability",
+        "description": "Full seed-to-pack traceability for every consignment."
+      },
+      {
+        "title": "Certified Quality",
+        "description": "HACCP & FSSC 22000 certified. Meets EU food-grade standards."
+      }
+    ],
+    "applications": [
+      {
+        "title": "Bakery & Confectionery",
+        "description": "Cakes, biscuits, pastries, chocolates, and sweets."
+      },
+      {
+        "title": "Beverage Production",
+        "description": "Soft drinks, juices, syrups, and energy drinks."
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Jams, sauces, ketchup, preserves, and ready meals."
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Consumer packs for supermarkets and wholesale distributors."
+      }
+    ],
+    "packaging": [
+      {
+        "format": "Bags",
+        "sizeLabel": "1–5 kg",
+        "image": "/25L-200L.png",
+        "description": "Retail & catering formats for consumer use."
+      },
+      {
+        "format": "Sacks",
+        "sizeLabel": "25–50 kg",
+        "image": "/25L-200L.png",
+        "description": "Industrial & wholesale bulk supply."
+      },
+      {
+        "format": "Big Bag",
+        "sizeLabel": "1,000 kg",
+        "image": "/1000L.png",
+        "description": "Large-scale industrial supply."
+      }
+    ],
+    "relatedSlugs": ["ketchup", "mayonnaise", "rapeseed-oil"]
   }
 ]

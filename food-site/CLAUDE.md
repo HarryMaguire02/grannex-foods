@@ -5,27 +5,39 @@ This file provides guidance to Claude Code when working with code in this reposi
 ## TODO
 
 ### Pages to build
-- [X] `/products` — product listing page with hero, category filter tabs, 9-product grid, CTA to contact
-- [ ] `/products/[slug]` — product detail page (image, description, specs, CTA to contact)
+- [X] `/products` — product listing page with hero, category filter tabs, 10-product grid, CTA to contact
+- [X] `/products/[slug]` — product detail page (fully built with all sections)
 - [ ] Legal pages — `/privacy-policy`, `/cookie-policy`, `/terms-of-use`, `/purchase-conditions`, `/sales-conditions`, `/whistleblower-policy`
 
 ### Polish
 - [ ] Animations — add scroll-triggered entrance animations (fade-in, slide-up) to sections across the site
-- [ ] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages
+- [ ] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages, including product detail page
 - [ ] `PageHeroSection` image — review and improve how the hero image is displayed/cropped on various screen sizes
+- [ ] Product detail page mobile sidebar — sidebar is hidden on mobile; consider adding a mobile product picker (dropdown or drawer)
 
 ### Infrastructure
 - [X] Upstash Redis — create new database for food-site (via Vercel Storage) and fill in `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` in `.env.local` and Vercel env vars
 - [ ] Test contact form end-to-end after Redis is connected
+- [ ] Test `ProductOrderSection` form on product detail pages end-to-end — API compatibility verified, `phone` placeholder fixed to pass length validation
 
 ### Content placeholders to replace with real data
 - [X] `ContactFormSection` — contact details confirmed: email `vsaranovic@grannex.com`, mobile `+381 631 077 109` (Vlado Šaranović)
 - [ ] `HomeHero.png` — used as fallback in About and Contact heroes, replace with page-specific images when available
-- [ ] `sitemap.ts` — add `/products/[slug]` entries once detail pages are built
+- [X] `sitemap.ts` — `/products/[slug]` entries added for all 10 products
+- [ ] `public/products/06-olive-oil.png` — image not yet provided by client
+- [ ] `public/products/10-sugar.png` — image not yet provided by client
+- [ ] Populate full rich data for Olive Oil in `products.json` (currently stub only — waiting on client Excel sheet)
+- [ ] Variant images for other products (currently only Sunflower Oil has `standard-sunflower-oil.png` and `oleic-sunflower-oil.png`)
+- [ ] Packaging images reused across all products — replace with product-specific images when available
+- [ ] Application images — currently only Sunflower Oil has 5 application images; other products use no images (text-only cards)
+- [X] Related product images — `related-rapeseed-oil.png`, `related-ketchup.png`, `related-mayonnaise.png` added; all products now share the same 3 related products
 
 ## Project Overview
 
 GrannexFoods B2B food ingredients and agricultural commodities website. Built with Next.js 16 (App Router), React 19, TypeScript 5, and Tailwind CSS 4. Sister site to grannex.com (grannex-nextjs), following the same architecture and patterns. Deployed on Vercel at `grannexfoods.com`.
+
+**Company contact:** Vlado Šaranović — `vsaranovic@grannex.com` — `+381 631 077 109`
+**Director:** Stelios Mavrojannis | **Company:** Grannex International All Rights Reserved
 
 ## Commands
 
@@ -44,18 +56,20 @@ No test framework is configured.
 
 ### Rendering Strategy
 - **Server Components** for layouts, pages, and metadata generation
-- **Client Components** (`"use client"`) for interactive UI: header (scroll/mobile), home hero slideshow
-- **Static Generation** for product detail pages via `generateStaticParams()` (to be added)
+- **Client Components** (`"use client"`) for interactive UI: header (scroll/mobile), home hero slideshow, ProductsGrid filter, ProductOrderSection form
+- **Static Generation** for product detail pages via `generateStaticParams()` — all 10 slugs pre-rendered at build time
 
 ### Data Layer
 - Product catalog is a static JSON file at `app/data/products.json` (10 products)
-- Each product has: `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `shelfLife`, `certifications`
+- **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils), `shelfLife`, `certifications`
+- **Rich fields** (detail page, all optional): `subtitle`, `tags`, `longDescription`, `origin`, `grade`, `productionMethod`, `tasteAroma`, `variants[]`, `nutrition[]`, `specifications[]`, `features[]`, `applications[]`, `packaging[]`, `relatedSlugs[]`
 - `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
-- `featured: true` marks the 4 products shown in `OurProductsSection` on the home page
+- `featured: true` marks the 4 products shown in `OurProductsSection` on the home page (Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce)
+- All rich fields are optional — detail page sections are conditionally rendered; missing fields simply hide the section
 - No database; all filtering is client-side
 
 ### API Routes
-- `app/api/contact/route.ts` — Order form endpoint
+- `app/api/contact/route.ts` — Order form endpoint (used by both `ContactFormSection` and `ProductOrderSection`)
   - Required fields: `companyName`, `contactName`, `email`, `phone`
   - Optional fields: `product`, `quantity`, `deliveryDate`, `deliveryAddress`, `notes`
   - Field validation, rate limiting via Upstash Redis (3 req/hour/IP), email via Resend
@@ -64,7 +78,7 @@ No test framework is configured.
 ### Component Organization
 - `app/components/header/` — ScrollHeader, Header, Navigation, NavLink
 - `app/components/footer/` — Footer
-- `app/components/PageHeroSection.tsx` — Shared hero base used by About and Contact pages; accepts `label`, `heading` (ReactNode), `description`, `imageSrc`, `imageAlt` props
+- `app/components/PageHeroSection.tsx` — Shared hero base used by About, Contact, Products pages; accepts `label`, `heading` (ReactNode), `description`, `imageSrc`, `imageAlt` props
 - `app/components/CTASection.tsx` — Full-width CTA banner; accepts `text`, `buttonContent`, optional `description`, optional `href` (defaults to `"/products"`); pass `href="/contact"` on the products page to avoid circular link
 - `app/components/SectionDivider.tsx` — Thin horizontal rule using `border-divider` color
 - `app/components/ContactPopup.tsx` — Stub, returns null (no longer triggered from header)
@@ -72,6 +86,44 @@ No test framework is configured.
 - `app/components/about/` — WarehouseSection, StatsSection, CommitmentsSection, HowItWorksSection
 - `app/components/contact/` — ContactFormSection, HQSection, FAQSection
 - `app/components/products/` — ProductCard, ProductsGrid
+- `app/components/products/detail/` — All product detail page sections (see below)
+
+### Product Detail Components (`app/components/products/detail/`)
+- `ProductHeroSection` — breadcrumb + sidebar (all products list, active highlighted) + product image + info card (tags, name, subtitle, green separator line, description, 2×2 spec grid, action buttons)
+- `ProductVariantsSection` — variant cards with 80×80 image, name, badge, description, stats row (oleic/linoleic/bestFor), order button; `bg-secondary/20 border-y border-secondary`; first card `border-2 border-primary`, second `border-2 border-secondary`
+- `ProductFeaturesSection` — 3-col feature grid with bullet dots and `border-b border-sage` dividers; `bg-white`
+- `ProductApplicationsSection` — dynamic column grid (1 col mobile → 2 col tablet → N col desktop, max 6); image on top `aspect-[308/84]`, title + description below; `bg-secondary/20 border-y border-secondary`; supports optional `image` field per application entry
+- `ProductNutritionSection` — side-by-side nutrition + specifications tables; both use matching `border-[#D4C9B0] bg-[#F5F0E8]` styling with `bg-[#EDE8DC]/50` alternating rows; `bg-white`
+- `ProductPackagingSection` — cards with `aspect-[11/3]` image area, size badge overlaid bottom-left, format name + description below; `bg-secondary/20 border-y border-secondary`
+- `ProductCertificationsSection` — hardcoded 4 cert cards (HACCP, FSSC 22000, Full Traceability, ISO 22000); `bg-white`; cards use `bg-secondary/20 border-secondary`
+- `ProductOrderSection` — mini order form pre-filled with product name, submits to `/api/contact`; "What happens next" timeline panel on the right; `id="order"` anchor for scroll-from-hero buttons; `bg-white`
+- `RelatedProductsSection` — uses `product.relatedSlugs` to pick 3 products; falls back to same-category products; card has `aspect-[400/84]` image with "Ready Stock" badge overlay + "Order this product" link; uses `relatedImage` field if present, falls back to `image`; `bg-secondary/20 border-t border-secondary`
+
+### Product Detail Page Structure (`app/products/[slug]/page.tsx`)
+```
+ProductHeroSection          ← always shown
+ProductVariantsSection      ← only if product.variants exists and non-empty
+ProductFeaturesSection      ← only if product.features exists and non-empty
+ProductApplicationsSection  ← only if product.applications exists and non-empty
+ProductNutritionSection     ← only if product.nutrition or product.specifications exists
+ProductPackagingSection     ← only if product.packaging exists and non-empty
+ProductCertificationsSection← always shown
+ProductOrderSection         ← always shown (id="order")
+RelatedProductsSection      ← always shown
+CTASection                  ← always shown (href="/contact")
+```
+
+### ProductHeroSection Layout Details
+```
+[sidebar 208px] | [image 400px] | [info card flex-1]
+```
+- Sidebar: `border-2 border-secondary`, items `bg-secondary/60` inactive / `bg-primary text-white` active / `hover:bg-green-light/40`
+- Info card: `border border-secondary rounded-2xl p-6`
+- Tags: first tag `bg-primary text-white`, subsequent tags `bg-pale text-primary`
+- Separator line: `w-14 h-[3px] bg-primary` between subtitle and description
+- Spec grid: no outer border — internal `border-r border-secondary` and `border-b border-secondary` dividers only
+- Buttons: "Place an Order" (`bg-primary`, `rounded-full`) and "Request a Quote" (`border-2 border-primary/30`, `rounded-full`) — both `<a href="#order">` scroll anchors
+- Mobile: sidebar hidden; image stacks above info content
 
 ### Routing
 - App Router with pages at: `/`, `/about`, `/contact`, `/products`, `/products/[slug]`
@@ -92,7 +144,7 @@ CTASection
 ### Products Page Structure (`app/products/page.tsx`)
 ```
 PageHeroSection   (label="Our Products", imageSrc="/ProductsHero.png")
-ProductsGrid      (client component — filter tabs + 4-col grid of all 9 products)
+ProductsGrid      (client component — filter tabs + 4-col grid of all 10 products)
 CTASection        (href="/contact" — links to contact, not back to products)
 ```
 
@@ -155,14 +207,15 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - Tailwind CSS v4 with custom theme in `app/globals.css`
 - Key colors:
   - `primary` — #315748 (dark green, main brand color)
-  - `secondary` — #EFD8B6 (beige/gold, used in footer border, hero accent line, product card bg)
+  - `secondary` — #EFD8B6 (beige/gold, used in sidebar borders, info card border, product card bg)
   - `cta` — #4A7C5E (CTA section background)
   - `gold` — #B99662
   - `green-light` — #AAD6C5
   - `green-medium` — #799B8D
-  - `pale` — #E8F3EC (icon backgrounds, badges)
-  - `sage` — #8AB89A (stat separator lines, FAQ dividers)
+  - `pale` — #E8F3EC (icon backgrounds, tag badges, hover states)
+  - `sage` — #8AB89A (stat separator lines, FAQ dividers, feature section dividers)
   - `divider` — #D4C9B0 (SectionDivider horizontal rule)
+- Ad-hoc hex values used in product detail: `#1A1A18` (variants section heading), `#8C7B5E` (second variant badge text/border), `#6B6B64` (variant description text)
 - Custom max-width: `max-w-content` (1240px)
 - Custom breakpoint: `xs` (500px)
 - Font: Roboto (300, 400, 500, 700) loaded via `next/font`
@@ -182,13 +235,14 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - Stacked single-column layouts on mobile, multi-column on larger screens
 - Font sizes, spacing, and component heights must scale — never rely solely on fixed px values
 - CTA section: stacks vertically on mobile with centered text and button; horizontal on `sm+`
+- Product detail sidebar: `hidden lg:flex` — not visible on mobile
 
 ### SEO
 - Per-page metadata in each `page.tsx`
 - JSON-LD Organization schema in root layout
 - `sitemap.ts` and `robots.ts` at app root
 - `metadataBase` set to `https://grannexfoods.com`
-- `/products` is in `sitemap.ts`; add `/products/[slug]` entries once detail pages are built
+- All 10 `/products/[slug]` entries included in `sitemap.ts`
 
 ### Environment Variables
 - `NEXT_PUBLIC_SITE_URL` — Public site URL (https://grannexfoods.com)
@@ -212,10 +266,12 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
-- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` are placeholders (images not yet provided by client)
+- `05L-5L.png`, `10L-20L.png`, `25L-200L.png`, `1000L.png` — packaging format images used in `ProductPackagingSection`
+- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` not yet provided
+- `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`
 
 ### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
-Mirrors the agri-site `ProductCard` exactly. The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
+The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
 - **Image area**: `flex-1` at rest → `flex-3` on hover (shrinks to give room to info panel); uses `transition-all duration-500`
 - **Info panel**: `flex-none` at rest → `flex-1` on hover (expands); product name shifts `text-center` → `text-left`
 - **Description**: hidden via `opacity-0 max-h-0` → revealed with `opacity-100 group-hover:max-h-40 transition-all duration-500`; capped at `line-clamp-3`
