@@ -101,17 +101,21 @@ No test framework is configured.
 
 ### Product Detail Page Structure (`app/products/[slug]/page.tsx`)
 ```
-ProductHeroSection          ← always shown
-ProductVariantsSection      ← only if product.variants exists and non-empty
-ProductFeaturesSection      ← only if product.features exists and non-empty
-ProductApplicationsSection  ← only if product.applications exists and non-empty
-ProductNutritionSection     ← only if product.nutrition or product.specifications exists
-ProductPackagingSection     ← only if product.packaging exists and non-empty
-ProductCertificationsSection← always shown
-ProductOrderSection         ← always shown (id="order")
-RelatedProductsSection      ← always shown
+ProductHeroSection          ← always shown            (bg-white)
+ProductVariantsSection      ← only if product.variants (bg-secondary/20)
+ProductFeaturesSection      ← only if product.features (bg-white)
+ProductApplicationsSection  ← only if product.applications (bg-secondary/20)
+ProductNutritionSection     ← only if product.nutrition or product.specifications (bg-white)
+ProductPackagingSection     ← only if product.packaging (bg-secondary/20)
+ProductCertificationsSection← always shown            (bg-white)
+SectionDivider              ← always shown
+ProductOrderSection         ← always shown (id="order") (bg-white)
+RelatedProductsSection      ← always shown            (bg-secondary/20)
 CTASection                  ← always shown (href="/contact")
 ```
+
+### Product Detail Page — Fixed Background Rule
+Each section has a **fixed, hardcoded** background — do not make them dynamic. The sequence is designed so that when all sections are present they naturally alternate. Sections that may be absent (Variants, Features, Applications, Nutrition, Packaging) can cause adjacent same-background sections for products that lack them — this is accepted and intentional; the fixed backgrounds are the source of truth.
 
 ### ProductHeroSection Layout Details
 ```
@@ -267,8 +271,14 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
 - `05L-5L.png`, `10L-20L.png`, `25L-200L.png`, `1000L.png` — packaging format images used in `ProductPackagingSection`
+- `Restaurants-Catering.png`, `FastFood-quickService.png`, `food-manufacturing.png`, `retail-distribution.png` — application images (308×84px) used in `ProductApplicationsSection` for Sunflower Oil
 - `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` not yet provided
 - `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`
+- `public/products/related-rapeseed-oil.png`, `public/products/related-ketchup.png`, `public/products/related-mayonnaise.png` — 400×84px related product images used in `RelatedProductsSection`
+
+### Data Layer — Additional Fields
+- `relatedImage` (optional) — separate image used in `RelatedProductsSection` cards (`aspect-[400/84]`); falls back to `image` if not set. Currently set for: rapeseed-oil, ketchup, mayonnaise
+- `applications[].image` (optional) — image shown above application card text (`aspect-[308/84]`). Currently set for Sunflower Oil only
 
 ### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
 The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
