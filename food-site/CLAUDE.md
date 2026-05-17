@@ -61,7 +61,7 @@ No test framework is configured.
 
 ### Data Layer
 - Product catalog is a static JSON file at `app/data/products.json` (10 products)
-- **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils), `shelfLife`, `certifications`
+- **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `additives` (condiments only), `shelfLife`, `certifications`
 - **Rich fields** (detail page, all optional): `subtitle`, `tags`, `longDescription`, `origin`, `grade`, `productionMethod`, `tasteAroma`, `variants[]`, `nutrition[]`, `specifications[]`, `features[]`, `applications[]`, `packaging[]`, `relatedSlugs[]`
 - `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
 - `featured: true` marks the 4 products shown in `OurProductsSection` on the home page (Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce)
@@ -125,7 +125,7 @@ Each section has a **fixed, hardcoded** background — do not make them dynamic.
 - Info card: `border border-secondary rounded-2xl p-6`
 - Tags: first tag `bg-primary text-white`, subsequent tags `bg-pale text-primary`
 - Separator line: `w-14 h-[3px] bg-primary` between subtitle and description
-- Spec grid: no outer border — internal `border-r border-secondary` and `border-b border-secondary` dividers only
+- Spec grid: no outer border — internal `border-r border-secondary` and `border-b border-secondary` dividers only; rows: Origin, Smoke Point (or Additives if no smokePoint), Shelf Life, Certifications
 - Buttons: "Place an Order" (`bg-primary`, `rounded-full`) and "Request a Quote" (`border-2 border-primary/30`, `rounded-full`) — both `<a href="#order">` scroll anchors
 - Mobile: sidebar hidden; image stacks above info content
 
@@ -279,6 +279,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 ### Data Layer — Additional Fields
 - `relatedImage` (optional) — separate image used in `RelatedProductsSection` cards (`aspect-[400/84]`); falls back to `image` if not set. Currently set for: rapeseed-oil, ketchup, mayonnaise
 - `applications[].image` (optional) — image shown above application card text (`aspect-[308/84]`). Currently set for Sunflower Oil only
+- `additives` (optional) — plain-text additives statement; used in `ProductHeroSection` spec grid as fallback when `smokePoint` is absent. Set for: ketchup, mayonnaise, mustard, sugar
 
 ### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
 The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
