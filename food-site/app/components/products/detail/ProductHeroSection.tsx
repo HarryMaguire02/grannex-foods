@@ -12,6 +12,7 @@ interface Product {
   longDescription?: string;
   origin?: string;
   smokePoint?: string;
+  additives?: string;
   shelfLife?: string;
   certifications?: string[];
 }
@@ -29,6 +30,8 @@ export default function ProductHeroSection({
     product.origin ? { label: "Origin", value: product.origin } : null,
     product.smokePoint
       ? { label: "Smoke Point", value: product.smokePoint }
+      : product.additives
+      ? { label: "Additives", value: product.additives }
       : null,
     product.shelfLife
       ? { label: "Shelf Life", value: product.shelfLife }

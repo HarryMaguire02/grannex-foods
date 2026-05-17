@@ -11,7 +11,7 @@ export default function ProductFeaturesSection({
   features,
 }: ProductFeaturesSectionProps) {
   return (
-    <section className="bg-white py-10 lg:py-14">
+    <section className="bg-white py-6 lg:py-8">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
         <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">
           Key Features

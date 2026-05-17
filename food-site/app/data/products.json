@@ -119,8 +119,7 @@
       },
       {
         "title": "Industrial Food Production",
-        "description": "Consistent bulk supply for large-scale manufactures",
-        "image": "/retail-distribution.png"
+        "description": "Consistent bulk supply for large-scale manufactures"
       }
     ],
     "packaging": [
@@ -164,10 +163,9 @@
     "longDescription": "Grannex Foods Corn Oil is a 100% pure, refined and deodorized premium cooking oil extracted from high-quality maize germ. Never blended, it delivers a light, mild flavour with a high smoke point — ideal for deep frying, baking, grilling, and salad dressings. Rich in polyunsaturated fats and vitamin E, it is a versatile choice for professional kitchens, food manufacturers, and wholesale buyers who demand consistent, top-tier quality.",
     "smokePoint": "~230°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Ukraine, North Macedonia",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "Refined & Deodorized, Premium Grade",
-    "productionMethod": "Hot pressing at 130–140°C",
     "tasteAroma": "Light, mild — fully refined and deodorized",
     "nutrition": [
       { "nutrient": "Energy", "per100g": "3700 kJ / 899 kcal" },
@@ -176,20 +174,29 @@
       { "nutrient": "— Monounsaturated", "per100g": "28–30 g" },
       { "nutrient": "— Polyunsaturated", "per100g": "55–58 g" },
       { "nutrient": "Carbohydrates", "per100g": "0.0 g" },
-      { "nutrient": "Protein", "per100g": "0.0 g" }
+      { "nutrient": "Protein", "per100g": "0.0 g" },
+      { "nutrient": "Salt", "per100g": "0.0 g" }
     ],
     "specifications": [
-      { "label": "Country of Origin", "value": "Ukraine, North Macedonia" },
-      { "label": "Grade", "value": "Refined & Deodorized, Premium Grade" },
-      { "label": "Smoke Point", "value": "~230°C" },
+      {
+        "label": "Ingredients",
+        "value": "100% pure corn (maize germ) oil - never blended"
+      },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       { "label": "Shelf Life", "value": "24 months" },
       {
-        "label": "Fat Type",
-        "value": "Rich in polyunsaturated fats & Vitamin E"
+        "label": "Tast & Aroma",
+        "value": "Light, mild - fully refined and deodorized"
       },
+      { "label": "Grade", "value": "Refined & Deodorized, Premium Grade" },
+      { "label": "Smoke Point", "value": "~230°C" },
       {
         "label": "Certifications",
         "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
+      {
+        "label": "Fat Type",
+        "value": "Rich in polyunsaturated fats & Vitamin E"
       }
     ],
     "features": [
@@ -221,19 +228,27 @@
     "applications": [
       {
         "title": "Restaurants & Catering",
-        "description": "Frying, sauteing, stir-frying, and general cooking."
+        "description": "Frying, sauteing, stir-frying, and general cooking.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Fast Food & Quick Service",
-        "description": "High-performance frying oil with consistent results under heavy use."
+        "description": "High-performance frying oil with consistent results under heavy use.",
+        "image": "/FastFood-quickService.png"
       },
       {
         "title": "Food Manufacturing",
-        "description": "Snacks, baked goods, dressings, and processed foods."
+        "description": "Snacks, baked goods, dressings, and processed foods.",
+        "image": "/food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
-        "description": "Packaged formats for commercial resale and consumer use."
+        "description": "Packaged formats for commercial resale and consumer use.",
+        "image": "/retail-distribution.png"
+      },
+      {
+        "title": "Industrial Production",
+        "description": "Reliable bulk supply for large-scale food manufactures"
       }
     ],
     "packaging": [
@@ -277,8 +292,8 @@
     "longDescription": "Grannex Foods Soybean Oil is a 100% pure, refined and deodorized premium vegetable oil, produced using hot pressing technology at 130–140°C to retain natural qualities. Cholesterol-free with a clean natural taste that enhances flavours in finished products, it is ideal for frying, baking, and large-scale industrial food production. Sourced from specially selected soybean seeds, it provides exceptional stability and consistent quality for every batch.",
     "smokePoint": "~232°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Ukraine, North Macedonia",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "Refined & Deodorized, Vegetable Oil",
     "productionMethod": "Hot pressing at 130–140°C",
     "tasteAroma": "Clean, neutral — cholesterol-free",
@@ -293,16 +308,20 @@
       { "nutrient": "Salt", "per100g": "0.0 g" }
     ],
     "specifications": [
-      { "label": "Country of Origin", "value": "Ukraine, North Macedonia" },
-      { "label": "Also Known As", "value": "Vegetable Oil" },
-      { "label": "Production Method", "value": "Hot pressing at 130–140°C" },
+      {
+        "label": "Ingredients",
+        "value": "100% pure soybean oil - never blended"
+      },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       { "label": "Smoke Point", "value": "~232°C" },
-      { "label": "Shelf Life", "value": "24 months" },
-      { "label": "Cholesterol", "value": "Cholesterol-free" },
       {
         "label": "Certifications",
         "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
-      }
+      },
+      { "label": "Also Known As", "value": "Vegetable Oil" },
+      { "label": "Production Method", "value": "Hot pressing at 130–140°C" },
+      { "label": "Shelf Life", "value": "24 months" },
+      { "label": "Cholesterol", "value": "Cholesterol-free" }
     ],
     "features": [
       {
@@ -337,7 +356,8 @@
       },
       {
         "title": "Restaurants & Catering",
-        "description": "Frying, sauteing, and all-purpose cooking."
+        "description": "Frying, sauteing, and all-purpose cooking.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Fast Food & Chip Shops",
@@ -345,7 +365,13 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Margarines, dressings, and emulsified products."
+        "description": "Margarines, dressings, and emulsified products.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Consumer and trade packaging for widespread distribution",
+        "image": "/retail-distribution.png"
       }
     ],
     "packaging": [
@@ -389,7 +415,7 @@
     "longDescription": "Grannex Foods Palm Oil is a premium RBD (Refined, Bleached & Deodorized) palm oil — a semi-solid fat at room temperature widely used in food manufacturing, bakery, confectionery, and industrial frying. Prized for its high oxidative stability, long shelf life, and neutral flavour, it is an essential ingredient for margarine production, shortening, instant noodles, biscuits, and a wide range of processed food products. Available in bulk formats to meet industrial demand.",
     "smokePoint": "~235°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"],
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
     "origin": "Cyprus (Premium Sourced)",
     "grade": "RBD — Refined, Bleached & Deodorized",
     "productionMethod": "RBD Refining Process",
@@ -405,18 +431,19 @@
       { "nutrient": "Salt", "per100g": "0.0 g" }
     ],
     "specifications": [
+      { "label": "Ingredients", "value": "100% refined palm oil (RBD)" },
       { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
-      { "label": "Grade", "value": "RBD — Refined, Bleached & Deodorized" },
       { "label": "Smoke Point", "value": "~235°C" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
+      { "label": "Grade", "value": "RBD — Refined, Bleached & Deodorized" },
       { "label": "Iodine Value", "value": "50–55 g I₂/100g" },
       { "label": "Shelf Life", "value": "24 months" },
       {
         "label": "Form",
         "value": "Semi-solid at room temp; liquid above ~36°C"
-      },
-      {
-        "label": "Certifications",
-        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
       }
     ],
     "features": [
@@ -460,7 +487,13 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Emulsifiers, creamers, and ready meals."
+        "description": "Emulsifiers, creamers, and ready meals.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Retail & Distribution",
+        "description": "Available in consumer and wholesale formats",
+        "image": "/retail-distribution.png"
       }
     ],
     "packaging": [
@@ -505,7 +538,7 @@
     "longDescription": "Grannex Foods Rapeseed Oil is a 100% pure, refined and deodorized premium cooking oil — produced using hot pressing technology at 130–140°C for optimal extraction and natural flavour retention. Boasting the lowest saturated fat content among common cooking oils and a natural source of omega-3 fatty acids, it is the health-conscious professional choice for frying, baking, dressings, and a wide range of culinary applications. Sometimes referred to as Canola Oil in North America, our rapeseed oil is 100% pure and never blended.",
     "smokePoint": "~204°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"],
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
     "origin": "Cyprus (Premium Sourced)",
     "grade": "Refined & Deodorized, Lowest Saturated Fat",
     "productionMethod": "Hot pressing at 130–140°C",
@@ -524,18 +557,22 @@
       { "nutrient": "Salt", "per100g": "0.0 g" }
     ],
     "specifications": [
+      {
+        "label": "Ingredients",
+        "value": "100% pure rapeseed oil - never blended"
+      },
       { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Smoke Point", "value": "~204°C" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
       { "label": "Also Known As", "value": "Canola Oil (N. America)" },
       { "label": "Production Method", "value": "Hot pressing at 130–140°C" },
-      { "label": "Smoke Point", "value": "~204°C" },
       { "label": "Shelf Life", "value": "24 months" },
       {
         "label": "Key Nutrition",
         "value": "Lowest saturated fat · Rich in Omega-3"
-      },
-      {
-        "label": "Certifications",
-        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
       }
     ],
     "features": [
@@ -567,7 +604,8 @@
     "applications": [
       {
         "title": "Restaurants & Catering",
-        "description": "Frying, roasting, baking, and salad dressings."
+        "description": "Frying, roasting, baking, and salad dressings.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Health-Focused Menus",
@@ -575,11 +613,17 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Dressings, sauces, marinades, and baked goods."
+        "description": "Dressings, sauces, marinades, and baked goods.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Fast Food & Catering",
+        "description": "Reliable high-volume frying oil."
       },
       {
         "title": "Retail & Distribution",
-        "description": "Premium consumer packaging for widespread resale."
+        "description": "Premium consumer packaging for widespread resale.",
+        "image": "/retail-distribution.png"
       }
     ],
     "packaging": [
@@ -623,8 +667,8 @@
     "longDescription": "Grannex Foods Olive Oil is a premium Mediterranean-origin oil available in Extra Virgin and Refined grades. Extra Virgin Olive Oil is cold-pressed from hand-selected olives, preserving natural polyphenols, rich flavour, and a golden-green hue — perfect for dressings, dips, and finishing dishes. Our Refined Olive Oil offers a lighter taste and higher smoke point for cooking, frying, and baking. Both grades meet the highest international food safety standards and are ideal for professional kitchens, gourmet food producers, and premium retail.",
     "smokePoint": "EVOO ~190°C / Refined ~240°C",
     "shelfLife": "24 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Cyprus / Mediterranean (Premium Sourced)",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "Greece / Mediterranean (Premium Sourced)",
     "grade": "Extra Virgin (Cold Pressed) · Refined (Pure)",
     "productionMethod": "Cold pressing (EVOO) / Refining (Pure)",
     "tasteAroma": "Rich, fruity (EVOO) / Light, neutral (Refined)",
@@ -639,21 +683,25 @@
       { "nutrient": "Salt", "per100g": "0.0 g" }
     ],
     "specifications": [
+      {
+        "label": "Ingredients",
+        "value": "100% pure olive oil (EVOO or Refined)"
+      },
       { "label": "Country of Origin", "value": "Cyprus / Mediterranean" },
+      { "label": "Smoke Point", "value": "EVOO ~190°C / Refined ~240°C" },
+      {
+        "label": "Certifications",
+        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
+      },
       {
         "label": "Grades Available",
         "value": "Extra Virgin (Cold Pressed) · Refined (Pure)"
       },
       { "label": "Acidity (EVOO)", "value": "≤0.8% free fatty acids" },
-      { "label": "Smoke Point", "value": "EVOO ~190°C / Refined ~240°C" },
       { "label": "Shelf Life", "value": "24 months" },
       {
         "label": "Key Nutrition",
         "value": "Rich in monounsaturated fats · High in Vitamin E & polyphenols"
-      },
-      {
-        "label": "Certifications",
-        "value": "HACCP · FSSC 22000 · ISO 22000 · Full Traceability"
       }
     ],
     "features": [
@@ -693,7 +741,12 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Antipasti, dressings, marinades, and premium sauces."
+        "description": "Antipasti, dressings, marinades, and premium sauces.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Bakery & Catering",
+        "description": "Refined olive oil for baking, roasting, and frying."
       },
       {
         "title": "Export & Wholesale",
@@ -734,6 +787,7 @@
     "subtitle": "Premium Tomato Ketchup · 28.5% Tomato Paste · No Artificial Additives",
     "image": "/products/07-ketchup.png",
     "relatedImage": "/products/related-ketchup.png",
+    "additives": "No artificial additives, colours, or preservatives",
     "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
@@ -741,8 +795,8 @@
     "description": "28.5% tomato paste. 100% natural. No artificial additives. Rich, smooth, balanced tomato flavour.",
     "longDescription": "Grannex Foods Tomato Ketchup is crafted from 100% natural ingredients — sun-ripened, juicy tomatoes processed with a 28.5% tomato paste content for a rich, authentic flavour and smooth, velvety texture. Free from artificial flavours, colours, and preservatives, it is the premium choice for professional kitchens, fast food operations, food manufacturers, and wholesale buyers who demand a consistent, high-quality condiment. Perfect for burgers, fries, pizzas, grilled meats, and a vast range of culinary applications.",
     "shelfLife": "12 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Cyprus (Premium Sourced)",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "Premium Tomato Ketchup",
     "tasteAroma": "Rich, smooth, perfectly balanced sweet-tangy flavour",
     "nutrition": [
@@ -757,7 +811,7 @@
     ],
     "specifications": [
       { "label": "Key Ingredient", "value": "28.5% tomato paste content" },
-      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       {
         "label": "Additives",
         "value": "No artificial additives, colours, or preservatives"
@@ -806,7 +860,8 @@
     "applications": [
       {
         "title": "Restaurants & Catering",
-        "description": "Table condiment, burger sauce, and cooking ingredient."
+        "description": "Table condiment, burger sauce, and cooking ingredient.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Fast Food & Chip Shops",
@@ -814,11 +869,17 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Base sauce for ready meals, pizzas, and processed foods."
+        "description": "Base sauce for ready meals, pizzas, and processed foods.",
+        "image": "/food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
-        "description": "Consumer packaging for supermarkets and convenience stores."
+        "description": "Consumer packaging for supermarkets and convenience stores.",
+        "image": "/retail-distribution.png"
+      },
+      {
+        "title": "Hospitality & Events",
+        "description": "Sachets and portion packs for large-scale service."
       }
     ],
     "packaging": [
@@ -843,15 +904,16 @@
     "subtitle": "Egg-Free · 67% & 30% Fat Variants · Premium Quality",
     "image": "/products/08-mayonnaise.png",
     "relatedImage": "/products/related-mayonnaise.png",
+    "additives": "No artificial additives or preservatives",
     "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
     "tags": ["Condiments & Sauces", "In Demand", "Global Dispatch"],
     "description": "Egg-free. 67% Classic & 30% Light variants. Sunflower oil base. Suitable for vegetarians.",
     "longDescription": "Grannex Foods Mayonnaise Sauce is a premium egg-free sauce made with 100% pure sunflower oil produced in our own facilities. Available in two variants — 67% fat Classic for a rich, creamy texture, and 30% fat Light for a healthier alternative — both are egg-free, making them suitable for vegetarians and those with egg allergies. Free from artificial additives and preservatives, our mayonnaise delivers consistent neutral taste and aroma, ideal for commercial kitchens, restaurants, food manufacturers, and wholesale distribution.",
-    "shelfLife": "6–12 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Cyprus (Premium Sourced)",
+    "shelfLife": "6–12 months (sealed) / Refrigerate after opening",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "Egg-Free · Premium Quality",
     "tasteAroma": "Neutral, creamy, and versatile",
     "nutrition": [
@@ -870,7 +932,7 @@
         "label": "Base Oil",
         "value": "100% pure sunflower oil (own production)"
       },
-      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       {
         "label": "Egg Content",
         "value": "Egg-free — suitable for vegetarians & egg allergy sufferers"
@@ -918,7 +980,8 @@
     "applications": [
       {
         "title": "Restaurants & Catering",
-        "description": "Sandwiches, burgers, salads, and base for other sauces."
+        "description": "Sandwiches, burgers, salads, and base for other sauces.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Fast Food Production",
@@ -930,13 +993,18 @@
       },
       {
         "title": "Retail & Distribution",
-        "description": "Retail jars and bulk packs for supermarkets and wholesalers."
+        "description": "Retail jars and bulk packs for supermarkets and wholesalers.",
+        "image": "/retail-distribution.png"
+      },
+      {
+        "title": "Allergen-Friendly Menus",
+        "description": "Egg-free formulation supports allergy-conscious kitchens."
       }
     ],
     "packaging": [
       {
         "format": "Jar / Bottle",
-        "sizeLabel": "430g – 850g",
+        "sizeLabel": "430g – 770g",
         "image": "/05L-5L.png",
         "description": "Retail & catering formats for consumer use."
       },
@@ -960,6 +1028,7 @@
     "name": "Mustard",
     "subtitle": "Whole Grain · Dijon · Hot · No Artificial Additives",
     "image": "/products/09-mustard.png",
+    "additives": "No artificial additives or preservatives",
     "category": "condiments-sauces",
     "featured": false,
     "badge": "In Demand",
@@ -967,8 +1036,8 @@
     "description": "Whole Grain, Dijon & Hot variants. Own raw materials. No artificial additives. Vegan.",
     "longDescription": "Grannex Foods Mustard is crafted from the finest mustard seeds using proven recipes that deliver authentic flavour, superior texture, and consistent quality. Available in three distinct varieties — Whole Grain, Dijon, and Hot — each is produced in our own certified facilities and is entirely free from artificial additives and preservatives. From creamy Dijon for gourmet sauces to rustic whole grain for charcuterie boards, our mustard range serves professional kitchens, food manufacturers, and wholesale buyers across the UK and internationally.",
     "shelfLife": "12 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Cyprus (Premium Sourced)",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "Whole Grain · Dijon · Hot",
     "tasteAroma": "Whole Grain: rustic & tangy · Dijon: creamy & smooth · Hot: spicy",
     "nutrition": [
@@ -986,7 +1055,7 @@
         "label": "Key Ingredients",
         "value": "High-quality mustard seeds — own raw materials"
       },
-      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       {
         "label": "Additives",
         "value": "No artificial additives or preservatives"
@@ -1034,7 +1103,8 @@
     "applications": [
       {
         "title": "Restaurants & Catering",
-        "description": "Sandwich spread, sauce base, and marinade ingredient."
+        "description": "Sandwich spread, sauce base, and marinade ingredient.",
+        "image": "/Restaurants-Catering.png"
       },
       {
         "title": "Deli & Charcuterie",
@@ -1046,7 +1116,13 @@
       },
       {
         "title": "Retail & Distribution",
-        "description": "Consumer jars for supermarkets and specialty stores."
+        "description": "Consumer jars for supermarkets and specialty stores.",
+        "image": "/retail-distribution.png"
+      },
+      {
+        "title": "Food Manufacturing",
+        "description": "Dressings, marinades, ready meals, and processed sauces",
+        "image": "/food-manufacturing.png"
       }
     ],
     "packaging": [
@@ -1070,6 +1146,7 @@
     "name": "Sugar",
     "subtitle": "White Refined · Raw Cane · Premium Grade",
     "image": "/products/10-sugar.png",
+    "additives": "None — 100% pure sugar",
     "category": "condiments-sauces",
     "featured": false,
     "badge": "In Demand",
@@ -1077,8 +1154,8 @@
     "description": "White Crystal, Raw Cane & Icing Sugar. ≥99.8% purity. Bulk supply for manufacturing & retail.",
     "longDescription": "Grannex Foods Sugar is a premium, food-grade refined sugar available in White Crystal and Raw Cane variants, sourced from certified producers and supplied in bulk to professional food manufacturers, bakeries, beverage producers, confectionery companies, and wholesale distributors. Our sugar meets the strictest international food safety standards, delivering consistent purity, crystal quality, and reliable bulk supply for every production requirement.",
     "shelfLife": "36 months",
-    "certifications": ["HACCP", "FSSC 22000"],
-    "origin": "Cyprus (Premium Sourced)",
+    "certifications": ["HACCP", "FSSC 22000", "ISO 22000", "Full Traceability"],
+    "origin": "EU, Ukraine, Serbia",
     "grade": "White Refined · Raw Cane · Premium Grade",
     "nutrition": [
       { "nutrient": "Energy", "per100g": "1700 kJ / 400 kcal" },
@@ -1095,7 +1172,7 @@
         "label": "Variants",
         "value": "White Crystal Sugar · Raw Cane Sugar · Icing Sugar"
       },
-      { "label": "Country of Origin", "value": "Cyprus (Premium Sourced)" },
+      { "label": "Country of Origin", "value": "EU, Ukraine, Serbia" },
       { "label": "Purity (White)", "value": "≥99.8% sucrose" },
       { "label": "Polarisation", "value": "≥99.8° Z" },
       { "label": "Moisture", "value": "≤0.06%" },
@@ -1143,11 +1220,17 @@
       },
       {
         "title": "Food Manufacturing",
-        "description": "Jams, sauces, ketchup, preserves, and ready meals."
+        "description": "Jams, sauces, ketchup, preserves, and ready meals.",
+        "image": "/food-manufacturing.png"
+      },
+      {
+        "title": "Dairy & Ice Cream",
+        "description": "Yoghurts, ice cream, flavoured milks, and desserts."
       },
       {
         "title": "Retail & Distribution",
-        "description": "Consumer packs for supermarkets and wholesale distributors."
+        "description": "Consumer packs for supermarkets and wholesale distributors.",
+        "image": "/retail-distribution.png"
       }
     ],
     "packaging": [
