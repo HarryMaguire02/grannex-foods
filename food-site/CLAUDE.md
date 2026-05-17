@@ -19,7 +19,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [ ] Test contact form end-to-end after Redis is connected
 
 ### Content placeholders to replace with real data
-- [ ] `ContactFormSection` — `warehouse@grannexfoods.com`, phone numbers (`+30 698 461 4171`, `+381 63 107 7708`) need confirming with client
+- [X] `ContactFormSection` — contact details confirmed: email `vsaranovic@grannex.com`, mobile `+381 631 077 109` (Vlado Šaranović)
 - [ ] `HomeHero.png` — used as fallback in About and Contact heroes, replace with page-specific images when available
 - [ ] `sitemap.ts` — add `/products/[slug]` entries once detail pages are built
 
@@ -48,9 +48,9 @@ No test framework is configured.
 - **Static Generation** for product detail pages via `generateStaticParams()` (to be added)
 
 ### Data Layer
-- Product catalog is a static JSON file at `app/data/products.json` (9 products)
-- Each product has: `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`
-- `category` values: `"cooking-oils"`, `"frying-oils"`, `"mayo-sauces"`, or `null` (shown only under All Products)
+- Product catalog is a static JSON file at `app/data/products.json` (10 products)
+- Each product has: `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `shelfLife`, `certifications`
+- `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
 - `featured: true` marks the 4 products shown in `OurProductsSection` on the home page
 - No database; all filtering is client-side
 
@@ -207,13 +207,12 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `linkedin-green.svg`, `facebook-green.svg` — green icons (available for future use)
 - `HomeHero.png` — used in About and Contact page heroes; also home hero slideshow fallback
 - `corn-oil-hero.png`, `ketchup-hero.png`, `mustard-hero.png`, `sunflower-oil-hero.png` — home hero slideshow slides
-- `OurProductsTemp.png` — old placeholder, no longer used (real images now come from `public/products/`)
 - `ProductsHero.png` — hero image for the products page
 - `warehouse.png` — warehouse photo used in `WarehouseSection` (About page)
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
-- `public/products/` — 9 product images: `01-sunflower-oil.png` through `09-mustard.png`
+- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` are placeholders (images not yet provided by client)
 
 ### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
 Mirrors the agri-site `ProductCard` exactly. The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
@@ -224,7 +223,7 @@ Mirrors the agri-site `ProductCard` exactly. The card is a `Link` (`group`) with
 - Props: `slug`, `name`, `image`, `description`
 
 ### OurProductsSection Data Source
-`OurProductsSection` reads from `app/data/products.json` and filters by `featured === true`. The 4 featured products are: Sunflower Oil, Rape Oil, Ketchup, Mayonnaise. To change which products appear on the home page, update the `featured` field in `products.json`.
+`OurProductsSection` reads from `app/data/products.json` and filters by `featured === true`. The 4 featured products are: Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce. To change which products appear on the home page, update the `featured` field in `products.json`.
 
 ### CommitmentsSection Icon Pattern
 Each card in `CommitmentsSection` has a fixed-height icon container (`h-32`) so all three cards are the same height regardless of each SVG's natural dimensions. Without this, SVGs of different heights cause card height mismatches. The icon is centered within `h-32 flex items-center justify-center`. Below the icon area, a text block with `p-6 text-center flex flex-col gap-3 flex-1`.

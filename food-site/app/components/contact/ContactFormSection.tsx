@@ -5,9 +5,15 @@ import Link from 'next/link';
 
 const PRODUCTS = [
   'Sunflower Oil',
+  'Corn Oil',
+  'Soybean Oil',
+  'Palm Oil',
   'Rapeseed Oil',
-  'Mayonnaise',
+  'Olive Oil',
   'Ketchup',
+  'Mayonnaise Sauce',
+  'Mustard',
+  'Sugar',
   'Other',
 ];
 
@@ -279,16 +285,12 @@ export default function ContactFormSection() {
               </p>
               <div className="flex flex-col divide-y divide-primary/10">
                 <div className="py-3">
-                  <p className="text-xs text-primary/50 mb-0.5">Warehouse Email</p>
-                  <p className="text-sm font-medium text-primary">warehouse@grannexfoods.com</p>
+                  <p className="text-xs text-primary/50 mb-0.5">Email</p>
+                  <p className="text-sm font-medium text-primary">vsaranovic@grannex.com</p>
                 </div>
                 <div className="py-3">
-                  <p className="text-xs text-primary/50 mb-0.5">Phone</p>
-                  <p className="text-sm font-medium text-primary">+30 698 461 4171</p>
-                </div>
-                <div className="py-3">
-                  <p className="text-xs text-primary/50 mb-0.5">Alternative</p>
-                  <p className="text-sm font-medium text-primary">+381 63 107 7708</p>
+                  <p className="text-xs text-primary/50 mb-0.5">Mobile</p>
+                  <p className="text-sm font-medium text-primary">+381 631 077 109</p>
                 </div>
                 <div className="py-3">
                   <p className="text-xs text-primary/50 mb-0.5">Address</p>

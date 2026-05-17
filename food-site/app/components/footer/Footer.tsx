@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,7 +8,6 @@ export default function Footer() {
       <div className="w-full py-6 lg:py-8">
         <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 lg:gap-12">
-
             {/* Logo */}
             <div className="flex items-center">
               <Image
@@ -29,8 +28,6 @@ export default function Footer() {
                   <p>Dimitri Stavrou 1 Street Nicosia Cyprus</p>
                   <p>info@grannexfood.com</p>
                   <p>+30 6984614171</p>
-                  <p className="pt-2">Director - Sotiris K. Mavropanos</p>
-                  <p>smavropanos@grannex.com</p>
                 </div>
               </div>
 
@@ -84,7 +81,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -94,25 +90,42 @@ export default function Footer() {
         <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
           <div className="border-t-2 border-secondary pt-6">
             <div className="flex flex-col gap-4">
-
               {/* Legal Links */}
               <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-secondary font-semibold">
-                <Link href="/sales-conditions" className="hover:text-white transition-colors">
+                <Link
+                  href="/sales-conditions"
+                  className="hover:text-white transition-colors"
+                >
                   Sales Conditions
                 </Link>
-                <Link href="/purchase-conditions" className="hover:text-white transition-colors">
+                <Link
+                  href="/purchase-conditions"
+                  className="hover:text-white transition-colors"
+                >
                   Purchase Conditions
                 </Link>
-                <Link href="/whistleblower-policy" className="hover:text-white transition-colors">
+                <Link
+                  href="/whistleblower-policy"
+                  className="hover:text-white transition-colors"
+                >
                   Whistleblower policy
                 </Link>
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-white transition-colors"
+                >
                   Privacy policy
                 </Link>
-                <Link href="/cookie-policy" className="hover:text-white transition-colors">
+                <Link
+                  href="/cookie-policy"
+                  className="hover:text-white transition-colors"
+                >
                   Cookie policy
                 </Link>
-                <Link href="/terms-of-use" className="hover:text-white transition-colors">
+                <Link
+                  href="/terms-of-use"
+                  className="hover:text-white transition-colors"
+                >
                   Terms of use
                 </Link>
               </nav>
@@ -121,7 +134,6 @@ export default function Footer() {
               <div className="flex justify-center text-xs text-white">
                 <p>Grannex International All Rights Reserved</p>
               </div>
-
             </div>
           </div>
         </div>

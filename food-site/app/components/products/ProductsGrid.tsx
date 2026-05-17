@@ -20,8 +20,7 @@ interface ProductsGridProps {
 const FILTERS = [
   { label: 'All Products', value: 'all' },
   { label: 'Cooking Oils', value: 'cooking-oils' },
-  { label: 'Mayo & Sauces', value: 'mayo-sauces' },
-  { label: 'Frying Oils', value: 'frying-oils' },
+  { label: 'Condiments & Sauces', value: 'condiments-sauces' },
 ];
 
 export default function ProductsGrid({ products }: ProductsGridProps) {

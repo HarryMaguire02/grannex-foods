@@ -6,7 +6,10 @@
     "category": "cooking-oils",
     "featured": true,
     "badge": "Best Seller",
-    "description": "High-quality refined and crude sunflower oil, suitable for food production, retail, and industrial use."
+    "description": "100% pure refined & deodorized sunflower oil. Standard & High Oleic variants available. Ideal for frying, baking, and industrial use.",
+    "smokePoint": "~230°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "corn-oil",
@@ -15,7 +18,10 @@
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
-    "description": "Light and neutral cooking oil pressed from corn germ — a cost-efficient choice for large-scale food manufacturing."
+    "description": "Refined & deodorized maize germ oil. Light, mild flavour. Rich in Vitamin E and polyunsaturates.",
+    "smokePoint": "~230°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "soybean-oil",
@@ -24,60 +30,89 @@
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
-    "description": "Versatile, widely-used vegetable oil with a mild flavour — suitable for frying, baking, and food processing at scale."
+    "description": "100% pure vegetable oil. Cholesterol-free. Neutral taste. Ideal for industrial food production.",
+    "smokePoint": "~232°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "palm-oil",
     "name": "Palm Oil",
     "image": "/products/04-palm-oil.png",
-    "category": "frying-oils",
+    "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
-    "description": "High-stability frying oil with a high smoke point — ideal for industrial frying and large-scale food production."
+    "description": "RBD palm oil. Semi-solid. High oxidative stability. Essential for bakery, margarine, and confectionery.",
+    "smokePoint": "~235°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
-    "slug": "rape-oil",
-    "name": "Rape Oil",
+    "slug": "rapeseed-oil",
+    "name": "Rapeseed Oil",
     "image": "/products/05-rape-oil.png",
     "category": "cooking-oils",
     "featured": true,
     "badge": "In Demand",
-    "description": "Versatile and cost-efficient oil with a balanced profile — ideal for large-scale food processing and distribution."
+    "description": "Lowest saturated fat. Rich in Omega-3. Light nutty flavour. Also known as Canola Oil.",
+    "smokePoint": "~204°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
-    "slug": "tapioca-starch",
-    "name": "Tapioca Starch",
-    "image": "/products/06-tapioca-starch.png",
-    "category": null,
+    "slug": "olive-oil",
+    "name": "Olive Oil",
+    "image": "/products/06-olive-oil.png",
+    "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
-    "description": "Fine-grade tapioca starch for thickening, binding, and texturing — sourced for consistent quality across food production."
+    "description": "Extra Virgin (cold-pressed) & Refined grades. Mediterranean origin. Rich in monounsaturates.",
+    "smokePoint": "EVOO ~190°C / Refined ~240°C",
+    "shelfLife": "24 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "ketchup",
     "name": "Ketchup",
     "image": "/products/07-ketchup.png",
-    "category": "mayo-sauces",
+    "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
-    "description": "High-quality tomato ketchup produced to consistent standards — available in bulk formats for retail, food service, and private label."
+    "description": "28.5% tomato paste. 100% natural. No artificial additives. Rich, smooth, balanced tomato flavour.",
+    "shelfLife": "12 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "mayonnaise",
-    "name": "Mayonnaise",
+    "name": "Mayonnaise Sauce",
     "image": "/products/08-mayonnaise.png",
-    "category": "mayo-sauces",
+    "category": "condiments-sauces",
     "featured": true,
     "badge": "In Demand",
-    "description": "Rich, creamy mayonnaise available in wholesale quantities — consistent texture and flavour for food service and retail."
+    "description": "Egg-free. 67% Classic & 30% Light variants. Sunflower oil base. Suitable for vegetarians.",
+    "shelfLife": "6–12 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   },
   {
     "slug": "mustard",
     "name": "Mustard",
     "image": "/products/09-mustard.png",
-    "category": "mayo-sauces",
+    "category": "condiments-sauces",
     "featured": false,
     "badge": "In Demand",
-    "description": "Classic yellow mustard in bulk supply — a reliable condiment for food service operations and private label production."
+    "description": "Whole Grain, Dijon & Hot variants. Own raw materials. No artificial additives. Vegan.",
+    "shelfLife": "12 months",
+    "certifications": ["HACCP", "FSSC 22000"]
+  },
+  {
+    "slug": "sugar",
+    "name": "Sugar",
+    "image": "/products/10-sugar.png",
+    "category": "condiments-sauces",
+    "featured": false,
+    "badge": "In Demand",
+    "description": "White Crystal, Raw Cane & Icing Sugar. ≥99.8% purity. Bulk supply for manufacturing & retail.",
+    "shelfLife": "36 months",
+    "certifications": ["HACCP", "FSSC 22000"]
   }
 ]
