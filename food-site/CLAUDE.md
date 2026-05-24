@@ -8,7 +8,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 - [x] `/products` — product listing page with hero, category filter tabs, 10-product grid, CTA to contact
 - [x] `/products/[slug]` — product detail page (fully built with all sections)
-- [ ] Legal pages — `/privacy-policy`, `/cookie-policy`, `/terms-of-use`, `/purchase-conditions`, `/sales-conditions`, `/whistleblower-policy`
+- [x] Legal pages — `/privacy-policy`, `/cookie-policy`, `/terms-of-use`, `/purchase-conditions`, `/sales-conditions`, `/whistleblower-policy`
 
 ### Polish
 
