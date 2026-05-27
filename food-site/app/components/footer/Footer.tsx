@@ -27,13 +27,12 @@ export default function Footer() {
                 <div className="space-y-3 text-sm">
                   <p>Dimitri Stavrou 1 Street Nicosia Cyprus</p>
                   <p>info@grannexfood.com</p>
-                  <p>+30 6984614171</p>
                 </div>
               </div>
 
-              {/* Contact Person */}
+              {/* Sales Director */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Contact Person</h3>
+                <h3 className="text-lg font-semibold mb-4">Sales Director</h3>
                 <div className="space-y-3 text-sm">
                   <p>Vlado Šaranović</p>
                   <p>vsaranovic@grannex.com</p>

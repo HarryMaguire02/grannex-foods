@@ -178,7 +178,7 @@ export default function ProductOrderSection({ productName }: ProductOrderSection
                 .
               </p>
 
-              <div className="flex gap-3">
+              <div className="flex flex-col xs:flex-row gap-3">
                 <button
                   type="submit"
                   disabled={formStatus === 'loading'}

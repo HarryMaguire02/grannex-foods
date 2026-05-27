@@ -235,7 +235,7 @@ export default function ProductHeroSection({
               })}
             </div>
           )}
-          <div className="flex gap-3">
+          <div className="flex flex-col xs:flex-row gap-3">
             <a
               href="#order"
               className="flex-1 bg-primary text-white text-sm font-semibold py-3.5 px-4 rounded-full text-center hover:bg-green-medium transition-colors"

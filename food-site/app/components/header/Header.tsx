@@ -112,7 +112,11 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}
-                  className="mt-2 py-3 px-4 rounded-full bg-primary text-white text-base font-medium text-center hover:bg-green-medium transition-colors"
+                  className={`py-3 px-4 rounded-lg text-base text-center font-medium transition-colors ${
+                    pathname === '/contact'
+                      ? 'bg-primary text-white'
+                      : 'text-primary hover:bg-primary/20'
+                  }`}
                 >
                   Contact us
                 </Link>

@@ -53,29 +53,31 @@ export default function ProductPackagingSection({
               </div>
 
               {/* Variant rows */}
-              <div className="flex flex-col flex-1">
-                {/* Column headers */}
-                <div className="grid grid-cols-4 px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider text-primary/40">
-                  <span>Size</span>
-                  <span>Net Wt.</span>
-                  <span>Units/Ctn</span>
-                  <span>Best For</span>
-                </div>
-
-                {/* Variant rows */}
-                {option.variants.map((variant, i) => (
-                  <div
-                    key={variant.size}
-                    className={`grid grid-cols-4 px-4 py-2 text-xs text-primary border-t border-secondary/60 ${
-                      i % 2 === 1 ? "bg-secondary/10" : ""
-                    }`}
-                  >
-                    <span className="font-medium">{variant.size}</span>
-                    <span>{variant.netWeight}</span>
-                    <span>{variant.unitsPerCarton}</span>
-                    <span>{variant.bestFor}</span>
+              <div className="flex flex-col flex-1 overflow-x-auto">
+                <div style={{ minWidth: '320px' }}>
+                  {/* Column headers */}
+                  <div className="grid grid-cols-4 px-3 sm:px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider text-primary/40">
+                    <span>Size</span>
+                    <span>Net Wt.</span>
+                    <span>Units/Ctn</span>
+                    <span>Best For</span>
                   </div>
-                ))}
+
+                  {/* Variant rows */}
+                  {option.variants.map((variant, i) => (
+                    <div
+                      key={variant.size}
+                      className={`grid grid-cols-4 px-3 sm:px-4 py-2 text-xs text-primary border-t border-secondary/60 ${
+                        i % 2 === 1 ? "bg-secondary/10" : ""
+                      }`}
+                    >
+                      <span className="font-medium">{variant.size}</span>
+                      <span>{variant.netWeight}</span>
+                      <span>{variant.unitsPerCarton}</span>
+                      <span>{variant.bestFor}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

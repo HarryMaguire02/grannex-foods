@@ -13,9 +13,9 @@ This file provides guidance to Claude Code when working with code in this reposi
 ### Polish
 
 - [ ] Animations — add scroll-triggered entrance animations (fade-in, slide-up) to sections across the site
-- [ ] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages, including product detail page
-- [ ] `PageHeroSection` image — review and improve how the hero image is displayed/cropped on various screen sizes
-- [ ] Product detail page mobile sidebar — sidebar is hidden on mobile; consider adding a mobile product picker (dropdown or drawer)
+- [x] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages, including product detail page
+- [x] `PageHeroSection` image — heading reduced to `text-3xl sm:text-4xl lg:text-5xl` for small screens
+- [x] Product detail page mobile sidebar — sidebar remains desktop-only (`hidden lg:flex`); no mobile product picker (intentional)
 
 ### Infrastructure
 
@@ -29,10 +29,18 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] `sitemap.ts` — `/products/[slug]` entries added for all 10 products
 - [x] `packaging[]` — real per-product data added for all 10 products from client spreadsheets
 - [ ] `public/products/10-sugar.png` — image not yet provided by client
-- [ ] Populate full rich data for Olive Oil in `products.json` (currently stub only — waiting on client Excel sheet)
+- [x] Populate full rich data for Olive Oil in `products.json` — all data confirmed against client Excel sheet
 - [ ] Format images for `ProductPackagingSection` — Bottle uses `/05L-5L.png`, Jerry Can uses `/10L-20L.png`; all other formats (Plastic Tube, Bucket, Jar/Bottle, Glass Bottle, Tin, Bag, Sack, Big Bag) have no image and show a `bg-secondary/40` placeholder — replace with real format images when available
 - [ ] Application images — currently only Sunflower Oil has application images; other products use no images (text-only cards)
 - [x] Related product images — `related-rapeseed-oil.png`, `related-ketchup.png`, `related-mayonnaise.png` added; all products now share the same 3 related products
+
+### Final wrap up
+
+- [] We need to decide what will buttons from `ProductVariantsSection` to do, currently both of them are navigating to contact form (check with product manager how this should be handled)
+- [] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
+- [] Improve image quality for all products
+- [] Decide with product owner what will Request a Quote button in contact us form section do
+
 
 ## Project Overview
 
@@ -308,7 +316,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `10L-20L.png` — format image for Jerry Can in `ProductPackagingSection`
 - `25L-200L.png`, `1000L.png` — available but no longer mapped to any packaging format (kept for possible future use)
 - `Restaurants-Catering.png`, `FastFood-quickService.png`, `food-manufacturing.png`, `retail-distribution.png` — application images (308×84px) used in `ProductApplicationsSection` for Sunflower Oil
-- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` not yet provided
+- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` and `06-olive-oil.png` all exist; `10-sugar.png` not yet provided by client
 - `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`
 - `public/products/related-rapeseed-oil.png`, `public/products/related-ketchup.png`, `public/products/related-mayonnaise.png` — 400×84px related product images used in `RelatedProductsSection`
 

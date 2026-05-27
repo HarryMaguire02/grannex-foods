@@ -89,7 +89,7 @@ export default function ProductVariantsSection({
                 >
                   {variant.oleic && (
                     <div
-                      className={`flex-1 px-4 border-r ${i === 0 ? "border-pale" : "border-secondary"}`}
+                      className={`flex-1 px-2 sm:px-4 border-r ${i === 0 ? "border-pale" : "border-secondary"}`}
                     >
                       <p className="text-xs text-green-medium font-medium mb-1">
                         Oleic (omega-9)
@@ -101,7 +101,7 @@ export default function ProductVariantsSection({
                   )}
                   {variant.linoleic && (
                     <div
-                      className={`flex-1 px-4 border-r ${i === 0 ? "border-pale" : "border-secondary"}`}
+                      className={`flex-1 px-2 sm:px-4 border-r ${i === 0 ? "border-pale" : "border-secondary"}`}
                     >
                       <p className="text-xs text-green-medium font-medium mb-1">
                         Linoleic (omega-6)
@@ -112,7 +112,7 @@ export default function ProductVariantsSection({
                     </div>
                   )}
                   {variant.bestFor && (
-                    <div className="flex-1 pl-4">
+                    <div className="flex-1 pl-2 sm:pl-4">
                       <p className="text-xs text-green-medium font-medium mb-1">
                         Best for
                       </p>

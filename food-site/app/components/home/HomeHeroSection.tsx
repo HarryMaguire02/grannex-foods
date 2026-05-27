@@ -28,15 +28,15 @@ export default function HomeHeroSection() {
 
           {/* Left: Content */}
           <div className="bg-primary flex flex-col justify-center">
-          <div className="w-full max-w-[620px] ml-auto px-6 sm:px-8 lg:px-12 py-14 lg:py-0 flex flex-col gap-6">
+          <div className="w-full max-w-[620px] ml-auto px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-0 flex flex-col gap-4 sm:gap-6">
             <p className="text-secondary text-xs font-semibold uppercase tracking-widest">
               Global Food Supplier
             </p>
             <div>
-              <h1 className="text-white font-bold text-4xl lg:text-5xl leading-tight">
+              <h1 className="text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">
                 Quality Ingredients.<br />Delivered Worldwide.
               </h1>
-              <div className="w-14 h-[3px] bg-secondary mt-5" />
+              <div className="w-14 h-[3px] bg-secondary mt-3 sm:mt-5" />
             </div>
             <p className="text-white/80 text-sm leading-relaxed max-w-sm">
               Reliable sourcing of oils, grains, and food ingredients - tailored to your business needs, with consistent quality and trusted supply chains.
@@ -59,7 +59,7 @@ export default function HomeHeroSection() {
           </div>
 
           {/* Right: Slideshow */}
-          <div className="relative h-64 sm:h-96 lg:h-full">
+          <div className="relative h-52 sm:h-72 lg:h-full">
             {slides.map((slide, index) => (
               <div
                 key={index}
