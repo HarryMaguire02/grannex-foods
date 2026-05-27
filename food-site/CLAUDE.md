@@ -20,17 +20,18 @@ This file provides guidance to Claude Code when working with code in this reposi
 ### Infrastructure
 
 - [x] Upstash Redis — create new database for food-site (via Vercel Storage) and fill in `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` in `.env.local` and Vercel env vars
-- [ ] Test contact form end-to-end after Redis is connected
-- [ ] Test `ProductOrderSection` form on product detail pages end-to-end — API compatibility verified, `phone` placeholder fixed to pass length validation
+- [x] Contact form (`ContactFormSection`) tested end-to-end
+- [x] `ProductOrderSection` form tested end-to-end on product detail pages
 
 ### Content placeholders to replace with real data
 
 - [x] `ContactFormSection` — contact details confirmed: email `vsaranovic@grannex.com`, mobile `+381 631 077 109` (Vlado Šaranović)
 - [x] `sitemap.ts` — `/products/[slug]` entries added for all 10 products
+- [x] `packaging[]` — real per-product data added for all 10 products from client spreadsheets
 - [ ] `public/products/10-sugar.png` — image not yet provided by client
 - [ ] Populate full rich data for Olive Oil in `products.json` (currently stub only — waiting on client Excel sheet)
-- [ ] Packaging images reused across all products — replace with product-specific images when available
-- [ ] Application images — currently only Sunflower Oil has 5 application images; other products use no images (text-only cards)
+- [ ] Format images for `ProductPackagingSection` — Bottle uses `/05L-5L.png`, Jerry Can uses `/10L-20L.png`; all other formats (Plastic Tube, Bucket, Jar/Bottle, Glass Bottle, Tin, Bag, Sack, Big Bag) have no image and show a `bg-secondary/40` placeholder — replace with real format images when available
+- [ ] Application images — currently only Sunflower Oil has application images; other products use no images (text-only cards)
 - [x] Related product images — `related-rapeseed-oil.png`, `related-ketchup.png`, `related-mayonnaise.png` added; all products now share the same 3 related products
 
 ## Project Overview
@@ -66,6 +67,7 @@ No test framework is configured.
 - Product catalog is a static JSON file at `app/data/products.json` (10 products)
 - **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `additives` (condiments only), `shelfLife`, `certifications`
 - **Rich fields** (detail page, all optional): `subtitle`, `tags`, `longDescription`, `origin`, `grade`, `productionMethod`, `tasteAroma`, `variants[]`, `nutrition[]`, `specifications[]`, `features[]`, `applications[]`, `packaging[]`, `relatedSlugs[]`
+- **`packaging[]` shape:** `{ format: string, image?: string, variants: { size, netWeight, unitsPerCarton, bestFor }[] }` — grouped by container type; all 10 products have real data from client spreadsheets
 - `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
 - `featured: true` marks the 4 products shown in `OurProductsSection` on the home page (Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce)
 - All rich fields are optional — detail page sections are conditionally rendered; missing fields simply hide the section
@@ -100,7 +102,7 @@ No test framework is configured.
 - `ProductFeaturesSection` — 3-col feature grid with bullet dots and `border-b border-sage` dividers; `bg-white`
 - `ProductApplicationsSection` — dynamic column grid (1 col mobile → 2 col tablet → N col desktop, max 6); image on top `aspect-[308/84]`, title + description below; `bg-secondary/20 border-y border-secondary`; supports optional `image` field per application entry
 - `ProductNutritionSection` — side-by-side nutrition + specifications tables; both use matching `border-[#D4C9B0] bg-[#F5F0E8]` styling with `bg-[#EDE8DC]/50` alternating rows; `bg-white`
-- `ProductPackagingSection` — cards with `aspect-[11/3]` image area, size badge overlaid bottom-left, format name + description below; `bg-secondary/20 border-y border-secondary`
+- `ProductPackagingSection` — format-grouped cards (`flex flex-wrap justify-center gap-4`; each card `w-[calc(33.333%-11px)]` on lg so 2-card rows are centered); each card has an optional `aspect-[11/3]` image area (falls back to `bg-secondary/40` placeholder) with format name badge overlay, then a 4-column variant grid (Size, Net Weight, Units/Ctn, Best For) with alternating row shading; `bg-secondary/20 border-y border-secondary`
 - `ProductCertificationsSection` — hardcoded 4 cert cards (HACCP, FSSC 22000, Full Traceability, ISO 22000); `bg-white`; cards use `bg-secondary/20 border-secondary`
 - `ProductOrderSection` — mini order form pre-filled with product name, submits to `/api/contact`; "What happens next" timeline panel on the right; `id="order"` anchor for scroll-from-hero buttons; `bg-white`
 - `RelatedProductsSection` — uses `product.relatedSlugs` to pick 3 products; falls back to same-category products; card has `aspect-[400/84]` image with "Ready Stock" badge overlay + "Order this product" link; uses `relatedImage` field if present, falls back to `image`; `bg-secondary/20 border-t border-secondary`
@@ -302,7 +304,9 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
-- `05L-5L.png`, `10L-20L.png`, `25L-200L.png`, `1000L.png` — packaging format images used in `ProductPackagingSection`
+- `05L-5L.png` — format image for Bottle / Glass Bottle in `ProductPackagingSection`
+- `10L-20L.png` — format image for Jerry Can in `ProductPackagingSection`
+- `25L-200L.png`, `1000L.png` — available but no longer mapped to any packaging format (kept for possible future use)
 - `Restaurants-Catering.png`, `FastFood-quickService.png`, `food-manufacturing.png`, `retail-distribution.png` — application images (308×84px) used in `ProductApplicationsSection` for Sunflower Oil
 - `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` exist; `06-olive-oil.png` and `10-sugar.png` not yet provided
 - `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`

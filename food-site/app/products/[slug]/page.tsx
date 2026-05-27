@@ -150,9 +150,13 @@ export default async function ProductDetailPage({
               product as {
                 packaging: {
                   format: string;
-                  sizeLabel: string;
                   image?: string;
-                  description: string;
+                  variants: {
+                    size: string;
+                    netWeight: string;
+                    unitsPerCarton: string;
+                    bestFor: string;
+                  }[];
                 }[];
               }
             ).packaging
