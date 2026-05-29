@@ -28,11 +28,13 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] `ContactFormSection` — contact details confirmed: email `vsaranovic@grannex.com`, mobile `+381 631 077 109` (Vlado Šaranović)
 - [x] `sitemap.ts` — `/products/[slug]` entries added for all 10 products
 - [x] `packaging[]` — real per-product data added for all 10 products from client spreadsheets
-- [ ] `public/products/10-sugar.png` — image not yet provided by client
+- [x] `public/products/10-sugar.png` — added by client
 - [x] Populate full rich data for Olive Oil in `products.json` — all data confirmed against client Excel sheet
 - [ ] Format images for `ProductPackagingSection` — Bottle uses `/05L-5L.png`, Jerry Can uses `/10L-20L.png`; all other formats (Plastic Tube, Bucket, Jar/Bottle, Glass Bottle, Tin, Bag, Sack, Big Bag) have no image and show a `bg-secondary/40` placeholder — replace with real format images when available
 - [ ] Application images — currently only Sunflower Oil has application images; other products use no images (text-only cards)
-- [x] Related product images — `related-rapeseed-oil.png`, `related-ketchup.png`, `related-mayonnaise.png` added; all products now share the same 3 related products
+- [x] Related product images — added for all 10 products except soybean-oil (no image available); `relatedImage` field set in `products.json` for 9 products; soybean-oil falls back to `image`
+- [x] `relatedSlugs` — updated per-product with intuitive groupings: oils recommend oils, condiments recommend condiments; see products.json for full mapping
+- [x] `ProductCertificationsSection` — redesigned to show certificate logo images (`haccp-certificate.png`, `fssc-sertificate.png`, `iso-certificate.png`) above name/description; 3-col grid matching Figma
 
 ### Final wrap up
 
@@ -316,9 +318,10 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `10L-20L.png` — format image for Jerry Can in `ProductPackagingSection`
 - `25L-200L.png`, `1000L.png` — available but no longer mapped to any packaging format (kept for possible future use)
 - `Restaurants-Catering.png`, `FastFood-quickService.png`, `food-manufacturing.png`, `retail-distribution.png` — application images (308×84px) used in `ProductApplicationsSection` for Sunflower Oil
-- `public/products/` — product images: `01-sunflower-oil.png` through `09-mustard.png` and `06-olive-oil.png` all exist; `10-sugar.png` not yet provided by client
+- `public/products/` — product images: `01-sunflower-oil.png` through `10-sugar.png` (all 10 exist)
 - `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`
-- `public/products/related-rapeseed-oil.png`, `public/products/related-ketchup.png`, `public/products/related-mayonnaise.png` — 400×84px related product images used in `RelatedProductsSection`
+- `public/products/related-{slug}.png` — 400×84px related product images used in `RelatedProductsSection`; exists for all products except `soybean-oil`
+- `public/haccp-certificate.png`, `public/fssc-sertificate.png` *(typo in filename — intentional)*, `public/iso-certificate.png` — certificate logos used in `ProductCertificationsSection`
 
 ### Data Layer — Additional Fields
 

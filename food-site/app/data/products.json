@@ -4,6 +4,7 @@
     "name": "Sunflower Oil",
     "subtitle": "Refined & Deodorized · Premium Grade",
     "image": "/products/01-sunflower-oil.png",
+    "relatedImage": "/products/related-sunflower-oil.png",
     "category": "cooking-oils",
     "featured": true,
     "badge": "Best Seller",
@@ -215,9 +216,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "corn-oil",
+      "rapeseed-oil",
+      "olive-oil"
     ]
   },
   {
@@ -225,6 +226,7 @@
     "name": "Corn Oil",
     "subtitle": "Refined & Deodorized · Premium Grade",
     "image": "/products/02-corn-oil.png",
+    "relatedImage": "/products/related-corn-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
@@ -411,9 +413,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "sunflower-oil",
+      "rapeseed-oil",
+      "soybean-oil"
     ]
   },
   {
@@ -607,9 +609,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "sunflower-oil",
+      "corn-oil",
+      "palm-oil"
     ]
   },
   {
@@ -617,6 +619,7 @@
     "name": "Palm Oil",
     "subtitle": "Refined, Bleached & Deodorized (RBD) · Premium Grade",
     "image": "/products/04-palm-oil.png",
+    "relatedImage": "/products/related-palm-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
@@ -802,8 +805,8 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
+      "soybean-oil",
+      "corn-oil",
       "rapeseed-oil"
     ]
   },
@@ -999,9 +1002,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "sunflower-oil",
+      "corn-oil",
+      "olive-oil"
     ]
   },
   {
@@ -1009,6 +1012,7 @@
     "name": "Olive Oil",
     "subtitle": "Extra Virgin & Refined · Premium Mediterranean Grade",
     "image": "/products/06-olive-oil.png",
+    "relatedImage": "/products/related-olive-oil.png",
     "category": "cooking-oils",
     "featured": false,
     "badge": "In Demand",
@@ -1185,9 +1189,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "rapeseed-oil",
+      "sunflower-oil",
+      "corn-oil"
     ]
   },
   {
@@ -1361,9 +1365,9 @@
       }
     ],
     "relatedSlugs": [
-      "ketchup",
+      "mustard",
       "mayonnaise",
-      "rapeseed-oil"
+      "sugar"
     ]
   },
   {
@@ -1554,8 +1558,8 @@
     ],
     "relatedSlugs": [
       "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "mustard",
+      "sunflower-oil"
     ]
   },
   {
@@ -1563,6 +1567,7 @@
     "name": "Mustard",
     "subtitle": "Whole Grain · Dijon · Hot · No Artificial Additives",
     "image": "/products/09-mustard.png",
+    "relatedImage": "/products/related-mustard.png",
     "additives": "No artificial additives or preservatives",
     "category": "condiments-sauces",
     "featured": false,
@@ -1726,7 +1731,7 @@
     "relatedSlugs": [
       "ketchup",
       "mayonnaise",
-      "rapeseed-oil"
+      "sugar"
     ]
   },
   {
@@ -1734,6 +1739,7 @@
     "name": "Sugar",
     "subtitle": "White Refined · Raw Cane · Premium Grade",
     "image": "/products/10-sugar.png",
+    "relatedImage": "/products/related-sugar.png",
     "additives": "None — 100% pure sugar",
     "category": "condiments-sauces",
     "featured": false,
@@ -1927,8 +1933,8 @@
     ],
     "relatedSlugs": [
       "ketchup",
-      "mayonnaise",
-      "rapeseed-oil"
+      "mustard",
+      "mayonnaise"
     ]
   }
 ]

@@ -1,11 +1,21 @@
+import Image from "next/image";
+
 const CERTS = [
-  { name: "HACCP", description: "Hazard Analysis & Critical Control Points" },
-  { name: "FSSC 22000", description: "Food Safety System Certification" },
   {
-    name: "Full Traceability",
-    description: "Source to final product, every batch",
+    name: "HACCP",
+    description: "Hazard Analysis & Critical Control Points",
+    image: "/haccp-certificate.png",
   },
-  { name: "ISO 22000", description: "International food safety management" },
+  {
+    name: "FSSC 22000",
+    description: "Food Safety System Certification",
+    image: "/fssc-sertificate.png",
+  },
+  {
+    name: "ISO 22000",
+    description: "International food safety management",
+    image: "/iso-certificate.png",
+  },
 ];
 
 export default function ProductCertificationsSection() {
@@ -19,14 +29,24 @@ export default function ProductCertificationsSection() {
           Certified from source to dispatch
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {CERTS.map((cert) => (
             <div
               key={cert.name}
-              className="rounded-xl border border-secondary bg-secondary/20 p-5 flex flex-col gap-1"
+              className="rounded-xl border border-secondary bg-secondary/20 p-6 flex flex-col items-center gap-3"
             >
-              <h3 className="text-sm font-bold text-primary">{cert.name}</h3>
-              <p className="text-xs text-primary/80 leading-relaxed">
+              <div className="relative h-40 w-full">
+                <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-primary text-center">
+                {cert.name}
+              </h3>
+              <p className="text-xs text-primary/70 leading-relaxed text-center">
                 {cert.description}
               </p>
             </div>
