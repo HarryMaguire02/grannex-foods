@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ProductCard from './ProductCard';
+import AnimateIn from '@/app/components/ui/AnimateIn';
 
 interface Product {
   slug: string;
@@ -36,32 +37,35 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
 
         {/* Filter tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {FILTERS.map((filter) => (
-            <button
-              key={filter.value}
-              onClick={() => setActiveFilter(filter.value)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === filter.value
-                  ? 'bg-primary text-white'
-                  : 'border border-primary/40 text-primary hover:border-primary'
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
+        <AnimateIn from="bottom">
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {FILTERS.map((filter) => (
+              <button
+                key={filter.value}
+                onClick={() => setActiveFilter(filter.value)}
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  activeFilter === filter.value
+                    ? 'bg-primary text-white'
+                    : 'border border-primary/40 text-primary hover:border-primary'
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+        </AnimateIn>
 
         {/* Product grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filtered.map((product) => (
-            <ProductCard
-              key={product.slug}
-              slug={product.slug}
-              name={product.name}
-              image={product.image}
-              description={product.description}
-            />
+          {filtered.map((product, i) => (
+            <AnimateIn key={product.slug} from="bottom" delay={i * 0.08} className="h-full">
+              <ProductCard
+                slug={product.slug}
+                name={product.name}
+                image={product.image}
+                description={product.description}
+              />
+            </AnimateIn>
           ))}
         </div>
 

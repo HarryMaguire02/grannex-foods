@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import AnimateIn from '@/app/components/ui/AnimateIn';
 
 interface ProductOrderSectionProps {
   productName: string;
@@ -80,14 +81,17 @@ export default function ProductOrderSection({ productName }: ProductOrderSection
   return (
     <section id="order" className="bg-white py-10 lg:py-14">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
-        <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">Place Your Order</p>
-        <h2 className="text-3xl font-bold text-primary mb-8 max-w-xl">
-          Fill in your details — we&apos;ll confirm pricing within one business day
-        </h2>
+        <AnimateIn from="bottom">
+          <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">Place Your Order</p>
+          <h2 className="text-3xl font-bold text-primary mb-8 max-w-xl">
+            Fill in your details — we&apos;ll confirm pricing within one business day
+          </h2>
+        </AnimateIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 lg:gap-8 items-start">
 
           {/* Form */}
+          <AnimateIn from="left">
           <div className="border border-primary/15 rounded-2xl overflow-hidden">
             <div className="bg-pale/60 px-6 py-4 border-b border-primary/10 flex items-center justify-between">
               <p className="text-sm font-medium text-primary">{productName}</p>
@@ -207,8 +211,10 @@ export default function ProductOrderSection({ productName }: ProductOrderSection
               )}
             </form>
           </div>
+          </AnimateIn>
 
           {/* What happens next */}
+          <AnimateIn from="right">
           <div className="bg-primary rounded-2xl p-6 flex flex-col gap-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-secondary mb-1">What happens next</p>
@@ -230,6 +236,7 @@ export default function ProductOrderSection({ productName }: ProductOrderSection
               Prefer to call? <span className="text-white/80 font-medium">+381 631 077 109</span>
             </p>
           </div>
+          </AnimateIn>
 
         </div>
       </div>

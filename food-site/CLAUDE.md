@@ -12,7 +12,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ### Polish
 
-- [ ] Animations — add scroll-triggered entrance animations (fade-in, slide-up) to sections across the site
+- [x] Animations — scroll-triggered entrance animations via `motion` (Motion for React v12+, `"motion/react"`); `AnimateIn` wrapper at `app/components/ui/AnimateIn.tsx`; applied to all sections across all pages
 - [x] Mobile responsiveness — audit and improve layouts on small screens (xs/sm breakpoints) across all pages, including product detail page
 - [x] `PageHeroSection` image — heading reduced to `text-3xl sm:text-4xl lg:text-5xl` for small screens
 - [x] Product detail page mobile sidebar — sidebar remains desktop-only (`hidden lg:flex`); no mobile product picker (intentional)
@@ -42,6 +42,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
 - [] Improve image quality for all products
 - [] Decide with product owner what will Request a Quote button in contact us form section do
+- [] Fix browser warnings
 
 
 ## Project Overview

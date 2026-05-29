@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AnimateIn from '@/app/components/ui/AnimateIn';
 
 const stats = [
   { value: '24/7', label: 'Order Dispatch' },
@@ -13,7 +14,7 @@ export default function AboutUsHomeSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left */}
-          <div>
+          <AnimateIn from="left">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-green-medium font-bold">—</span>
               <span className="text-xs font-semibold uppercase tracking-widest text-green-medium">
@@ -32,18 +33,20 @@ export default function AboutUsHomeSection() {
             >
               Learn More
             </Link>
-          </div>
+          </AnimateIn>
 
           {/* Right: Stats */}
-          <div className="grid grid-cols-3 gap-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-2 items-center text-center">
-                <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-primary">{stat.value}</span>
-                <div className="w-8 h-[2px] bg-sage" />
-                <span className="text-xs text-sage">{stat.label}</span>
-              </div>
-            ))}
-          </div>
+          <AnimateIn from="right">
+            <div className="grid grid-cols-3 gap-4">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col gap-2 items-center text-center">
+                  <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-primary">{stat.value}</span>
+                  <div className="w-8 h-[2px] bg-sage" />
+                  <span className="text-xs text-sage">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </AnimateIn>
 
         </div>
       </div>
