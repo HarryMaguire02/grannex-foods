@@ -149,12 +149,12 @@
       {
         "title": "Restaurants & Catering",
         "description": "Frying, sauteing, and everyday cooking at scale.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/restaurants-and-catering.png"
       },
       {
         "title": "Fast Food & Quick Service",
         "description": "High-performance frying that maintains quality under repeated use.",
-        "image": "/FastFood-quickService.png"
+        "image": "/fast-food-and-quick-service.png"
       },
       {
         "title": "Food Manufacturing",
@@ -164,11 +164,12 @@
       {
         "title": "Retail & Distribution",
         "description": "Packaged formats for commercial resale and widespread distribution.",
-        "image": "/retail-distribution.png"
+        "image": "/retail-and-distribution.png"
       },
       {
         "title": "Industrial Food Production",
-        "description": "Consistent bulk supply for large-scale manufactures"
+        "description": "Consistent bulk supply for large-scale manufactures",
+        "image": "/industrial-food-production.png"
       }
     ],
     "packaging": [
@@ -346,26 +347,27 @@
       {
         "title": "Restaurants & Catering",
         "description": "Frying, sauteing, stir-frying, and general cooking.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/corn-restaurants-and-catering.png"
       },
       {
         "title": "Fast Food & Quick Service",
         "description": "High-performance frying oil with consistent results under heavy use.",
-        "image": "/FastFood-quickService.png"
+        "image": "/fast-food-and-quick-service.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Snacks, baked goods, dressings, and processed foods.",
-        "image": "/food-manufacturing.png"
+        "image": "/corn-food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Packaged formats for commercial resale and consumer use.",
-        "image": "/retail-distribution.png"
+        "image": "/corn-retail-distribution.png"
       },
       {
         "title": "Industrial Production",
-        "description": "Reliable bulk supply for large-scale food manufactures"
+        "description": "Reliable bulk supply for large-scale food manufactures",
+        "image": "/industrial-food-production.png"
       }
     ],
     "packaging": [
@@ -542,26 +544,28 @@
     "applications": [
       {
         "title": "Industrial Food Production",
-        "description": "Snacks, ready meals, baked goods, and processed foods."
+        "description": "Snacks, ready meals, baked goods, and processed foods.",
+        "image": "/industrial-food-production.png"
       },
       {
         "title": "Restaurants & Catering",
         "description": "Frying, sauteing, and all-purpose cooking.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/restaurants-and-catering.png"
       },
       {
         "title": "Fast Food & Chip Shops",
-        "description": "Consistent high-performance frying oil."
+        "description": "Consistent high-performance frying oil.",
+        "image": "/fast-food-and-quick-service.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Margarines, dressings, and emulsified products.",
-        "image": "/food-manufacturing.png"
+        "image": "/soybean-food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Consumer and trade packaging for widespread distribution",
-        "image": "/retail-distribution.png"
+        "image": "/soybean-retail-and-distribution.png"
       }
     ],
     "packaging": [
@@ -739,25 +743,28 @@
     "applications": [
       {
         "title": "Bakery & Confectionery",
-        "description": "Biscuits, cakes, pastries, and chocolate products."
+        "description": "Biscuits, cakes, pastries, and chocolate products.",
+        "image": "/bakery-and-confectionery.png"
       },
       {
         "title": "Margarine & Shortening",
-        "description": "Core ingredient in margarine and vegetable fat production."
+        "description": "Core ingredient in margarine and vegetable fat production.",
+        "image": "/soybean-food-manufacturing.png"
       },
       {
         "title": "Industrial Frying",
-        "description": "Instant noodles, snacks, and deep-fried processed foods."
+        "description": "Instant noodles, snacks, and deep-fried processed foods.",
+        "image": "/fast-food-and-quick-service.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Emulsifiers, creamers, and ready meals.",
-        "image": "/food-manufacturing.png"
+        "image": "/soybean-food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Available in consumer and wholesale formats",
-        "image": "/retail-distribution.png"
+        "image": "/palm-retail-and-distribution.png"
       }
     ],
     "packaging": [
@@ -936,11 +943,12 @@
       {
         "title": "Restaurants & Catering",
         "description": "Frying, roasting, baking, and salad dressings.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/restaurants-and-catering.png"
       },
       {
         "title": "Health-Focused Menus",
-        "description": "Low-saturated-fat option for health-conscious customers."
+        "description": "Low-saturated-fat option for health-conscious customers.",
+        "image": "/rapeseed-health-focused-menus.png"
       },
       {
         "title": "Food Manufacturing",
@@ -949,12 +957,13 @@
       },
       {
         "title": "Fast Food & Catering",
-        "description": "Reliable high-volume frying oil."
+        "description": "Reliable high-volume frying oil.",
+        "image": "/fast-food-and-quick-service.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Premium consumer packaging for widespread resale.",
-        "image": "/retail-distribution.png"
+        "image": "/rapeseed-retail-and-distribution.png"
       }
     ],
     "packaging": [
@@ -1009,7 +1018,7 @@
   },
   {
     "slug": "olive-oil",
-    "name": "Olive Oil",
+    "name": "Extra Virgin Olive Oil",
     "subtitle": "Extra Virgin & Refined · Premium Mediterranean Grade",
     "image": "/products/06-olive-oil.png",
     "relatedImage": "/products/related-olive-oil.png",
@@ -1132,24 +1141,28 @@
     "applications": [
       {
         "title": "Fine Dining & Restaurants",
-        "description": "Dressings, dips, finishing oil, and premium cooking."
+        "description": "Dressings, dips, finishing oil, and premium cooking.",
+        "image": "/olive-fine-dining-restaurants.png"
       },
       {
         "title": "Retail & Gourmet Stores",
-        "description": "Premium bottled product for health-conscious consumers."
+        "description": "Premium bottled product for health-conscious consumers.",
+        "image": "/olive-retail-and-gourmet.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Antipasti, dressings, marinades, and premium sauces.",
-        "image": "/food-manufacturing.png"
+        "image": "/olive-food-manufacturing.png"
       },
       {
         "title": "Bakery & Catering",
-        "description": "Refined olive oil for baking, roasting, and frying."
+        "description": "Refined olive oil for baking, roasting, and frying.",
+        "image": "/olive-bakery-and-catering.png"
       },
       {
         "title": "Export & Wholesale",
-        "description": "Bulk supply for international distributors and importers."
+        "description": "Bulk supply for international distributors and importers.",
+        "image": "/olive-export-and-wholesale.png"
       }
     ],
     "packaging": [
@@ -1319,25 +1332,27 @@
       {
         "title": "Restaurants & Catering",
         "description": "Table condiment, burger sauce, and cooking ingredient.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/ketchup-restaurants-catering.png"
       },
       {
         "title": "Fast Food & Chip Shops",
-        "description": "Dipping sauce and accompaniment for fried foods."
+        "description": "Dipping sauce and accompaniment for fried foods.",
+        "image": "/ketchup-fast-food.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Base sauce for ready meals, pizzas, and processed foods.",
-        "image": "/food-manufacturing.png"
+        "image": "/ketchup-food-manufacturing.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Consumer packaging for supermarkets and convenience stores.",
-        "image": "/retail-distribution.png"
+        "image": "/ketchup-retail-distribution.png"
       },
       {
         "title": "Hospitality & Events",
-        "description": "Sachets and portion packs for large-scale service."
+        "description": "Sachets and portion packs for large-scale service.",
+        "image": "/ketchup-hospitality-events.png"
       }
     ],
     "packaging": [
@@ -1495,24 +1510,27 @@
       {
         "title": "Restaurants & Catering",
         "description": "Sandwiches, burgers, salads, and base for other sauces.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/mayo-restaurants-and-catering.png"
       },
       {
         "title": "Fast Food Production",
-        "description": "Burgers, wraps, and ready-to-eat products."
+        "description": "Burgers, wraps, and ready-to-eat products.",
+        "image": "/mayo-fast-food-production.png"
       },
       {
         "title": "Industrial Food Production",
-        "description": "Ready meals, sauces, dressings, and processed foods."
+        "description": "Ready meals, sauces, dressings, and processed foods.",
+        "image": "/mayo-industrial-food-production.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Retail jars and bulk packs for supermarkets and wholesalers.",
-        "image": "/retail-distribution.png"
+        "image": "/mayo-retail-distribution.png"
       },
       {
         "title": "Allergen-Friendly Menus",
-        "description": "Egg-free formulation supports allergy-conscious kitchens."
+        "description": "Egg-free formulation supports allergy-conscious kitchens.",
+        "image": "/mayo-allergen-friendly.png"
       }
     ],
     "packaging": [
@@ -1683,25 +1701,27 @@
       {
         "title": "Restaurants & Catering",
         "description": "Sandwich spread, sauce base, and marinade ingredient.",
-        "image": "/Restaurants-Catering.png"
+        "image": "/mustard-restaurants-catering.png"
       },
       {
         "title": "Deli & Charcuterie",
-        "description": "Whole grain mustard for premium boards and gourmet menus."
+        "description": "Whole grain mustard for premium boards and gourmet menus.",
+        "image": "/mustard-deli-charcuterie.png"
       },
       {
         "title": "Fast Food & Takeaways",
-        "description": "Hot dogs, burgers, wraps, and sandwiches."
+        "description": "Hot dogs, burgers, wraps, and sandwiches.",
+        "image": "/mustard-fast-food.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Consumer jars for supermarkets and specialty stores.",
-        "image": "/retail-distribution.png"
+        "image": "/mustard-retail-distribution.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Dressings, marinades, ready meals, and processed sauces",
-        "image": "/food-manufacturing.png"
+        "image": "/mustard-food-manufacturing.png"
       }
     ],
     "packaging": [
@@ -1741,11 +1761,11 @@
     "image": "/products/10-sugar.png",
     "relatedImage": "/products/related-sugar.png",
     "additives": "None — 100% pure sugar",
-    "category": "condiments-sauces",
+    "category": "sweeteners",
     "featured": false,
     "badge": "In Demand",
     "tags": [
-      "Condiments & Sauces",
+      "Sweeteners",
       "In Demand",
       "Global Dispatch"
     ],
@@ -1857,25 +1877,28 @@
     "applications": [
       {
         "title": "Bakery & Confectionery",
-        "description": "Cakes, biscuits, pastries, chocolates, and sweets."
+        "description": "Cakes, biscuits, pastries, chocolates, and sweets.",
+        "image": "/sugar-bakery-and-confectionery.png"
       },
       {
         "title": "Beverage Production",
-        "description": "Soft drinks, juices, syrups, and energy drinks."
+        "description": "Soft drinks, juices, syrups, and energy drinks.",
+        "image": "/sugar-beverage-production.png"
       },
       {
         "title": "Food Manufacturing",
         "description": "Jams, sauces, ketchup, preserves, and ready meals.",
-        "image": "/food-manufacturing.png"
+        "image": "/sugar-food-manufacturing.png"
       },
       {
         "title": "Dairy & Ice Cream",
-        "description": "Yoghurts, ice cream, flavoured milks, and desserts."
+        "description": "Yoghurts, ice cream, flavoured milks, and desserts.",
+        "image": "/sugar-dairy-and-ice-cream.png"
       },
       {
         "title": "Retail & Distribution",
         "description": "Consumer packs for supermarkets and wholesale distributors.",
-        "image": "/retail-distribution.png"
+        "image": "/sugar-retail-distribution.png"
       }
     ],
     "packaging": [

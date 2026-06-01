@@ -30,18 +30,22 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] `packaging[]` — real per-product data added for all 10 products from client spreadsheets
 - [x] `public/products/10-sugar.png` — added by client
 - [x] Populate full rich data for Olive Oil in `products.json` — all data confirmed against client Excel sheet
-- [ ] Format images for `ProductPackagingSection` — Bottle uses `/05L-5L.png`, Jerry Can uses `/10L-20L.png`; all other formats (Plastic Tube, Bucket, Jar/Bottle, Glass Bottle, Tin, Bag, Sack, Big Bag) have no image and show a `bg-secondary/40` placeholder — replace with real format images when available
-- [ ] Application images — currently only Sunflower Oil has application images; other products use no images (text-only cards)
 - [x] Related product images — added for all 10 products except soybean-oil (no image available); `relatedImage` field set in `products.json` for 9 products; soybean-oil falls back to `image`
 - [x] `relatedSlugs` — updated per-product with intuitive groupings: oils recommend oils, condiments recommend condiments; see products.json for full mapping
 - [x] `ProductCertificationsSection` — redesigned to show certificate logo images (`haccp-certificate.png`, `fssc-sertificate.png`, `iso-certificate.png`) above name/description; 3-col grid matching Figma
 
 ### Final wrap up
 
-- [] We need to decide what will buttons from `ProductVariantsSection` to do, currently both of them are navigating to contact form (check with product manager how this should be handled)
+- [x] In ProductHeroSection we need to handle long descrription better. Either to shorten up the text or to display somehow all text. This approach with 3 dots is not good
+- [x] Rename Olive oil to extra virgin olive oil everywhere you can
+- [x] (cooking oils, best seller i global dispatch) All tags in single product page (productHeroSection)  should be the same style (no green background)
+- [x] Application images — currently only Sunflower Oil has application images; other products use no images (text-only cards) - add images to all cards
+- [x] Remove buttons from `ProductVariantsSection`
+- [x] Decide with product owner what will Request a Quote button in contact us form section do - REMOVE IT 
+- [x] In products page we should have Sauces filter instead of Condiments & Sauces, and we should add Sweeteners category for sugar
+- [] ProductPackagingSection should be done differently (no table for variants). Each variant should have it's own grid (for example - sunflower oil 5 grids, mustard 2, sugar 6). If there is more then 3 grids, display only 3 and they should be 'spinnable' like a catalog. Also user should be able to manualy scroll horizontally
 - [] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
 - [] Improve image quality for all products
-- [] Decide with product owner what will Request a Quote button in contact us form section do
 - [] Fix browser warnings
 
 

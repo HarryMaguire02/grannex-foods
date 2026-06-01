@@ -127,19 +127,6 @@ export default function ProductVariantsSection({
                   </div>
                 )}
 
-                {/* Order button — left-aligned, not full width */}
-                <a
-                  href="#order"
-                  className={`self-start text-sm font-medium py-2.5 px-5 rounded-lg transition-colors ${
-                    i === 0
-                      ? "bg-primary text-white hover:bg-green-medium"
-                      : "border-2 border-[#8C7B5E] text-[#8C7B5E] hover:bg-[#8C7B5E]/10"
-                  }`}
-                >
-                  Order{" "}
-                  {variant.name.replace(productName, "").trim() || variant.name}{" "}
-                  Sunflower
-                </a>
               </div>
             </AnimateIn>
           ))}

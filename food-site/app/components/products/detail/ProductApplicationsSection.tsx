@@ -30,7 +30,7 @@ export default function ProductApplicationsSection({ applications }: ProductAppl
                 {app.image && (
                   <div className="relative w-full aspect-[308/84]">
                     <Image
-                      src={app.image}
+                      src={`/applications${app.image}`}
                       alt={app.title}
                       fill
                       className="object-cover"

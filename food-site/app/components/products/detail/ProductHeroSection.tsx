@@ -98,12 +98,10 @@ export default function ProductHeroSection({
             {/* Tags */}
             {product.tags && product.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
-                {product.tags.map((tag, i) => (
+                {product.tags.map((tag) => (
                   <span
                     key={tag}
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      i === 0 ? "bg-primary text-white" : "text-primary bg-pale"
-                    }`}
+                    className="px-3 py-1 rounded-full text-xs font-medium text-primary bg-pale"
                   >
                     {tag}
                   </span>
@@ -128,7 +126,7 @@ export default function ProductHeroSection({
 
             {/* Description */}
             {product.longDescription && (
-              <p className="text-sm text-primary/70 leading-relaxed mb-5 line-clamp-4">
+              <p className="text-sm text-primary/70 leading-relaxed mb-5">
                 {product.longDescription}
               </p>
             )}
@@ -160,21 +158,13 @@ export default function ProductHeroSection({
               </div>
             )}
 
-            {/* Action buttons — inside the card, at the bottom */}
-            <div className="flex gap-3 mt-auto">
-              <a
-                href="#order"
-                className="flex-1 bg-primary text-white text-sm font-semibold py-3.5 px-6 rounded-full text-center hover:bg-green-medium transition-colors"
-              >
-                Place an Order
-              </a>
-              <a
-                href="#order"
-                className="flex-1 border-2 border-primary/30 text-primary text-sm font-semibold py-3.5 px-6 rounded-full text-center hover:bg-pale transition-colors"
-              >
-                Request a Quote
-              </a>
-            </div>
+            {/* Action button */}
+            <a
+              href="#order"
+              className="mt-auto bg-primary text-white text-sm font-semibold py-3.5 px-6 rounded-full text-center hover:bg-green-medium transition-colors"
+            >
+              Place an Order
+            </a>
           </div>
         </div>
 
@@ -182,12 +172,10 @@ export default function ProductHeroSection({
         <div className="lg:hidden pb-8 flex flex-col gap-4">
           {product.tags && product.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {product.tags.map((tag, i) => (
+              {product.tags.map((tag) => (
                 <span
                   key={tag}
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    i === 0 ? "bg-primary text-white" : "text-primary bg-pale"
-                  }`}
+                  className="px-3 py-1 rounded-full text-xs font-medium text-primary bg-pale"
                 >
                   {tag}
                 </span>
@@ -235,20 +223,12 @@ export default function ProductHeroSection({
               })}
             </div>
           )}
-          <div className="flex flex-col xs:flex-row gap-3">
-            <a
-              href="#order"
-              className="flex-1 bg-primary text-white text-sm font-semibold py-3.5 px-4 rounded-full text-center hover:bg-green-medium transition-colors"
-            >
-              Place an Order
-            </a>
-            <a
-              href="#order"
-              className="flex-1 border-2 border-primary/30 text-primary text-sm font-semibold py-3.5 px-4 rounded-full text-center hover:bg-pale transition-colors"
-            >
-              Request a Quote
-            </a>
-          </div>
+          <a
+            href="#order"
+            className="bg-primary text-white text-sm font-semibold py-3.5 px-4 rounded-full text-center hover:bg-green-medium transition-colors"
+          >
+            Place an Order
+          </a>
         </div>
       </div>
     </section>
