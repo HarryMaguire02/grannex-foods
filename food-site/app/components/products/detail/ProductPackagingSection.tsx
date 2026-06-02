@@ -5,7 +5,6 @@ import Image from 'next/image';
 import AnimateIn from '@/app/components/ui/AnimateIn';
 
 const GAP = 16;
-const VISIBLE = 3;
 const CLONE_COUNT = 3;
 const INTERVAL_MS = 3500;
 
@@ -96,7 +95,17 @@ export default function ProductPackagingSection({
     opt.variants.map((v) => ({ ...v, format: opt.format }))
   );
   const total = allVariants.length;
-  const needsCarousel = total > VISIBLE;
+
+  // Start at CLONE_COUNT so the first visible cards are the real first cards
+  const [index, setIndex] = useState(CLONE_COUNT);
+  const [animated, setAnimated] = useState(true);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const indexRef = useRef(index);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const needsCarousel = total > visibleCount;
 
   // Extended list: [last CLONE_COUNT items] + [all items] + [first CLONE_COUNT items]
   const extended = needsCarousel
@@ -107,27 +116,19 @@ export default function ProductPackagingSection({
       ]
     : allVariants;
 
-  // Start at CLONE_COUNT so the first visible cards are the real first cards
-  const [index, setIndex] = useState(CLONE_COUNT);
-  const [animated, setAnimated] = useState(true);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [cardWidth, setCardWidth] = useState(0);
-  const indexRef = useRef(index);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
   // Keep a ref in sync with state to avoid stale closures in event handlers
   useEffect(() => {
     indexRef.current = index;
   }, [index]);
 
-  // Compute card width whenever the container resizes
+  // Compute card width + visible count whenever the container resizes
   useEffect(() => {
     const compute = () => {
-      if (containerRef.current) {
-        setCardWidth(
-          (containerRef.current.offsetWidth - (VISIBLE - 1) * GAP) / VISIBLE
-        );
-      }
+      if (!containerRef.current) return;
+      const w = containerRef.current.offsetWidth;
+      const cols = w < 540 ? 1 : w < 900 ? 2 : 3;
+      setVisibleCount(cols);
+      setCardWidth((w - (cols - 1) * GAP) / cols);
     };
     compute();
     const ro = new ResizeObserver(compute);
@@ -227,7 +228,7 @@ export default function ProductPackagingSection({
                     variant={variant}
                     shelfLife={shelfLife}
                     style={{ width: cardWidth > 0 ? `${cardWidth}px` : undefined }}
-                    className={cardWidth === 0 ? 'w-[calc(33.333%-11px)]' : ''}
+                    className={cardWidth === 0 ? 'w-full' : ''}
                   />
                 ))}
               </div>
