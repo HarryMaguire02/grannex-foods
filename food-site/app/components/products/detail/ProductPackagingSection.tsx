@@ -175,18 +175,21 @@ export default function ProductPackagingSection({
     }
   };
 
-  const handlePrev = () => {
+  const handleMouseEnter = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    startAutoPlay();
+  }, [startAutoPlay]);
+
+  const handleDotClick = useCallback((dotIndex: number) => {
     startAutoPlay();
     setAnimated(true);
-    setIndex((prev) => prev - 1);
-  };
+    setIndex(CLONE_COUNT + dotIndex);
+  }, [startAutoPlay]);
 
-  const handleNext = () => {
-    startAutoPlay();
-    setAnimated(true);
-    setIndex((prev) => prev + 1);
-  };
-
+  const realIndex = ((index - CLONE_COUNT) % total + total) % total;
   const translateX = cardWidth > 0 ? -(index * (cardWidth + GAP)) : 0;
 
   return (
@@ -202,18 +205,11 @@ export default function ProductPackagingSection({
         </AnimateIn>
 
         {needsCarousel ? (
-          <div className="relative">
-            {/* Prev arrow */}
-            <button
-              onClick={handlePrev}
-              aria-label="Previous"
-              className="hidden lg:flex absolute -left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-secondary shadow-sm items-center justify-center hover:bg-pale transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
+          <div
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             {/* Clipping container */}
             <div className="overflow-hidden" ref={containerRef}>
               {/* Sliding track */}
@@ -237,16 +233,21 @@ export default function ProductPackagingSection({
               </div>
             </div>
 
-            {/* Next arrow */}
-            <button
-              onClick={handleNext}
-              aria-label="Next"
-              className="hidden lg:flex absolute -right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-secondary shadow-sm items-center justify-center hover:bg-pale transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+            {/* Dots */}
+            <div className="flex justify-center items-center gap-2 mt-5">
+              {allVariants.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleDotClick(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                  className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                    i === realIndex
+                      ? 'bg-primary'
+                      : 'bg-primary/25 hover:bg-primary/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         ) : (
           /* Static grid for ≤3 variants */
