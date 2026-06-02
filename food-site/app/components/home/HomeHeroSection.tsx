@@ -27,7 +27,7 @@ export default function HomeHeroSection() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 lg:h-[520px]">
 
           {/* Left: Content */}
-          <div className="bg-primary flex flex-col justify-center">
+          <div className="bg-primary flex flex-col justify-center order-2 lg:order-1">
           <div className="w-full max-w-[620px] ml-auto px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-0 flex flex-col gap-4 sm:gap-6">
             <p className="text-secondary text-xs font-semibold uppercase tracking-widest">
               Global Food Supplier
@@ -59,7 +59,7 @@ export default function HomeHeroSection() {
           </div>
 
           {/* Right: Slideshow */}
-          <div className="relative h-52 sm:h-72 lg:h-full">
+          <div className="relative h-52 sm:h-72 lg:h-full order-1 lg:order-2">
             {slides.map((slide, index) => (
               <div
                 key={index}
