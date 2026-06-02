@@ -73,27 +73,27 @@ export default function HomeHeroSection() {
                   fill
                   className="object-cover"
                   priority={index === 0}
-                />
-              </div>
-            ))}
-
-            {/* Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                  className={`w-3 h-3 rounded-full border-2 border-white transition-all ${
-                    index === currentSlide ? 'bg-white' : 'bg-transparent hover:bg-white/40'
-                  }`}
-                />
-              ))}
+              />
             </div>
-          </div>
+          ))}
 
+          {/* Dots */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                className={`w-3 h-3 rounded-full border-2 border-white transition-all ${
+                  index === currentSlide ? 'bg-white' : 'bg-transparent hover:bg-white/40'
+                }`}
+              />
+            ))}
+          </div>
         </div>
-      </section>
+
+      </div>
+    </section>
 
     </>
   );

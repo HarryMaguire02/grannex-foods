@@ -156,11 +156,13 @@ export default async function ProductDetailPage({
                     netWeight: string;
                     unitsPerCarton: string;
                     bestFor: string;
+                    image?: string;
                   }[];
                 }[];
               }
             ).packaging
           }
+          shelfLife={"shelfLife" in product ? (product as { shelfLife: string }).shelfLife : undefined}
         />
       )}
 

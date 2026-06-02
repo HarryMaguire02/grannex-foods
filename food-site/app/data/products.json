@@ -181,19 +181,22 @@
             "size": "1 L",
             "netWeight": "920 g",
             "unitsPerCarton": "12–15 pcs",
-            "bestFor": "Retail / Consumer"
+            "bestFor": "Retail / Consumer",
+            "image": "/packaging/sunflower-1L.png"
           },
           {
             "size": "5 L",
             "netWeight": "~4,600 g",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/sunflower-5L.png"
           },
           {
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/sunflower-10L.png"
           }
         ]
       },
@@ -205,13 +208,15 @@
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/sunflower-jerry-can-10L.png"
           },
           {
             "size": "20 L",
             "netWeight": "~18.4 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/sunflower-20L.png"
           }
         ]
       }
@@ -379,19 +384,22 @@
             "size": "1 L",
             "netWeight": "920 g",
             "unitsPerCarton": "12–15 pcs",
-            "bestFor": "Retail / Consumer"
+            "bestFor": "Retail / Consumer",
+            "image": "/packaging/corn-1L.png"
           },
           {
             "size": "5 L",
             "netWeight": "~4,600 g",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/corn-5L.png"
           },
           {
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/corn-10L.png"
           }
         ]
       },
@@ -403,13 +411,15 @@
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/corn-jerry-can-10L.png"
           },
           {
             "size": "20 L",
             "netWeight": "~18.4 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/corn-20L.png"
           }
         ]
       }
@@ -577,19 +587,22 @@
             "size": "1 L",
             "netWeight": "920 g",
             "unitsPerCarton": "12–15 pcs",
-            "bestFor": "Retail / Consumer"
+            "bestFor": "Retail / Consumer",
+            "image": "/packaging/soybean-1L.png"
           },
           {
             "size": "5 L",
             "netWeight": "~4,600 g",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/soybean-5L.png"
           },
           {
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/soybean-10L.png"
           }
         ]
       },
@@ -601,13 +614,15 @@
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/soybean-jerry-can-10L.png"
           },
           {
             "size": "20 L",
             "netWeight": "~18.4 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/soybean-20L.png"
           }
         ]
       }
@@ -776,19 +791,22 @@
             "size": "1 L",
             "netWeight": "920 g",
             "unitsPerCarton": "12–15 pcs",
-            "bestFor": "Retail / Consumer"
+            "bestFor": "Retail / Consumer",
+            "image": "/packaging/palm-1L.png"
           },
           {
             "size": "5 L",
             "netWeight": "~4,600 g",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/palm-5L.png"
           },
           {
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/palm-10L.png"
           }
         ]
       },
@@ -800,13 +818,15 @@
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/palm-jerry-can-10L.png"
           },
           {
             "size": "20 L",
             "netWeight": "~18.4 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/palm-20L.png"
           }
         ]
       }
@@ -975,19 +995,22 @@
             "size": "1 L",
             "netWeight": "920 g",
             "unitsPerCarton": "12–15 pcs",
-            "bestFor": "Retail / Consumer"
+            "bestFor": "Retail / Consumer",
+            "image": "/packaging/rapeseed-1L.png"
           },
           {
             "size": "5 L",
             "netWeight": "~4,600 g",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/rapeseed-5L.png"
           },
           {
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/rapeseed-10L.png"
           }
         ]
       },
@@ -999,13 +1022,15 @@
             "size": "10 L",
             "netWeight": "~9.2 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Catering / Food Service"
+            "bestFor": "Catering / Food Service",
+            "image": "/packaging/rapeseed-jerry-can-10L.png"
           },
           {
             "size": "20 L",
             "netWeight": "~18.4 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/rapeseed-20L.png"
           }
         ]
       }
@@ -1173,19 +1198,22 @@
             "size": "250 ml",
             "netWeight": "~230 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Premium Retail"
+            "bestFor": "Premium Retail",
+            "image": "/packaging/olive-250ml.png"
           },
           {
             "size": "500 ml",
             "netWeight": "~460 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Premium Retail"
+            "bestFor": "Premium Retail",
+            "image": "/packaging/olive-500ml.png"
           },
           {
             "size": "750 ml",
             "netWeight": "~690 g",
             "unitsPerCarton": "6 pcs",
-            "bestFor": "Premium Retail"
+            "bestFor": "Premium Retail",
+            "image": "/packaging/olive-750ml.png"
           }
         ]
       },
@@ -1196,7 +1224,8 @@
             "size": "1 L",
             "netWeight": "~920 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Retail / Catering"
+            "bestFor": "Retail / Catering",
+            "image": "/packaging/olive-1L.png"
           }
         ]
       }
@@ -1363,7 +1392,8 @@
             "size": "850 g",
             "netWeight": "850 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Retail / Catering"
+            "bestFor": "Retail / Catering",
+            "image": "/packaging/ketchup-850ml.png"
           }
         ]
       },
@@ -1374,7 +1404,8 @@
             "size": "5 kg",
             "netWeight": "5 kg",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Food Service"
+            "bestFor": "Food Service",
+            "image": "/packaging/ketchup-5kg.png"
           }
         ]
       }
@@ -1541,13 +1572,15 @@
             "size": "430 g",
             "netWeight": "430 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Retail"
+            "bestFor": "Retail",
+            "image": "/packaging/mayonnaise-430g.png"
           },
           {
             "size": "770 g",
             "netWeight": "770 g",
             "unitsPerCarton": "6 pcs",
-            "bestFor": "Catering"
+            "bestFor": "Catering",
+            "image": "/packaging/mayonnaise-770g.png"
           }
         ]
       },
@@ -1558,7 +1591,8 @@
             "size": "850 g",
             "netWeight": "850 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Food Service"
+            "bestFor": "Food Service",
+            "image": "/packaging/mayonnaise-850g.png"
           }
         ]
       },
@@ -1569,7 +1603,8 @@
             "size": "5 L",
             "netWeight": "~4.8 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Food Service"
+            "bestFor": "Food Service",
+            "image": "/packaging/mayonnaise-5L.png"
           }
         ]
       }
@@ -1732,7 +1767,8 @@
             "size": "900 g",
             "netWeight": "900 g",
             "unitsPerCarton": "12 pcs",
-            "bestFor": "Food Service"
+            "bestFor": "Food Service",
+            "image": "/packaging/mustard-900g.png"
           }
         ]
       },
@@ -1743,7 +1779,8 @@
             "size": "5 kg",
             "netWeight": "5 kg",
             "unitsPerCarton": "2 pcs",
-            "bestFor": "Food Service"
+            "bestFor": "Food Service",
+            "image": "/packaging/mustard-5kg.png"
           }
         ]
       }
@@ -1909,19 +1946,22 @@
             "size": "1 kg",
             "netWeight": "1 kg",
             "unitsPerCarton": "10 pcs",
-            "bestFor": "Retail"
+            "bestFor": "Retail",
+            "image": "/packaging/sugar-1kg.png"
           },
           {
             "size": "2 kg",
             "netWeight": "2 kg",
             "unitsPerCarton": "5 pcs",
-            "bestFor": "Retail"
+            "bestFor": "Retail",
+            "image": "/packaging/sugar-2kg.png"
           },
           {
             "size": "5 kg",
             "netWeight": "5 kg",
             "unitsPerCarton": "4 pcs",
-            "bestFor": "Retail / Catering"
+            "bestFor": "Retail / Catering",
+            "image": "/packaging/sugar-5kg.png"
           }
         ]
       },
@@ -1932,13 +1972,15 @@
             "size": "25 kg",
             "netWeight": "25 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/sugar-25kg.png"
           },
           {
             "size": "50 kg",
             "netWeight": "50 kg",
             "unitsPerCarton": "Bulk",
-            "bestFor": "Industrial / Wholesale"
+            "bestFor": "Industrial / Wholesale",
+            "image": "/packaging/sugar-50kg.png"
           }
         ]
       },
@@ -1949,7 +1991,8 @@
             "size": "1,000 kg",
             "netWeight": "1,000 kg",
             "unitsPerCarton": "Single",
-            "bestFor": "Large-Scale Industrial"
+            "bestFor": "Large-Scale Industrial",
+            "image": "/packaging/sugar-1000kg.png"
           }
         ]
       }

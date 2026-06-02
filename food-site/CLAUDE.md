@@ -43,11 +43,11 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] Remove buttons from `ProductVariantsSection`
 - [x] Decide with product owner what will Request a Quote button in contact us form section do - REMOVE IT 
 - [x] In products page we should have Sauces filter instead of Condiments & Sauces, and we should add Sweeteners category for sugar
-- [] ProductCertificationsSections should have option to download certificates once you click on grid and when you hover on grid there should be indicator that by clicking on you will download certificate. Also we can add some small note/watermark which will say that. pdfs will be at public/pdfs folder
-- [] ProductPackagingSection should be done differently (no table for variants). Each variant should have it's own grid (for example - sunflower oil 5 grids, mustard 2, sugar 6). If there is more then 3 grids, display only 3 and they should be 'spinnable' like a catalog. Also user should be able to manualy scroll horizontally. Images are at public/packaging
+- [x] ProductCertificationsSections should have option to download certificates once you click on grid and when you hover on grid there should be indicator that by clicking on you will download certificate. Also we can add some small note/watermark which will say that. pdfs will be at public/pdfs folder
+- [x] ProductPackagingSection should be done differently (no table for variants). Each variant should have it's own grid (for example - sunflower oil 5 grids, mustard 2, sugar 6). If there is more then 3 grids, display only 3 and they should be 'spinnable' like a catalog. Also user should be able to manualy scroll horizontally. Images are at public/packaging
 - [] PageHeroSection component must be done better, currently we display hover image all way to the right which is not good. Image should be alligned with our text on right side. It shouldn't go all way to the end
 - [] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
-- Website structure - our max width should be bigger i think, currently on monitor screens website looks empty, but be careful not to brake phone screens
+- [x] Website structure - max-width-content increased from 1240px to 1400px in globals.css
 - [] Fix browser warnings
 - [] Improve image quality for all products
 
