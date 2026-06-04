@@ -30,10 +30,12 @@ export default function OurProductsSection() {
                 {/* Image */}
                 <div className="relative h-48">
                   <Image
-                    src={product.image}
+                    src={product.relatedImage || product.image}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
+                    loading="eager"
                   />
                   <div className="absolute bottom-3 left-3">
                     <span className="bg-pale text-primary text-xs font-medium px-3 py-1 rounded-full">

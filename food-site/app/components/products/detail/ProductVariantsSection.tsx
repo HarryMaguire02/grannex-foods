@@ -26,12 +26,12 @@ export default function ProductVariantsSection({
     <section className="bg-secondary/20 border-y border-secondary py-10 lg:py-14">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
         <AnimateIn from="bottom">
-          <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">
+          <p className="text-xl font-semibold uppercase tracking-widest text-primary mb-1">
             Product Variants
           </p>
-          <h2 className="text-3xl font-bold mb-8" style={{ color: "#1A1A18" }}>
+          <p className="text-sm mb-8">
             Choose the right {productName.toLowerCase()} for your business needs
-          </h2>
+          </p>
         </AnimateIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

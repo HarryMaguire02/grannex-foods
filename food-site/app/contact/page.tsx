@@ -9,7 +9,7 @@ import CTASection from '@/app/components/CTASection';
 export const metadata: Metadata = {
   title: 'Contact & Orders | GrannexFoods',
   description:
-    'Place your order or get in touch with GrannexFoods. Contact our team for wholesale cooking oils, sauces, and food ingredients. Minimum order 1 pallet.',
+    'Place your order or get in touch with GrannexFoods. Contact our team for wholesale cooking oils, sauces, and food ingredients. Minimum order 1 container.',
 };
 
 export default function ContactPage() {

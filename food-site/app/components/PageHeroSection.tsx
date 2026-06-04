@@ -13,14 +13,14 @@ export default function PageHeroSection({ label, heading, description, imageSrc,
     <section className="w-full bg-primary overflow-hidden">
       {/* Mobile: full-bleed image above text */}
       <div className="relative aspect-[3/2] lg:hidden">
-        <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
+        <Image src={imageSrc} alt={imageAlt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
       </div>
 
       {/* Text + desktop image */}
       <div className="relative">
         {/* Below 1920px: full-bleed; 1920px+: capped at 700px (half of 1400px max-w) so right edge aligns with container */}
         <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 right-0 min-[1920px]:right-auto min-[1920px]:w-[700px]">
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
+          <Image src={imageSrc} alt={imageAlt} fill sizes="(min-width: 1920px) 700px, 50vw" className="object-cover" priority />
         </div>
 
         {/* Text: in normal flow (sets section height); w-1/2 on desktop aligns with image boundary */}

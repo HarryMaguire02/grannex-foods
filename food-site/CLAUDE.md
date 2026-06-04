@@ -43,14 +43,17 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] Remove buttons from `ProductVariantsSection`
 - [x] Decide with product owner what will Request a Quote button in contact us form section do - REMOVE IT 
 - [x] In products page we should have Sauces filter instead of Condiments & Sauces, and we should add Sweeteners category for sugar
-- [x] ProductCertificationsSections should have option to download certificates once you click on grid and when you hover on grid there should be indicator that by clicking on you will download certificate. Also we can add some small note/watermark which will say that. pdfs will be at public/pdfs folder
+- [x] ProductCertificationsSection — download functionality removed; cards are now plain `<div>` elements (no `<a download>`), no "Download PDF" text/icon; `public/pdfs/` folder deleted
 - [x] ProductPackagingSection should be done differently (no table for variants). Each variant should have it's own grid (for example - sunflower oil 5 grids, mustard 2, sugar 6). If there is more then 3 grids, display only 3 and they should be 'spinnable' like a catalog. Also user should be able to manualy scroll horizontally. Images are at public/packaging
 - [x] ProductPackagingSection carousel — replaced prev/next arrows with dot navigation below cards; dots are uniform `w-2 h-2` circles (active = `bg-primary`, inactive = `bg-primary/25`); carousel pauses on hover and resumes on mouse leave; dots are clickable to jump to any card
 - [x] PageHeroSection component must be done better, currently we display hover image all way to the right which is not good. Image should be alligned with our text on right side. It shouldn't go all way to the end
 - [x] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
 - [x] Website structure - max-width-content increased from 1240px to 1400px in globals.css
-- [] Fix browser warnings
-- [] Improve image quality and size on all screens. Already covered (products, applications and packaging images)
+- [x] Fix browser warnings — see "Browser Warning Fixes" section below
+- [x] Improve image quality and size on all screens — container aspect ratios matched to real image dimensions: `PageHeroSection` mobile `aspect-[3/2]` (1536×1024), `HomeHeroSection` mobile `aspect-[800/680]`, `ProductCertificationsSection` cert logos `w-36 h-36`; products/applications/packaging already covered previously
+- [x] Swap style for applications key features and packaging & supply (title and desc) — all product detail sections now use `text-xl font-semibold uppercase tracking-widest text-primary mb-1` for section name and `text-sm` for tagline (matching `ProductNutritionSection` approach)
+- [x] Packaging & supply should have option for swiping on phone — touch swipe added to carousel (`onTouchStart`/`onTouchEnd`, 50px threshold)
+- [] DESIGNER TASK - Change images: `mustard-5kg`, `products-hero`, update dimensions for all images inside packaging folder (1256x168 -> 968x336)
 
 
 ## Project Overview
@@ -86,6 +89,7 @@ No test framework is configured.
 - Product catalog is a static JSON file at `app/data/products.json` (10 products)
 - **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `additives` (condiments only), `shelfLife`, `certifications`
 - **Rich fields** (detail page, all optional): `subtitle`, `tags`, `longDescription`, `origin`, `grade`, `productionMethod`, `tasteAroma`, `variants[]`, `nutrition[]`, `specifications[]`, `features[]`, `applications[]`, `packaging[]`, `relatedSlugs[]`
+- **`origin` values** are `"Made in the EU"` for all 10 products. Displayed in the hero spec grid under the label `"Country of Manufacture"`. The matching `specifications[]` entry also uses label `"Country of Manufacture"` (not `"Country of Origin"`).
 - **`packaging[]` shape:** `{ format: string, variants: { size, netWeight, unitsPerCarton, bestFor, image? }[] }` — grouped by container type; format-level `image` was removed (unused); variant-level `image` points to `/packaging/*.png`; all 10 products have real data from client spreadsheets
 - `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
 - `featured: true` marks the 4 products shown in `OurProductsSection` on the home page (Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce)
@@ -121,8 +125,8 @@ No test framework is configured.
 - `ProductFeaturesSection` — 3-col feature grid with bullet dots and `border-b border-sage` dividers; `bg-white`
 - `ProductApplicationsSection` — dynamic column grid (1 col mobile → 2 col tablet → N col desktop, max 6); image on top `aspect-[121/42]` (matches 968×336 source images), title + description below; `bg-secondary/20 border-y border-secondary`; supports optional `image` field per application entry
 - `ProductNutritionSection` — side-by-side nutrition + specifications tables; both use matching `border-[#D4C9B0] bg-[#F5F0E8]` styling with `bg-[#EDE8DC]/50` alternating rows; `bg-white`
-- `ProductPackagingSection` — infinite auto-advancing carousel (3500ms, infinite loop via head/tail clone trick) when `total > 3`; each card is a `FlatVariant` with image (`aspect-[121/42]`, matches 968×336 source images), size badge, format name, and `LeaderRow` stats; dot navigation below (`w-2 h-2` uniform circles, active = `bg-primary`, inactive = `bg-primary/25`, clickable); carousel pauses on `onMouseEnter` / resumes on `onMouseLeave`; static flex-wrap grid for ≤3 variants; `bg-secondary/20 border-y border-secondary`
-- `ProductCertificationsSection` — hardcoded 4 cert cards (HACCP, FSSC 22000, Full Traceability, ISO 22000); `bg-white`; cards use `bg-secondary/20 border-secondary`
+- `ProductPackagingSection` — infinite auto-advancing carousel (3500ms, infinite loop via head/tail clone trick) when `total > 3`; each card is a `FlatVariant` with image (`aspect-[121/42]`, matches 968×336 source images), size badge, format name, and `LeaderRow` stats; dot navigation below (`w-2 h-2` uniform circles, active = `bg-primary`, inactive = `bg-primary/25`, clickable); carousel pauses on `onMouseEnter` / resumes on `onMouseLeave`; touch swipe supported (`onTouchStart`/`onTouchEnd`, 50px threshold, pauses then restarts autoplay); static flex-wrap grid for ≤3 variants; `bg-secondary/20 border-y border-secondary`
+- `ProductCertificationsSection` — 3 cert cards (HACCP, FSSC 22000, ISO 22000); each card is a `<a download>` link to the PDF; `w-36 h-36` cert logo (`object-contain`) + name + description + "Download PDF" text link with icon (no hover overlay); `bg-white`; cards use `bg-secondary/20 border-secondary`
 - `ProductOrderSection` — mini order form pre-filled with product name, submits to `/api/contact`; "What happens next" timeline panel on the right; `id="order"` anchor for scroll-from-hero buttons; `bg-white`
 - `RelatedProductsSection` — uses `product.relatedSlugs` to pick 3 products; falls back to same-category products; card has `aspect-[400/84]` image with "Ready Stock" badge overlay + "Order this product" link; uses `relatedImage` field if present, falls back to `image`; `bg-secondary/20 border-t border-secondary`
 
@@ -142,6 +146,17 @@ RelatedProductsSection      ← always shown            (bg-secondary/20)
 CTASection                  ← always shown (href="/contact")
 ```
 
+### Product Detail Section Heading Pattern
+
+All product detail sections use a consistent two-line heading:
+
+```tsx
+<p className="text-xl font-semibold uppercase tracking-widest text-primary mb-1">Section Name</p>
+<p className="text-sm mb-8">Short tagline describing the section</p>
+```
+
+`ProductNutritionSection` uses `mb-6` instead of `mb-8` (less content gap). Do not use `<h2>` + small eyebrow label pattern in these sections.
+
 ### Product Detail Page — Fixed Background Rule
 
 Each section has a **fixed, hardcoded** background — do not make them dynamic. The sequence is designed so that when all sections are present they naturally alternate. Sections that may be absent (Variants, Features, Applications, Nutrition, Packaging) can cause adjacent same-background sections for products that lack them — this is accepted and intentional; the fixed backgrounds are the source of truth.
@@ -158,7 +173,7 @@ Each section has a **fixed, hardcoded** background — do not make them dynamic.
 - Info card: `border border-secondary rounded-2xl p-6`
 - Tags: first tag `bg-primary text-white`, subsequent tags `bg-pale text-primary`
 - Separator line: `w-14 h-[3px] bg-primary` between subtitle and description
-- Spec grid: no outer border — internal `border-r border-secondary` and `border-b border-secondary` dividers only; rows: Origin, Smoke Point (or Additives if no smokePoint), Shelf Life, Certifications
+- Spec grid: no outer border — internal `border-r border-secondary` and `border-b border-secondary` dividers only; rows: Country of Manufacture, Smoke Point (or Additives if no smokePoint), Shelf Life, Certifications
 - Buttons: "Place an Order" (`bg-primary`, `rounded-full`) and "Request a Quote" (`border-2 border-primary/30`, `rounded-full`) — both `<a href="#order">` scroll anchors
 - Mobile: sidebar hidden; image stacks above info content
 
@@ -245,18 +260,33 @@ For hero sections that use a full-width 2-column layout (content left, image rig
 When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSection):
 
 - Wrap each icon in a fixed-height container (`h-14 flex items-center justify-center`) so all card titles align at the same vertical position regardless of icon dimensions
-- Example: `WhyChooseUsSection` with `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg`
+- Use a plain `<img>` tag (not `next/image`) for SVG icons — SVGs are already vector/small and Next.js cannot optimize them; using `<Image>` triggers dimension-mismatch warnings
+- Example: `WhyChooseUsSection` with `quality-choose-us.svg`, `CommitmentsSection` with `about-us-*.svg`
 
 ### Shared Hero Component
 
 - `PageHeroSection` is the base for all page heroes (About, Contact, Products)
-- Layout: full-width `bg-primary`; desktop uses the Large-Screen Hero Pattern (absolute image from `left-1/2`, text in `w-1/2` of `max-w-content`); mobile shows a full-bleed image above the text
+- Layout: full-width `bg-primary`; desktop uses the Large-Screen Hero Pattern (absolute image from `left-1/2`, text in `w-1/2` of `max-w-content`); mobile shows a full-bleed image above the text in an `aspect-[3/2]` container (matches 1536×1024 source images)
+- Mobile image: no `priority` (avoids unused-preload warning from prefetching); `sizes="(max-width: 1024px) 100vw, 50vw"`
+- Desktop image: `priority` + `sizes="(min-width: 1920px) 700px, 50vw"`
 - `heading` prop is `React.ReactNode` to support `<br />` in headings
 
 ### Google Maps Embed
 
 - Uses the free Google Maps Embed API (iframe) — no API key, no billing, no usage limits
 - Wrapped in a fixed-height container with `rounded-xl overflow-hidden` to clip iframe to rounded corners
+
+### Styling
+
+### Browser Warning Fixes
+
+Key decisions made to eliminate console warnings — don't revert these:
+
+- **SVGs must use `<img>`, not `<Image>`** — `next/image` cannot optimize SVGs and triggers dimension-mismatch warnings. Applies to: `WhyChooseUsSection`, `CommitmentsSection`, any future SVG icon grids.
+- **`priority` vs `loading="eager"`** — Use `priority` only on a single above-fold image per page (adds `<link rel="preload">`). Use `loading="eager"` when the image is above the fold but the page is also prefetched by Next.js (e.g. `ProductHeroSection`, `OurProductsSection`) to avoid "preloaded but not used" warnings.
+- **`data-scroll-behavior="smooth"`** — Added to `<html>` in `layout.tsx` to silence Next.js's scroll-behavior warning during route transitions.
+- **`sizes` on every `fill` image** — All `fill` images must have a `sizes` prop matching their actual rendered width. Fixed across: `HomeHeroSection`, `OurProductsSection`, `PageHeroSection`, `WarehouseSection`, `ProductCertificationsSection` (`sizes="144px"`), `ProductHeroSection`, `RelatedProductsSection`.
+- **`WarehouseSection`** — uses `priority` (it is the LCP element on the About page).
 
 ### Styling
 
@@ -322,7 +352,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `grannexFoodsFooterLogo.svg` — footer logo
 - `linkedin-icon.svg`, `facebook-icon.svg` — white icons for footer
 - `linkedin-green.svg`, `facebook-green.svg` — green icons (available for future use)
-- `corn-oil-hero.png`, `ketchup-hero.png`, `mustard-hero.png`, `sunflower-oil-hero.png` — home hero slideshow slides
+- `corn-oil-hero.png`, `ketchup-hero.png`, `mustard-hero.png`, `sunflower-oil-hero.png` — home hero slideshow slides (800×680px); mobile container uses `aspect-[800/680]`
 - `products-hero.png` — hero image for the products page
 - `warehouse.png` — warehouse photo used in `WarehouseSection` (About page)
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
@@ -337,7 +367,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 
 ### Data Layer — Additional Fields
 
-- `relatedImage` (optional) — separate image used in `RelatedProductsSection` cards (`aspect-[400/84]`); falls back to `image` if not set. Currently set for: rapeseed-oil, ketchup, mayonnaise
+- `relatedImage` (optional) — separate image used in `RelatedProductsSection` cards (`aspect-[400/84]`) and `OurProductsSection` home cards; falls back to `image` if not set. Set for all products except soybean-oil
 - `applications[].image` (optional) — image shown above application card text (`aspect-[121/42]`, 968×336px source). Currently set for all oil products
 - `additives` (optional) — plain-text additives statement; used in `ProductHeroSection` spec grid as fallback when `smokePoint` is absent. Set for: ketchup, mayonnaise, mustard, sugar
 

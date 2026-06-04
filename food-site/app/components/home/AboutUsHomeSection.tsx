@@ -3,7 +3,7 @@ import AnimateIn from '@/app/components/ui/AnimateIn';
 
 const stats = [
   { value: '24/7', label: 'Order Dispatch' },
-  { value: '1 Pallet', label: 'Minimum Order' },
+  { value: '1 Container', label: 'Minimum Order' },
   { value: 'Extensive', label: 'Delivery Coverage' },
 ];
 

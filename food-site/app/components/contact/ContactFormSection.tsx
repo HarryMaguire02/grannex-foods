@@ -318,7 +318,7 @@ export default function ContactFormSection() {
             <div className="bg-pale rounded-xl p-4 flex items-start gap-3">
               <div className="w-2 h-2 rounded-full bg-green-medium mt-1.5 shrink-0" />
               <div>
-                <p className="text-sm font-medium text-primary">Minimum order: 1 pallet</p>
+                <p className="text-sm font-medium text-primary">Minimum order: 1 container</p>
                 <p className="text-xs text-primary/60 mt-0.5">
                   Custom pricing available for full truckload and bulk supply enquiries.
                 </p>

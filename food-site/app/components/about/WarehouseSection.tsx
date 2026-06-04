@@ -8,8 +8,8 @@ const bullets = [
     description: 'Orders are processed and dispatched around the clock, every day of the year.',
   },
   {
-    title: 'Pallet-Based Ordering',
-    description: 'Minimum 1 pallet — highly scalable, from small distributors up to full truckloads.',
+    title: 'Container-Based Ordering',
+    description: 'Minimum 1 container — highly scalable, from small distributors up to full truckloads.',
   },
   {
     title: 'Extensive Coverage',
@@ -43,7 +43,9 @@ export default function WarehouseSection() {
                 src="/warehouse.png"
                 alt="GrannexFoods warehouse"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
+                priority
               />
             </div>
           </AnimateIn>

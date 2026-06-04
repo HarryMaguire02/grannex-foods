@@ -3,7 +3,7 @@ import AnimateIn from '@/app/components/ui/AnimateIn';
 const faqs = [
   {
     question: 'What is the minimum order?',
-    answer: 'Minimum 1 pallet. Custom pricing available for full truckloads.',
+    answer: 'Minimum 1 container. Custom pricing available for full truckloads.',
   },
   {
     question: 'How quickly do you dispatch?',

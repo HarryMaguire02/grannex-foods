@@ -27,7 +27,7 @@ export default function ProductHeroSection({
   const allProducts = productsData as { slug: string; name: string }[];
 
   const specRows = [
-    product.origin ? { label: "Origin", value: product.origin } : null,
+    product.origin ? { label: "Country of Manufacture", value: product.origin } : null,
     product.smokePoint
       ? { label: "Smoke Point", value: product.smokePoint }
       : product.additives
@@ -88,7 +88,7 @@ export default function ProductHeroSection({
               alt={product.name}
               fill
               className="object-cover"
-              priority
+              loading="eager"
               sizes="(max-width: 1024px) 100vw, 400px"
             />
           </div>

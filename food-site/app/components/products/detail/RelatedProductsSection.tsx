@@ -52,12 +52,12 @@ export default function RelatedProductsSection({
     <section className="bg-secondary/20 border-t border-secondary py-10 lg:py-14">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
         <AnimateIn from="bottom">
-          <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">
+          <p className="text-xl font-semibold uppercase tracking-widest text-primary mb-1">
             Related Products
           </p>
-          <h2 className="text-3xl font-bold text-primary mb-8">
+          <p className="text-sm mb-8">
             You might also need
-          </h2>
+          </p>
         </AnimateIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

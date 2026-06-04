@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import AnimateIn from '@/app/components/ui/AnimateIn';
 
 const commitments = [
@@ -44,13 +43,7 @@ export default function CommitmentsSection() {
               <div className="bg-secondary/30 rounded-2xl border-b-4 border-primary flex flex-col overflow-hidden h-full">
                 {/* Icon area — fixed height so all cards align regardless of SVG natural size */}
                 <div className="flex items-center justify-center pt-8 px-8 h-32">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    width={80}
-                    height={80}
-                    className="object-contain"
-                  />
+                  <img src={item.icon} alt={item.title} width={80} height={80} />
                 </div>
 
                 {/* Text area */}

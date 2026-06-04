@@ -103,6 +103,7 @@ export default function ProductPackagingSection({
   const [visibleCount, setVisibleCount] = useState(3);
   const indexRef = useRef(index);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const needsCarousel = total > visibleCount;
 
@@ -189,6 +190,22 @@ export default function ProductPackagingSection({
     setIndex(CLONE_COUNT + dotIndex);
   }, [startAutoPlay]);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    touchStartX.current = null;
+    if (Math.abs(delta) > 50) {
+      setAnimated(true);
+      setIndex((prev) => prev + (delta > 0 ? 1 : -1));
+    }
+    startAutoPlay();
+  }, [startAutoPlay]);
+
   const realIndex = ((index - CLONE_COUNT) % total + total) % total;
   const translateX = cardWidth > 0 ? -(index * (cardWidth + GAP)) : 0;
 
@@ -196,12 +213,12 @@ export default function ProductPackagingSection({
     <section className="bg-secondary/20 border-y border-secondary py-10 lg:py-14">
       <div className="max-w-content mx-auto px-6 sm:px-8 lg:px-12">
         <AnimateIn from="bottom">
-          <p className="text-xs font-semibold uppercase tracking-widest text-green-medium mb-2">
+          <p className="text-xl font-semibold uppercase tracking-widest text-primary mb-1">
             Packaging &amp; Supply
           </p>
-          <h2 className="text-3xl font-bold text-primary mb-8">
+          <p className="text-sm mb-8">
             Every format your business needs
-          </h2>
+          </p>
         </AnimateIn>
 
         {needsCarousel ? (
@@ -209,6 +226,8 @@ export default function ProductPackagingSection({
             className="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Clipping container */}
             <div className="overflow-hidden" ref={containerRef}>

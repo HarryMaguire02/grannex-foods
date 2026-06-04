@@ -28,7 +28,7 @@ export default function AboutPage() {
       <CommitmentsSection />
       <SectionDivider />
       <HowItWorksSection />
-      <CTASection text="Ready to work with us?" description="Place your first order today — minimum 1 pallet, dispatched fast." buttonContent="Place An Order" />
+      <CTASection text="Ready to work with us?" description="Place your first order today — minimum 1 container, dispatched fast." buttonContent="Place An Order" />
     </>
   );
 }
