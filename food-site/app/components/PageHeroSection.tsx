@@ -12,7 +12,7 @@ export default function PageHeroSection({ label, heading, description, imageSrc,
   return (
     <section className="w-full bg-primary overflow-hidden">
       {/* Mobile: full-bleed image above text */}
-      <div className="relative h-48 sm:h-60 lg:hidden">
+      <div className="relative aspect-[3/2] lg:hidden">
         <Image src={imageSrc} alt={imageAlt} fill className="object-cover" priority />
       </div>
 

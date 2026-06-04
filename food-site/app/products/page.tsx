@@ -17,7 +17,7 @@ export default function ProductsPage() {
         label="Our Products"
         heading={<>Everything Your Business<br />Needs</>}
         description="Premium cooking oils, mayo, and sauces — available wholesale for immediate dispatch."
-        imageSrc="/ProductsHero.png"
+        imageSrc="/products-hero.png"
         imageAlt="GrannexFoods product range"
       />
       <ProductsGrid products={productsData} />

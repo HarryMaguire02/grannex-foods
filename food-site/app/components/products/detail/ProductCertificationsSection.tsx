@@ -41,24 +41,9 @@ export default function ProductCertificationsSection() {
               <a
                 href={cert.pdf}
                 download
-                className="group relative rounded-xl border border-secondary bg-secondary/20 p-6 flex flex-col items-center gap-3 h-full overflow-hidden cursor-pointer"
+                className="rounded-xl border border-secondary bg-secondary/20 p-6 flex flex-col items-center gap-3 h-full cursor-pointer"
               >
-                {/* Hover download overlay */}
-                <div className="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-center gap-2 z-10">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                  </svg>
-                  <span className="text-white text-sm font-semibold">Download PDF</span>
-                </div>
-
-                <div className="relative h-40 w-full">
+                <div className="relative w-36 h-36">
                   <Image
                     src={cert.image}
                     alt={cert.name}
@@ -72,6 +57,19 @@ export default function ProductCertificationsSection() {
                 <p className="text-xs text-primary/70 leading-relaxed text-center">
                   {cert.description}
                 </p>
+                <div className="flex items-center gap-1.5 text-primary text-xs font-medium mt-auto pt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-3.5 h-3.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                  Download PDF
+                </div>
               </a>
             </AnimateIn>
           ))}

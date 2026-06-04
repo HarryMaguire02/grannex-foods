@@ -59,7 +59,7 @@ export default function HomeHeroSection() {
 
       {/* Mobile: image first, text second */}
       <div className="lg:hidden">
-        <div className="relative h-52 sm:h-72">
+        <div className="relative aspect-[800/680]">
           {slideshow}
         </div>
         <div className="px-6 sm:px-8 py-8 sm:py-10 flex flex-col gap-4 sm:gap-6">

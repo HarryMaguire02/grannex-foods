@@ -50,7 +50,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
 - [x] Website structure - max-width-content increased from 1240px to 1400px in globals.css
 - [] Fix browser warnings
-- [] Improve image quality for all products
+- [] Improve image quality and size on all screens. Already covered (products, applications and packaging images)
 
 
 ## Project Overview
@@ -183,7 +183,7 @@ CTASection
 ### Products Page Structure (`app/products/page.tsx`)
 
 ```
-PageHeroSection   (label="Our Products", imageSrc="/ProductsHero.png")
+PageHeroSection   (label="Our Products", imageSrc="/products-hero.png")
 ProductsGrid      (client component — filter tabs + 4-col grid of all 10 products)
 CTASection        (href="/contact" — links to contact, not back to products)
 ```
@@ -323,7 +323,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `linkedin-icon.svg`, `facebook-icon.svg` — white icons for footer
 - `linkedin-green.svg`, `facebook-green.svg` — green icons (available for future use)
 - `corn-oil-hero.png`, `ketchup-hero.png`, `mustard-hero.png`, `sunflower-oil-hero.png` — home hero slideshow slides
-- `ProductsHero.png` — hero image for the products page
+- `products-hero.png` — hero image for the products page
 - `warehouse.png` — warehouse photo used in `WarehouseSection` (About page)
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
