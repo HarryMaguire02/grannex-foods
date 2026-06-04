@@ -28,7 +28,7 @@ export default function ProductApplicationsSection({ applications }: ProductAppl
             <AnimateIn key={app.title} from="bottom" delay={i * 0.08} className="h-full">
               <div className="rounded-xl border border-primary/15 bg-white overflow-hidden hover:border-primary/30 transition-colors h-full">
                 {app.image && (
-                  <div className="relative w-full aspect-[308/84]">
+                  <div className="relative w-full aspect-[121/42]">
                     <Image
                       src={`/applications${app.image}`}
                       alt={app.title}

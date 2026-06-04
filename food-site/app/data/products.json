@@ -175,7 +175,6 @@
     "packaging": [
       {
         "format": "Bottle",
-        "image": "/05L-5L.png",
         "variants": [
           {
             "size": "1 L",
@@ -202,7 +201,6 @@
       },
       {
         "format": "Jerry Can",
-        "image": "/10L-20L.png",
         "variants": [
           {
             "size": "10 L",
@@ -378,7 +376,6 @@
     "packaging": [
       {
         "format": "Bottle",
-        "image": "/05L-5L.png",
         "variants": [
           {
             "size": "1 L",
@@ -405,7 +402,6 @@
       },
       {
         "format": "Jerry Can",
-        "image": "/10L-20L.png",
         "variants": [
           {
             "size": "10 L",
@@ -581,7 +577,6 @@
     "packaging": [
       {
         "format": "Bottle",
-        "image": "/05L-5L.png",
         "variants": [
           {
             "size": "1 L",
@@ -608,7 +603,6 @@
       },
       {
         "format": "Jerry Can",
-        "image": "/10L-20L.png",
         "variants": [
           {
             "size": "10 L",
@@ -785,7 +779,6 @@
     "packaging": [
       {
         "format": "Bottle",
-        "image": "/05L-5L.png",
         "variants": [
           {
             "size": "1 L",
@@ -812,7 +805,6 @@
       },
       {
         "format": "Jerry Can",
-        "image": "/10L-20L.png",
         "variants": [
           {
             "size": "10 L",
@@ -989,7 +981,6 @@
     "packaging": [
       {
         "format": "Bottle",
-        "image": "/05L-5L.png",
         "variants": [
           {
             "size": "1 L",
@@ -1016,7 +1007,6 @@
       },
       {
         "format": "Jerry Can",
-        "image": "/10L-20L.png",
         "variants": [
           {
             "size": "10 L",

@@ -18,7 +18,6 @@ interface PackagingVariant {
 
 interface PackagingOption {
   format: string;
-  image?: string;
   variants: PackagingVariant[];
 }
 
@@ -57,7 +56,7 @@ function PackagingCard({
       style={style}
       className={`flex-none rounded-xl border border-secondary bg-white overflow-hidden flex flex-col ${className}`}
     >
-      <div className="relative w-full aspect-[5/2] bg-secondary/20 flex-shrink-0 overflow-hidden">
+      <div className="relative w-full aspect-[121/42] bg-secondary/20 flex-shrink-0 overflow-hidden">
         {variant.image ? (
           <Image
             src={variant.image}

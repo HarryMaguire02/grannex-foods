@@ -61,7 +61,7 @@ export default function ProductHeroSection({
         </nav>
 
         {/* Main layout: sidebar | image | info */}
-        <div className="flex gap-0 pb-6">
+        <div className="flex gap-0 pb-6 lg:items-start">
           {/* Sidebar — desktop only */}
           <aside className="hidden lg:flex flex-col w-52 shrink-0 mr-6">
             <nav className="flex flex-col rounded-xl overflow-hidden border-2 border-secondary">
@@ -82,7 +82,7 @@ export default function ProductHeroSection({
           </aside>
 
           {/* Product image */}
-          <div className="relative w-full lg:w-[400px] shrink-0 h-72 sm:h-96 lg:h-auto lg:min-h-[420px] rounded-2xl overflow-hidden bg-secondary/30 mr-0 lg:mr-6">
+          <div className="relative w-full lg:w-[400px] shrink-0 h-72 sm:h-96 lg:h-auto lg:aspect-[880/910] rounded-2xl overflow-hidden bg-secondary/30 mr-0 lg:mr-6">
             <Image
               src={product.image}
               alt={product.name}

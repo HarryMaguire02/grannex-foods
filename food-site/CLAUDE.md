@@ -46,8 +46,8 @@ This file provides guidance to Claude Code when working with code in this reposi
 - [x] ProductCertificationsSections should have option to download certificates once you click on grid and when you hover on grid there should be indicator that by clicking on you will download certificate. Also we can add some small note/watermark which will say that. pdfs will be at public/pdfs folder
 - [x] ProductPackagingSection should be done differently (no table for variants). Each variant should have it's own grid (for example - sunflower oil 5 grids, mustard 2, sugar 6). If there is more then 3 grids, display only 3 and they should be 'spinnable' like a catalog. Also user should be able to manualy scroll horizontally. Images are at public/packaging
 - [x] ProductPackagingSection carousel — replaced prev/next arrows with dot navigation below cards; dots are uniform `w-2 h-2` circles (active = `bg-primary`, inactive = `bg-primary/25`); carousel pauses on hover and resumes on mouse leave; dots are clickable to jump to any card
-- [] PageHeroSection component must be done better, currently we display hover image all way to the right which is not good. Image should be alligned with our text on right side. It shouldn't go all way to the end
-- [] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
+- [x] PageHeroSection component must be done better, currently we display hover image all way to the right which is not good. Image should be alligned with our text on right side. It shouldn't go all way to the end
+- [x] HomeHeroSection image must be done better, currently our image does not fill all space on right if screen is to wide
 - [x] Website structure - max-width-content increased from 1240px to 1400px in globals.css
 - [] Fix browser warnings
 - [] Improve image quality for all products
@@ -86,7 +86,7 @@ No test framework is configured.
 - Product catalog is a static JSON file at `app/data/products.json` (10 products)
 - **Base fields** (all products): `slug`, `name`, `image`, `category`, `featured`, `badge`, `description`, `smokePoint` (oils only), `additives` (condiments only), `shelfLife`, `certifications`
 - **Rich fields** (detail page, all optional): `subtitle`, `tags`, `longDescription`, `origin`, `grade`, `productionMethod`, `tasteAroma`, `variants[]`, `nutrition[]`, `specifications[]`, `features[]`, `applications[]`, `packaging[]`, `relatedSlugs[]`
-- **`packaging[]` shape:** `{ format: string, image?: string, variants: { size, netWeight, unitsPerCarton, bestFor }[] }` — grouped by container type; all 10 products have real data from client spreadsheets
+- **`packaging[]` shape:** `{ format: string, variants: { size, netWeight, unitsPerCarton, bestFor, image? }[] }` — grouped by container type; format-level `image` was removed (unused); variant-level `image` points to `/packaging/*.png`; all 10 products have real data from client spreadsheets
 - `category` values: `"cooking-oils"`, `"condiments-sauces"`, or `null` (shown only under All Products)
 - `featured: true` marks the 4 products shown in `OurProductsSection` on the home page (Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce)
 - All rich fields are optional — detail page sections are conditionally rendered; missing fields simply hide the section
@@ -119,9 +119,9 @@ No test framework is configured.
 - `ProductHeroSection` — breadcrumb + sidebar (all products list, active highlighted) + product image + info card (tags, name, subtitle, green separator line, description, 2×2 spec grid, action buttons)
 - `ProductVariantsSection` — variant cards with 80×80 image, name, badge, description, stats row (oleic/linoleic/bestFor), order button; `bg-secondary/20 border-y border-secondary`; first card `border-2 border-primary`, second `border-2 border-secondary`
 - `ProductFeaturesSection` — 3-col feature grid with bullet dots and `border-b border-sage` dividers; `bg-white`
-- `ProductApplicationsSection` — dynamic column grid (1 col mobile → 2 col tablet → N col desktop, max 6); image on top `aspect-[308/84]`, title + description below; `bg-secondary/20 border-y border-secondary`; supports optional `image` field per application entry
+- `ProductApplicationsSection` — dynamic column grid (1 col mobile → 2 col tablet → N col desktop, max 6); image on top `aspect-[121/42]` (matches 968×336 source images), title + description below; `bg-secondary/20 border-y border-secondary`; supports optional `image` field per application entry
 - `ProductNutritionSection` — side-by-side nutrition + specifications tables; both use matching `border-[#D4C9B0] bg-[#F5F0E8]` styling with `bg-[#EDE8DC]/50` alternating rows; `bg-white`
-- `ProductPackagingSection` — infinite auto-advancing carousel (3500ms, infinite loop via head/tail clone trick) when `total > 3`; each card is a `FlatVariant` with image (`aspect-[5/2]`), size badge, format name, and `LeaderRow` stats; dot navigation below (`w-2 h-2` uniform circles, active = `bg-primary`, inactive = `bg-primary/25`, clickable); carousel pauses on `onMouseEnter` / resumes on `onMouseLeave`; static flex-wrap grid for ≤3 variants; `bg-secondary/20 border-y border-secondary`
+- `ProductPackagingSection` — infinite auto-advancing carousel (3500ms, infinite loop via head/tail clone trick) when `total > 3`; each card is a `FlatVariant` with image (`aspect-[121/42]`, matches 968×336 source images), size badge, format name, and `LeaderRow` stats; dot navigation below (`w-2 h-2` uniform circles, active = `bg-primary`, inactive = `bg-primary/25`, clickable); carousel pauses on `onMouseEnter` / resumes on `onMouseLeave`; static flex-wrap grid for ≤3 variants; `bg-secondary/20 border-y border-secondary`
 - `ProductCertificationsSection` — hardcoded 4 cert cards (HACCP, FSSC 22000, Full Traceability, ISO 22000); `bg-white`; cards use `bg-secondary/20 border-secondary`
 - `ProductOrderSection` — mini order form pre-filled with product name, submits to `/api/contact`; "What happens next" timeline panel on the right; `id="order"` anchor for scroll-from-hero buttons; `bg-white`
 - `RelatedProductsSection` — uses `product.relatedSlugs` to pick 3 products; falls back to same-category products; card has `aspect-[400/84]` image with "Ready Stock" badge overlay + "Order this product" link; uses `relatedImage` field if present, falls back to `image`; `bg-secondary/20 border-t border-secondary`
@@ -152,6 +152,8 @@ Each section has a **fixed, hardcoded** background — do not make them dynamic.
 [sidebar 208px] | [image 400px] | [info card flex-1]
 ```
 
+- Flex row uses `lg:items-start` so the image never stretches to match a tall info card
+- Image container: `lg:w-[400px] lg:aspect-[880/910]` — locked to the product image ratio (880×910px) to prevent cropping regardless of info card height
 - Sidebar: `border-2 border-secondary`, items `bg-secondary/60` inactive / `bg-primary text-white` active / `hover:bg-green-light/40`
 - Info card: `border border-secondary rounded-2xl p-6`
 - Tags: first tag `bg-primary text-white`, subsequent tags `bg-pale text-primary`
@@ -222,18 +224,21 @@ The order form card (`ContactFormSection`) uses a two-part layout inside a singl
 When a section needs a full-width background but text aligned to the page content grid:
 
 - Make the section `w-full` with no max-width constraint
-- Inside the content column, use `max-w-[620px] ml-auto` (half of max-content = 1240px/2)
+- Inside the content column, use `max-w-[700px] ml-auto` (half of max-content = 1400px/2)
 - Use standard page padding: `px-6 sm:px-8 lg:px-12`
-- This ensures `ml-auto` creates an offset equal to `(viewport - 1240px) / 2`, matching other sections
+- This ensures `ml-auto` creates an offset equal to `(viewport - 1400px) / 2`, matching other sections
 - Example: `HomeHeroSection` left panel
 
 ### Large-Screen Hero Pattern
 
-For hero sections that use a full-width 2-column grid (content left, image right):
+For hero sections that use a full-width 2-column layout (content left, image right):
 
-- Add `bg-primary` to the outer `<section>` so the green background bleeds to full viewport width
-- Cap the inner grid with `max-w-[1400px] mx-auto` to prevent the image column from becoming excessively wide on 2K/4K screens
-- Example: `HomeHeroSection`
+- Section is `w-full bg-primary overflow-hidden`; green background bleeds to full viewport width
+- **Desktop image** is `absolute top-0 bottom-0 left-1/2 right-0` (spans from 50vw to right viewport edge — always flush, no green gap)
+- At `min-[1920px]`: add `min-[1920px]:right-auto min-[1920px]:w-[700px]` to cap the image at half of `max-w-[1400px]`, creating symmetric green margins on very wide monitors
+- **Text** sits inside `max-w-[1400px] mx-auto` with `w-1/2` — its right edge is always exactly at 50vw (proof: `(vw − 1400)/2 + 700 = vw/2`), so text and image boundary always align
+- **Mobile order**: image column first (carousel / photo), text column second; implemented with CSS `order-1`/`order-2` or separate `lg:hidden` / `hidden lg:block` blocks
+- Examples: `HomeHeroSection`, `PageHeroSection`
 
 ### Icon Grids with Fixed-Size SVGs
 
@@ -245,7 +250,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 ### Shared Hero Component
 
 - `PageHeroSection` is the base for all page heroes (About, Contact, Products)
-- Layout: full-width `bg-primary`, desktop right-30% image, mobile stacked image, content left-aligned in `max-w-content` container
+- Layout: full-width `bg-primary`; desktop uses the Large-Screen Hero Pattern (absolute image from `left-1/2`, text in `w-1/2` of `max-w-content`); mobile shows a full-bleed image above the text
 - `heading` prop is `React.ReactNode` to support `<br />` in headings
 
 ### Google Maps Embed
@@ -267,7 +272,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
   - `sage` — #8AB89A (stat separator lines, FAQ dividers, feature section dividers)
   - `divider` — #D4C9B0 (SectionDivider horizontal rule)
 - Ad-hoc hex values used in product detail: `#1A1A18` (variants section heading), `#8C7B5E` (second variant badge text/border), `#6B6B64` (variant description text)
-- Custom max-width: `max-w-content` (1240px)
+- Custom max-width: `max-w-content` (1400px)
 - Custom breakpoint: `xs` (500px)
 - Font: Roboto (300, 400, 500, 700) loaded via `next/font`
 
@@ -323,10 +328,8 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 - `about-us-quality.svg`, `about-us-reliability.svg`, `about-us-partnership.svg` — icons for `CommitmentsSection` cards
 - `quality-choose-us.svg`, `supply-choose-us.svg`, `partnership-choose-us.svg` — icons for WhyChooseUsSection cards
 - `contact-us-hero.png` — hero image for contact page
-- `05L-5L.png` — format image for Bottle / Glass Bottle in `ProductPackagingSection`
-- `10L-20L.png` — format image for Jerry Can in `ProductPackagingSection`
-- `25L-200L.png`, `1000L.png` — available but no longer mapped to any packaging format (kept for possible future use)
-- `Restaurants-Catering.png`, `FastFood-quickService.png`, `food-manufacturing.png`, `retail-distribution.png` — application images (308×84px) used in `ProductApplicationsSection` for Sunflower Oil
+- `05L-5L.png`, `10L-20L.png`, `25L-200L.png`, `1000L.png` — legacy packaging format images, no longer referenced anywhere (can be deleted)
+- Application images (968×336px) — used in `ProductApplicationsSection`; various filenames per product under `public/`
 - `public/products/` — product images: `01-sunflower-oil.png` through `10-sugar.png` (all 10 exist)
 - `public/products/standard-sunflower-oil.png`, `public/products/oleic-sunflower-oil.png` — 80×80 variant images for Sunflower Oil `ProductVariantsSection`
 - `public/products/related-{slug}.png` — 400×84px related product images used in `RelatedProductsSection`; exists for all products except `soybean-oil`
@@ -335,7 +338,7 @@ When displaying SVG icons of varying natural sizes in a grid (e.g. WhyChooseUsSe
 ### Data Layer — Additional Fields
 
 - `relatedImage` (optional) — separate image used in `RelatedProductsSection` cards (`aspect-[400/84]`); falls back to `image` if not set. Currently set for: rapeseed-oil, ketchup, mayonnaise
-- `applications[].image` (optional) — image shown above application card text (`aspect-[308/84]`). Currently set for Sunflower Oil only
+- `applications[].image` (optional) — image shown above application card text (`aspect-[121/42]`, 968×336px source). Currently set for all oil products
 - `additives` (optional) — plain-text additives statement; used in `ProductHeroSection` spec grid as fallback when `smokePoint` is absent. Set for: ketchup, mayonnaise, mustard, sugar
 
 ### ProductCard Hover Pattern (`app/components/products/ProductCard.tsx`)
