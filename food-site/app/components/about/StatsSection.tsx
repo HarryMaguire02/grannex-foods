@@ -15,7 +15,7 @@ export default function StatsSection() {
           {stats.map((stat, i) => (
             <AnimateIn key={stat.label} from="bottom" delay={i * 0.1}>
               <div className="flex flex-col items-center text-center">
-                <span className="text-3xl lg:text-4xl font-bold text-primary">{stat.value}</span>
+                <span className="whitespace-nowrap text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">{stat.value}</span>
                 <div className="w-8 h-[2px] bg-sage mx-auto my-2" />
                 <span className="text-sm text-primary">{stat.label}</span>
               </div>

@@ -39,12 +39,12 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
 
         {/* Filter tabs */}
         <AnimateIn from="bottom">
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-3 mb-10">
             {FILTERS.map((filter) => (
               <button
                 key={filter.value}
                 onClick={() => setActiveFilter(filter.value)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                className={`w-full sm:w-auto px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                   activeFilter === filter.value
                     ? 'bg-primary text-white'
                     : 'border border-primary/40 text-primary hover:border-primary'

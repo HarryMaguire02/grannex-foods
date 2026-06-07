@@ -381,6 +381,10 @@ The card is a `Link` (`group`) with a fixed height (`h-80 md:h-96`):
 - **"Read more"**: `text-green-medium` label always present in the description block, revealed on hover
 - Props: `slug`, `name`, `image`, `description`
 
+### ProductsGrid Filter Layout
+
+Filter tabs container uses `grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-3` — on mobile (< 640px) the 4 buttons form a clean 2×2 grid; on `sm+` they revert to a centered flex row where all 4 fit on one line. Each button has `w-full sm:w-auto` so it fills its grid cell on mobile and auto-sizes on larger screens.
+
 ### OurProductsSection Data Source
 
 `OurProductsSection` reads from `app/data/products.json` and filters by `featured === true`. The 4 featured products are: Sunflower Oil, Rapeseed Oil, Ketchup, Mayonnaise Sauce. To change which products appear on the home page, update the `featured` field in `products.json`.
@@ -406,6 +410,12 @@ Steps and connectors live in a single flat `items: Item[]` array (alternating `t
 ### AboutUsHomeSection Stats Centering
 
 The stats grid (`grid grid-cols-3`) sits in the right column of a 2-col layout. Each stat item uses `flex flex-col gap-2 items-center text-center` so the value, divider line, and label are horizontally centered within their grid cell.
+
+Stat values use `whitespace-nowrap text-sm xs:text-xl sm:text-2xl lg:text-4xl` — the `whitespace-nowrap` prevents multi-word values like "1 Container" from wrapping, and `text-sm` at the base keeps them within their column on phones where the 3-col grid leaves only ~110px per cell.
+
+### StatsSection (About Page) Stats
+
+The stats grid is `grid grid-cols-2 lg:grid-cols-4` (2-col on mobile, 4-col on desktop). Stat values use `whitespace-nowrap text-xl xs:text-2xl sm:text-3xl lg:text-4xl` — same `whitespace-nowrap` rationale as `AboutUsHomeSection`; `text-xl` is safe at 2-col widths but would wrap at 3-col.
 
 ### Card Layout Pattern
 

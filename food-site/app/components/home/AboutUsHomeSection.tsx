@@ -40,7 +40,7 @@ export default function AboutUsHomeSection() {
             <div className="grid grid-cols-3 gap-4">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col gap-2 items-center text-center">
-                  <span className="text-xl sm:text-2xl lg:text-4xl font-bold text-primary">{stat.value}</span>
+                  <span className="whitespace-nowrap text-sm xs:text-xl sm:text-2xl lg:text-4xl font-bold text-primary">{stat.value}</span>
                   <div className="w-8 h-[2px] bg-sage" />
                   <span className="text-xs text-sage">{stat.label}</span>
                 </div>
