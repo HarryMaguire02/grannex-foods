@@ -1383,7 +1383,7 @@
             "netWeight": "850 g",
             "unitsPerCarton": "12 pcs",
             "bestFor": "Retail / Catering",
-            "image": "/packaging/ketchup-850ml.png"
+            "image": "/packaging/ketchup-850ml.jpeg"
           }
         ]
       },
@@ -1395,7 +1395,7 @@
             "netWeight": "5 kg",
             "unitsPerCarton": "4 pcs",
             "bestFor": "Food Service",
-            "image": "/packaging/ketchup-5kg.png"
+            "image": "/packaging/ketchup-5kg.jpeg"
           }
         ]
       }
@@ -1758,7 +1758,7 @@
             "netWeight": "900 g",
             "unitsPerCarton": "12 pcs",
             "bestFor": "Food Service",
-            "image": "/packaging/mustard-900g.png"
+            "image": "/packaging/mustard-900g.jpeg"
           }
         ]
       },
@@ -1770,7 +1770,7 @@
             "netWeight": "5 kg",
             "unitsPerCarton": "2 pcs",
             "bestFor": "Food Service",
-            "image": "/packaging/mustard-5kg.png"
+            "image": "/packaging/mustard-5kg.jpeg"
           }
         ]
       }
@@ -1937,21 +1937,21 @@
             "netWeight": "1 kg",
             "unitsPerCarton": "10 pcs",
             "bestFor": "Retail",
-            "image": "/packaging/sugar-1kg.png"
+            "image": "/packaging/sugar-1kg.jpeg"
           },
           {
             "size": "2 kg",
             "netWeight": "2 kg",
             "unitsPerCarton": "5 pcs",
             "bestFor": "Retail",
-            "image": "/packaging/sugar-2kg.png"
+            "image": "/packaging/sugar-2kg.jpeg"
           },
           {
             "size": "5 kg",
             "netWeight": "5 kg",
             "unitsPerCarton": "4 pcs",
             "bestFor": "Retail / Catering",
-            "image": "/packaging/sugar-5kg.png"
+            "image": "/packaging/sugar-5kg.jpeg"
           }
         ]
       },
@@ -1963,14 +1963,14 @@
             "netWeight": "25 kg",
             "unitsPerCarton": "Bulk",
             "bestFor": "Industrial / Wholesale",
-            "image": "/packaging/sugar-25kg.png"
+            "image": "/packaging/sugar-25kg.jpeg"
           },
           {
             "size": "50 kg",
             "netWeight": "50 kg",
             "unitsPerCarton": "Bulk",
             "bestFor": "Industrial / Wholesale",
-            "image": "/packaging/sugar-50kg.png"
+            "image": "/packaging/sugar-50kg.jpeg"
           }
         ]
       },
@@ -1982,7 +1982,7 @@
             "netWeight": "1,000 kg",
             "unitsPerCarton": "Single",
             "bestFor": "Large-Scale Industrial",
-            "image": "/packaging/sugar-1000kg.png"
+            "image": "/packaging/sugar-1000kg.jpeg"
           }
         ]
       }
