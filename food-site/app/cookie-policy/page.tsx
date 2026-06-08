@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Cookie Policy - GrannexFoods",
-  description: "How GrannexFoods handles cookies and similar technologies. We use a deliberately minimal, cookieless analytics setup and do not run advertising or tracking cookies.",
+  title: "Cookie Policy - Grannex",
+  description: "How Grannex handles cookies and similar technologies. We use a deliberately minimal, cookieless analytics setup and do not run advertising or tracking cookies.",
 };
 
 export default function CookiePolicyPage() {
@@ -31,7 +31,7 @@ export default function CookiePolicyPage() {
         {/* Introduction */}
         <div className="mb-8">
           <p className="text-primary font-normal text-sm leading-6 text-justify">
-            This page explains how the GrannexFoods website uses cookies and similar storage technologies. The short version: we keep this to an absolute minimum. We do not run advertising cookies, retargeting pixels, social-media tracking pixels or third-party analytics cookies on this site.
+            This page explains how the Grannex website uses cookies and similar storage technologies. The short version: we keep this to an absolute minimum. We do not run advertising cookies, retargeting pixels, social-media tracking pixels or third-party analytics cookies on this site.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function CookiePolicyPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">Controlling cookies in your browser</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              Even though there is very little to control on this site, you can block or delete cookies at any time through your browser settings. Doing so should have no impact on your ability to use the GrannexFoods website.
+              Even though there is very little to control on this site, you can block or delete cookies at any time through your browser settings. Doing so should have no impact on your ability to use the Grannex website.
             </p>
           </section>
 

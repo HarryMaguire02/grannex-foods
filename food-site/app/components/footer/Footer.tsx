@@ -11,8 +11,8 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center">
               <Image
-                src="/grannexFoodsFooterLogo.svg"
-                alt="GrannexFoods Logo"
+                src="/grannexLogoFooter.svg"
+                alt="Grannex Logo"
                 width={320}
                 height={128}
                 className="h-24 md:h-26 lg:h-30 w-auto"
@@ -26,7 +26,7 @@ export default function Footer() {
                 <h3 className="text-lg font-semibold mb-4">Contact</h3>
                 <div className="space-y-3 text-sm">
                   <p>Dimitri Stavrou 1 Street Nicosia Cyprus</p>
-                  <p>info@grannexfood.com</p>
+                  <p>info@grannex.com</p>
                 </div>
               </div>
 

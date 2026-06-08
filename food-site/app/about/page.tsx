@@ -8,9 +8,9 @@ import CTASection from '@/app/components/CTASection';
 import PageHeroSection from '../components/PageHeroSection';
 
 export const metadata: Metadata = {
-  title: 'About Us | GrannexFoods',
+  title: 'About Us | Grannex',
   description:
-    'GrannexFoods is a trusted wholesale supplier of high-quality cooking oils, mayo, and essential groceries. Fully stocked warehouse, 24/7 dispatch, and genuine partnership.',
+    'Grannex is a trusted wholesale supplier of high-quality cooking oils, mayo, and essential groceries. Fully stocked warehouse, 24/7 dispatch, and genuine partnership.',
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         heading={<>Built on Quality.<br />Delivered with Trust.</>}
         description="We are a trusted wholesale supplier of high-quality cooking oils, mayo, and essential groceries — providing uncompromising reliability to the food service sector."
         imageSrc="/about-us-hero.png"
-        imageAlt="GrannexFoods quality cooking oils and food ingredients"
+        imageAlt="Grannex quality cooking oils and food ingredients"
       />
       <WarehouseSection />
       <StatsSection />

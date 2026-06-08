@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Whistleblower Policy - GrannexFoods",
-  description: "GrannexFoods Whistleblowing & Integrity Policy - Reporting breaches with confidentiality and protection.",
+  title: "Whistleblower Policy - Grannex",
+  description: "Grannex Whistleblowing & Integrity Policy - Reporting breaches with confidentiality and protection.",
 };
 
 export default function WhistleblowerPolicyPage() {
@@ -30,7 +30,7 @@ export default function WhistleblowerPolicyPage() {
         {/* Introduction */}
         <div className="mb-8">
           <p className="text-primary font-normal text-sm leading-6 text-justify">
-            GrannexFoods is committed to the highest standards of transparency and ethical conduct. In accordance with Cyprus Law 6(I)/2022 (Protection of Persons Reporting Breaches of Union and National Law), we provide a secure channel for employees, contractors, and partners to report suspected misconduct, fraud, or breaches of food safety or environmental standards.
+            Grannex is committed to the highest standards of transparency and ethical conduct. In accordance with Cyprus Law 6(I)/2022 (Protection of Persons Reporting Breaches of Union and National Law), we provide a secure channel for employees, contractors, and partners to report suspected misconduct, fraud, or breaches of food safety or environmental standards.
           </p>
         </div>
 

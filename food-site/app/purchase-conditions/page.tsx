@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Purchase Conditions - GrannexFoods",
-  description: "General Conditions of Purchase for GrannexFoods - Procurement Standards for food ingredients and commodities.",
+  title: "Purchase Conditions - Grannex",
+  description: "General Conditions of Purchase for Grannex - Procurement Standards for food ingredients and commodities.",
 };
 
 export default function PurchaseConditionsPage() {
@@ -28,7 +28,7 @@ export default function PurchaseConditionsPage() {
         </h1>
 
         <h2 className="text-xl font-semibold text-primary mb-6">
-          GrannexFoods &ndash; Procurement Standards
+          Grannex &ndash; Procurement Standards
         </h2>
 
         {/* Content Sections */}
@@ -36,7 +36,7 @@ export default function PurchaseConditionsPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">Contractual Supremacy</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              The terms stated in a specific Purchase Order, Contract, or official Email Agreement issued by GrannexFoods shall prevail over these general conditions.
+              The terms stated in a specific Purchase Order, Contract, or official Email Agreement issued by Grannex shall prevail over these general conditions.
             </p>
           </section>
 
@@ -57,7 +57,7 @@ export default function PurchaseConditionsPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">Right of Rejection</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              GrannexFoods reserves the right to reject any delivery, in whole or in part, if the food ingredient or commodity does not strictly match the quality, grade or specification levels defined in the Purchase Order.
+              Grannex reserves the right to reject any delivery, in whole or in part, if the food ingredient or commodity does not strictly match the quality, grade or specification levels defined in the Purchase Order.
             </p>
           </section>
 

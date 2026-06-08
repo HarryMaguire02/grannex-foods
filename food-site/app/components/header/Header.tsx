@@ -39,8 +39,8 @@ export default function Header() {
               <div className="flex-1">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/grannexFoodsLogo.svg"
-                    alt="GrannexFoods Logo"
+                    src="/grannexLogo.svg"
+                    alt="Grannex Logo"
                     width={200}
                     height={66}
                     className="h-10 md:h-12 w-auto"

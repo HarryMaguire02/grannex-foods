@@ -30,7 +30,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   return {
-    title: `${product.name} | GrannexFoods`,
+    title: `${product.name} | Grannex`,
     description: product.description,
   };
 }

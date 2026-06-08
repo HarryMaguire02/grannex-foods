@@ -15,12 +15,12 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com'),
-  title: "GrannexFoods — Quality Food Ingredients & Commodities",
-  description: "GrannexFoods is a leading supplier of quality food ingredients and agricultural commodities. We deliver proteins, starches, sweeteners, oils, and more to businesses worldwide.",
+  title: "Grannex — Quality Food Ingredients & Commodities",
+  description: "Grannex is a leading supplier of quality food ingredients and agricultural commodities. We deliver proteins, starches, sweeteners, oils, and more to businesses worldwide.",
   keywords: ["food ingredients", "agricultural commodities", "proteins", "starches", "sweeteners", "vegetable oils", "food supply"],
-  authors: [{ name: "GrannexFoods" }],
+  authors: [{ name: "Grannex" }],
   openGraph: {
-    title: "GrannexFoods — Quality Food Ingredients & Commodities",
+    title: "Grannex — Quality Food Ingredients & Commodities",
     description: "Quality food ingredients and agricultural commodities, delivered globally. Leading supplier of proteins, starches, sweeteners, and oils.",
     type: "website",
     locale: "en_US",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
         url: '/logo-sharing.png',
         width: 1225,
         height: 560,
-        alt: 'GrannexFoods',
+        alt: 'Grannex',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GrannexFoods — Quality Food Ingredients & Commodities',
+    title: 'Grannex — Quality Food Ingredients & Commodities',
     description: 'Quality food ingredients and agricultural commodities, delivered globally.',
     images: ['/logo-sharing.png'],
   },
@@ -48,10 +48,10 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'GrannexFoods',
+  name: 'Grannex',
   description: 'Leading supplier of quality food ingredients and agricultural commodities.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com',
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com'}/grannexFoodsLogo.svg`,
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com'}/grannexLogo.svg`,
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',

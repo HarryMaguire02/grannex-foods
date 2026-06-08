@@ -5,7 +5,7 @@ import CTASection from '@/app/components/CTASection';
 import productsData from '@/app/data/products.json';
 
 export const metadata: Metadata = {
-  title: 'Products | GrannexFoods',
+  title: 'Products | Grannex',
   description:
     'Browse our full range of wholesale food products — premium cooking oils, mayo, sauces and more. Available for immediate dispatch.',
 };
@@ -18,7 +18,7 @@ export default function ProductsPage() {
         heading={<>Everything Your Business<br />Needs</>}
         description="Premium cooking oils, mayo, and sauces — available wholesale for immediate dispatch."
         imageSrc="/products-hero.png"
-        imageAlt="GrannexFoods product range"
+        imageAlt="Grannex product range"
       />
       <ProductsGrid products={productsData} />
       <CTASection

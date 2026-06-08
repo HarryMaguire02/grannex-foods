@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - GrannexFoods",
-  description: "How GrannexFoods collects, uses and protects personal data, in line with the EU General Data Protection Regulation (GDPR) and Cyprus data protection law.",
+  title: "Privacy Policy - Grannex",
+  description: "How Grannex collects, uses and protects personal data, in line with the EU General Data Protection Regulation (GDPR) and Cyprus data protection law.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
         {/* Introduction */}
         <div className="mb-8">
           <p className="text-primary font-normal text-sm leading-6 text-justify">
-            GrannexFoods respects your privacy. This policy explains what personal data we collect through this website, why we process it, how long we keep it and the rights you have under the EU General Data Protection Regulation (Regulation (EU) 2016/679, &ldquo;GDPR&rdquo;) and the Cyprus Law Providing for the Protection of Natural Persons with Regard to the Processing of Personal Data (Law 125(I)/2018). We have written it to be straightforward and accurate to how this site actually works, rather than to mirror generic templates.
+            Grannex respects your privacy. This policy explains what personal data we collect through this website, why we process it, how long we keep it and the rights you have under the EU General Data Protection Regulation (Regulation (EU) 2016/679, &ldquo;GDPR&rdquo;) and the Cyprus Law Providing for the Protection of Natural Persons with Regard to the Processing of Personal Data (Law 125(I)/2018). We have written it to be straightforward and accurate to how this site actually works, rather than to mirror generic templates.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">1. Who we are (Data Controller)</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              The data controller responsible for your personal data is Grannex International, operating under the brand GrannexFoods. You can reach us about anything in this policy at{' '}
+              The data controller responsible for your personal data is Grannex International, operating under the brand Grannex. You can reach us about anything in this policy at{' '}
               <a href="mailto:info@grannex.com" className="text-green-medium hover:underline">info@grannex.com</a>.
             </p>
           </section>
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">2. Scope of this policy</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              This policy covers personal data we collect through the GrannexFoods website at grannexfoods.com. It does not cover personal data exchanged through signed commercial contracts, KYC processes or unrelated business correspondence outside the website &mdash; those are governed by the relevant agreement between you and GrannexFoods.
+              This policy covers personal data we collect through the Grannex website at grannexfoods.com. It does not cover personal data exchanged through signed commercial contracts, KYC processes or unrelated business correspondence outside the website &mdash; those are governed by the relevant agreement between you and Grannex.
             </p>
           </section>
 
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
               <strong>Vercel Speed Insights.</strong> Also provided by Vercel, this collects anonymous performance measurements (Core Web Vitals such as Largest Contentful Paint, Interaction to Next Paint and Cumulative Layout Shift) so we can see where the site is slow and fix it. It does not identify individual visitors.
             </p>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              <strong>Google Search Console.</strong> Google Search Console is a webmaster tool that reports how the GrannexFoods site appears in Google search results (impressions, clicks, queries, indexing status). It runs on Google&rsquo;s side based on data Google already holds about its own search results &mdash; it does not place trackers, scripts or cookies on this website.
+              <strong>Google Search Console.</strong> Google Search Console is a webmaster tool that reports how the Grannex site appears in Google search results (impressions, clicks, queries, indexing status). It runs on Google&rsquo;s side based on data Google already holds about its own search results &mdash; it does not place trackers, scripts or cookies on this website.
             </p>
           </section>
 
@@ -130,7 +130,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">10. Security</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              The website is served over HTTPS. We apply technical and organisational measures appropriate to the limited scope of data we collect, and we keep the number of people inside GrannexFoods who can access enquiry messages to those who actually need it.
+              The website is served over HTTPS. We apply technical and organisational measures appropriate to the limited scope of data we collect, and we keep the number of people inside Grannex who can access enquiry messages to those who actually need it.
             </p>
           </section>
 

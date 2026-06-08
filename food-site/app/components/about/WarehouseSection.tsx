@@ -41,7 +41,7 @@ export default function WarehouseSection() {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-full">
               <Image
                 src="/warehouse.png"
-                alt="GrannexFoods warehouse"
+                alt="Grannex warehouse"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

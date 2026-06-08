@@ -7,9 +7,9 @@ import SectionDivider from '@/app/components/SectionDivider';
 import CTASection from '@/app/components/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Contact & Orders | GrannexFoods',
+  title: 'Contact & Orders | Grannex',
   description:
-    'Place your order or get in touch with GrannexFoods. Contact our team for wholesale cooking oils, sauces, and food ingredients. Minimum order 1 container.',
+    'Place your order or get in touch with Grannex. Contact our team for wholesale cooking oils, sauces, and food ingredients. Minimum order 1 container.',
 };
 
 export default function ContactPage() {
@@ -20,7 +20,7 @@ export default function ContactPage() {
         heading="Place Your Order"
         description="Fill in the form below and we'll get back to you within one business day with confirmation and pricing."
         imageSrc="/contact-us-hero.png"
-        imageAlt="GrannexFoods warehouse operations"
+        imageAlt="Grannex warehouse operations"
       />
       <ContactFormSection />
       <SectionDivider />

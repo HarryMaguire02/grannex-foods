@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: process.env.EMAIL_FROM || 'noreply@grannexfoods.com',
-      to: process.env.CONTACT_EMAIL || 'info@grannexfoods.com',
+      to: process.env.CONTACT_EMAIL || 'info@grannex.com',
       subject: `New Order Request from ${companyName}`,
       html: `
         <!DOCTYPE html>
@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
                   <!-- Logo Header -->
                   <tr>
                     <td style="background-color: #ffffff; padding: 30px 40px; text-align: center; border-bottom: 3px solid #315748;">
-                      <img src="${siteUrl}/grannexFoodsLogo.svg" alt="GrannexFoods" style="max-width: 200px; height: auto;" />
+                      <img src="${siteUrl}/grannexLogo.svg" alt="Grannex" style="max-width: 200px; height: auto;" />
                     </td>
                   </tr>
 
@@ -122,8 +122,8 @@ export async function POST(request: NextRequest) {
                   <!-- Footer -->
                   <tr>
                     <td style="background-color: #f9f9f9; padding: 20px 40px; text-align: center; border-top: 1px solid #e0e0e0;">
-                      <p style="margin: 0; color: #666; font-size: 12px;">This email was sent from the GrannexFoods order form.</p>
-                      <p style="margin: 10px 0 0 0; color: #999; font-size: 11px;">© ${new Date().getFullYear()} GrannexFoods. All rights reserved.</p>
+                      <p style="margin: 0; color: #666; font-size: 12px;">This email was sent from the Grannex order form.</p>
+                      <p style="margin: 10px 0 0 0; color: #999; font-size: 11px;">© ${new Date().getFullYear()} Grannex. All rights reserved.</p>
                     </td>
                   </tr>
 

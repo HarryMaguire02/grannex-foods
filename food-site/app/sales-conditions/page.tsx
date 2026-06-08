@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Sales Conditions - GrannexFoods",
-  description: "General Terms and Conditions of Sale for GrannexFoods - Sale of Food Ingredients and Commodities.",
+  title: "Sales Conditions - Grannex",
+  description: "General Terms and Conditions of Sale for Grannex - Sale of Food Ingredients and Commodities.",
 };
 
 export default function SalesConditionsPage() {
@@ -28,7 +28,7 @@ export default function SalesConditionsPage() {
         </h1>
 
         <h2 className="text-xl font-semibold text-primary mb-6">
-          GrannexFoods &ndash; Sale of Food Ingredients
+          Grannex &ndash; Sale of Food Ingredients
         </h2>
 
         {/* Content Sections */}
@@ -71,7 +71,7 @@ export default function SalesConditionsPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">Retention of Title</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              GrannexFoods retains full ownership of the goods until full payment has been received.
+              Grannex retains full ownership of the goods until full payment has been received.
             </p>
           </section>
 
