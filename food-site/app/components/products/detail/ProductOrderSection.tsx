@@ -182,21 +182,13 @@ export default function ProductOrderSection({ productName }: ProductOrderSection
                 .
               </p>
 
-              <div className="flex flex-col xs:flex-row gap-3">
-                <button
-                  type="submit"
-                  disabled={formStatus === 'loading'}
-                  className="flex-1 bg-primary text-white text-sm font-medium py-3 rounded-full hover:bg-green-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {formStatus === 'loading' ? 'Sending...' : 'Submit Order'}
-                </button>
-                <a
-                  href="mailto:vsaranovic@grannex.com"
-                  className="flex-1 border border-primary text-primary text-sm font-medium py-3 rounded-full text-center hover:bg-pale transition-colors"
-                >
-                  Request a Quote Instead
-                </a>
-              </div>
+              <button
+                type="submit"
+                disabled={formStatus === 'loading'}
+                className="w-full bg-primary text-white text-sm font-medium py-3 rounded-full hover:bg-green-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {formStatus === 'loading' ? 'Sending...' : 'Place an Order'}
+              </button>
 
               {formStatus === 'success' && (
                 <div className="flex items-start gap-3 bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 text-sm">
