@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import productsData from '@/app/data/products.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.grannexretail.com';
 
   const productPages: MetadataRoute.Sitemap = productsData.map((product) => ({
     url: `${baseUrl}/products/${product.slug}`,

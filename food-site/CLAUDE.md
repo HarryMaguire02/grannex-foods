@@ -331,12 +331,12 @@ Key decisions made to eliminate console warnings — don't revert these:
 - Per-page metadata in each `page.tsx`
 - JSON-LD Organization schema in root layout
 - `sitemap.ts` and `robots.ts` at app root
-- `metadataBase` set to `https://grannexretail.com`
+- `metadataBase` set to `https://www.grannexretail.com`
 - All 10 `/products/[slug]` entries included in `sitemap.ts`
 
 ### Environment Variables
 
-- `NEXT_PUBLIC_SITE_URL` — Public site URL (https://grannexretail.com)
+- `NEXT_PUBLIC_SITE_URL` — Public site URL (https://www.grannexretail.com)
 - `RESEND_API_KEY` — Resend email service key
 - `CONTACT_EMAIL` — Destination for contact form submissions
 - `EMAIL_FROM` — Sender address for outbound emails

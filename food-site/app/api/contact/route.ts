@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.grannexretail.com';
 
     const { error } = await resend.emails.send({
       from: process.env.EMAIL_FROM || 'noreply@grannexretail.com',
