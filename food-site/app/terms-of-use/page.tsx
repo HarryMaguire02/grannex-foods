@@ -40,7 +40,7 @@ export default function TermsOfUsePage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">1. About this website</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              The website at grannexfoods.com is operated by Grannex International under the brand Grannex. References to &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;Grannex&rdquo; mean Grannex International.
+              The website at grannexretail.com is operated by Grannex International under the brand Grannex. References to &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;Grannex&rdquo; mean Grannex International.
             </p>
           </section>
 

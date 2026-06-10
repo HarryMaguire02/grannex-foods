@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h3 className="text-lg font-bold text-primary mb-3">2. Scope of this policy</h3>
             <p className="text-primary font-normal text-sm leading-6 text-justify">
-              This policy covers personal data we collect through the Grannex website at grannexfoods.com. It does not cover personal data exchanged through signed commercial contracts, KYC processes or unrelated business correspondence outside the website &mdash; those are governed by the relevant agreement between you and Grannex.
+              This policy covers personal data we collect through the Grannex website at grannexretail.com. It does not cover personal data exchanged through signed commercial contracts, KYC processes or unrelated business correspondence outside the website &mdash; those are governed by the relevant agreement between you and Grannex.
             </p>
           </section>
 

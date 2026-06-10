@@ -58,7 +58,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Project Overview
 
-GrannexFoods B2B food ingredients and agricultural commodities website. Built with Next.js 16 (App Router), React 19, TypeScript 5, and Tailwind CSS 4. Sister site to grannex.com (grannex-nextjs), following the same architecture and patterns. Deployed on Vercel at `grannexfoods.com`.
+GrannexFoods B2B food ingredients and agricultural commodities website. Built with Next.js 16 (App Router), React 19, TypeScript 5, and Tailwind CSS 4. Sister site to grannex.com (grannex-nextjs), following the same architecture and patterns. Deployed on Vercel at `grannexretail.com`.
 
 **Company contact:** Vlado Šaranović — `vsaranovic@grannex.com` — `+381 631 077 109`
 **Director:** Stelios Mavrojannis | **Company:** Grannex International All Rights Reserved
@@ -331,12 +331,12 @@ Key decisions made to eliminate console warnings — don't revert these:
 - Per-page metadata in each `page.tsx`
 - JSON-LD Organization schema in root layout
 - `sitemap.ts` and `robots.ts` at app root
-- `metadataBase` set to `https://grannexfoods.com`
+- `metadataBase` set to `https://grannexretail.com`
 - All 10 `/products/[slug]` entries included in `sitemap.ts`
 
 ### Environment Variables
 
-- `NEXT_PUBLIC_SITE_URL` — Public site URL (https://grannexfoods.com)
+- `NEXT_PUBLIC_SITE_URL` — Public site URL (https://grannexretail.com)
 - `RESEND_API_KEY` — Resend email service key
 - `CONTACT_EMAIL` — Destination for contact form submissions
 - `EMAIL_FROM` — Sender address for outbound emails

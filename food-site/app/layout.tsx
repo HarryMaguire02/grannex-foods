@@ -14,7 +14,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com'),
   title: "Grannex — Quality Food Ingredients & Commodities",
   description: "Grannex is a leading supplier of quality food ingredients and agricultural commodities. We deliver proteins, starches, sweeteners, oils, and more to businesses worldwide.",
   keywords: ["food ingredients", "agricultural commodities", "proteins", "starches", "sweeteners", "vegetable oils", "food supply"],
@@ -50,8 +50,8 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Grannex',
   description: 'Leading supplier of quality food ingredients and agricultural commodities.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com',
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com'}/grannexLogo.svg`,
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com',
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com'}/grannexLogo.svg`,
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',

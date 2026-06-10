@@ -56,10 +56,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexfoods.com';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grannexretail.com';
 
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'noreply@grannexfoods.com',
+      from: process.env.EMAIL_FROM || 'noreply@grannexretail.com',
       to: process.env.CONTACT_EMAIL || 'info@grannex.com',
       subject: `New Order Request from ${companyName}`,
       html: `
